@@ -1,16 +1,29 @@
-
 <h1 align="center">
   PowerHouse Site
 </h1>
 
+## Table of Contents:
+
+1. [Developers](#devs)
+2. [Getting Started Developing](#developing)
+3. [Deplyment With Netlify](#deploy)
+4. [Prismic](#prismic)
+5. [Gatsby](#gatsby)
+6. [Config Files](#config)
+7. [Dependencies](#dependencies)
+
+
+
+
+
 ## Developers
-* Sam Gildea
-* Viviana Camargo
-* Jialin Zhen
-* Erin Wang
+* Sam Gildea: Project Lead
+* Viviana Camargo: Developer
+* Jialin Zhen: Developer
+* Erin Wang: Designer/Developer
 
 
-## 🚀 Quick start
+## Getting Started Developing
 
 1.  **Start developing.**
 
@@ -22,9 +35,31 @@
     gatsby develop
     ```
 
-## 🧐 What's inside?
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+
+## Deploy With Netlify 
+1. Login into Netlify
+2. Create a new site from git
+3. Link to Your GitHub
+4. Authorize Netlify
+5. Select Your Repo
+6. Configure Your Settings
+7. Build Site
+
+
+
+## Prismic 
+Prismic is a Headless CMS that is a tool for managing and updating all the content on the site.
+
+To automatically deploy on Netlify when Prismic is updated you must add webhooks. Learn more about webhooks with Prismic and Netlify [here](https://prismic.io/docs/technologies/deploy-gatsby).
+
+
+
+## Gatsby  
+Gatsby is a React-based open-source framework for creating websites and apps. 
+
+
+## Config Files
 
     .
     ├── node_modules
@@ -40,9 +75,6 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── package.json
     └── README.md
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
-
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
 
 3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
 
@@ -62,18 +94,10 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+12. **`README.md`**: Information about the PowerHouse Site
 
 
-## Node packages
+## Dependencies
 * styled-components
 * gatsby-source-prismic
 
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-hello-world)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
