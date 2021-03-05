@@ -5,15 +5,12 @@
 ## Table of Contents:
 
 1. [Developers](#developers)
-2. [Getting Started Developing](#developing)
-3. [Deplyment With Netlify](#deploy)
+2. [Getting Started Developing](#getting-started-developing)
+3. [Deplyment With Netlify](#deploy-with-netlify)
 4. [Prismic](#prismic)
 5. [Gatsby](#gatsby)
-6. [Config Files](#config)
+6. [Config Files](#config-files)
 7. [Dependencies](#dependencies)
-
-
-
 
 
 ## Developers
