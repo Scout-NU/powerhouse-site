@@ -4,7 +4,7 @@
 
 ## Table of Contents:
 
-1. [Developers](#devs)
+1. [Developers](#developers)
 2. [Getting Started Developing](#developing)
 3. [Deplyment With Netlify](#deploy)
 4. [Prismic](#prismic)
