@@ -31,6 +31,8 @@ module.exports = {
         schemas: {
           // all the schemas here
           test: require("./src/schemas/test.json"),
+          Homepage: require("./src/schemas/Homepage.json"),
+
 
        },
        typePathsFilenamePrefix:

@@ -1,0 +1,37 @@
+{
+    "Main" : { },
+    "Hero Section" : {
+      "hero_headline" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Hero Headline"
+        }
+      },
+      "hero_subtext" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Hero Subtext"
+        }
+      },
+      "hero_cta_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Hero Button Text"
+        }
+      },
+      "hero_button_destination" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Hero Button Destination"
+        }
+      },
+      "hero_background_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "Hero Background Image"
+        }
+      }
+    }
+  }

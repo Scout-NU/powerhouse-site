@@ -2,17 +2,20 @@ import React from "react"
 import { graphql } from "gatsby"
 
 export default function Home({ data }) {
-  return <div>{data.prismicTestContent.data.test_title[0].text}</div>
+
+  const homepageData = data.prismicHomepage.data
+
+  return <div>{homepageData.hero_headline}</div>
 }
 
 export const query = graphql`
-  query TestQuery {
-    prismicTestContent {
+  query HomePageQuery {
+    prismicHomepage {
       data {
-        test_title {
-          text
-          type
-        }
+        hero_button_destination
+        hero_cta_text
+        hero_headline
+        hero_subtext
       }
     }
   }
