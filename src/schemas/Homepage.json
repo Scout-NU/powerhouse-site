@@ -33,5 +33,39 @@
           "label" : "Hero Background Image"
         }
       }
+    },
+    "Intro to Solar" : {
+      "section_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Section title"
+        }
+      },
+      "section_description" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Section Description"
+        }
+      },
+      "button_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Button Text"
+        }
+      },
+      "button_destination" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Button Destination"
+        }
+      },
+      "section_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "Section Image"
+        }
+      }
     }
   }

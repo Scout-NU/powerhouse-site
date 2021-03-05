@@ -12,6 +12,10 @@ export const query = graphql`
   query HomePageQuery {
     prismicHomepage {
       data {
+        section_title
+        section_description
+        button_text
+        button_destination
         hero_button_destination
         hero_cta_text
         hero_headline
