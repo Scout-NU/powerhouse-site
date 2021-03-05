@@ -6,14 +6,14 @@ export default function Home({ data }) {
 }
 
 export const query = graphql`
-  query TestQuery {
-    prismicTestContent {
-      data {
-        test_title {
-          text
-          type
-        }
-      }
+  query HomePageQuery {
+    prismicHomepage {
+    data {
+      hero_button_destination
+      hero_cta_text
+      hero_headline
+      hero_subtext
     }
+  }
   }
 `
