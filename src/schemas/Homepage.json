@@ -117,5 +117,37 @@
           "label" : "Impact Example"
         }
       }
+    }, 
+    "Email Section" : {
+      "email_eyebrow_heading" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Email Eyebrow Heading"
+        }
+      },
+      "enter_email_label" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Enter Email Label"
+        }
+      },
+      "email_description" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Email Description"
+        }
+      },
+      "sign_up_button_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Sign Up Button Text"
+        }
+      },
+      "sign_up_button_destination" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Sign up Button Destination"
+        }
+      }
     }
   }

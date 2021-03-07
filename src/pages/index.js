@@ -22,6 +22,11 @@ export const query = graphql`
         hero_subtext
         impact_description
         impact_section_title
+        email_description
+        email_eyebrow_heading
+        enter_email_label
+        sign_up_button_destination
+        sign_up_button_text
       }
     }
   }
