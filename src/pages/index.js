@@ -20,6 +20,8 @@ export const query = graphql`
         hero_cta_text
         hero_headline
         hero_subtext
+        impact_description
+        impact_section_title
       }
     }
   }

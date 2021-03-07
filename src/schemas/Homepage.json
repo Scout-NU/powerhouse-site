@@ -67,5 +67,55 @@
           "label" : "Section Image"
         }
       }
+    },
+    "Impact Section" : {
+      "impact_section_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Impact Section Title"
+        }
+      },
+      "impact_description" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Impact Description"
+        }
+      },
+      "impact_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "Impact Image"
+        }
+      },
+      "impact_example" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "impact_example_image" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "Impact Example Image"
+              }
+            },
+            "impact_big_text" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Impact Big Text"
+              }
+            },
+            "impact_small_text" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Impact Small Text"
+              }
+            }
+          },
+          "label" : "Impact Example"
+        }
+      }
     }
   }
