@@ -16,6 +16,9 @@ export const query = graphql`
   query AboutQuery {
     prismicAbout {
       data {
+        cta_button_destination
+        cta_button_text
+        industry_context_heading
         mission_description
         mission_heading
       }

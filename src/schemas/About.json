@@ -1,28 +1,69 @@
 {
-    "Main" : { },
+    "Main": {},
     "Mission Section": {
         "mission_heading": {
-          "type": "Text",
-          "config": {
-            "label": "Mission Heading"
-          }
+            "type": "Text",
+            "config": {
+                "label": "Mission Heading"
+            }
         },
         "mission_description": {
-          "type": "Text",
-          "config": {
-            "label": "Mission Description"
-          }
+            "type": "Text",
+            "config": {
+                "label": "Mission Description"
+            }
         },
         "mission_image": {
-          "type": "Image",
-          "config": {
-            "constraint": {},
-            "thumbnails": [],
-            "label": "Mission Image"
-          }
+            "type": "Image",
+            "config": {
+                "constraint": {},
+                "thumbnails": [],
+                "label": "Mission Image"
+            }
         }
-      },
-    "Industry Context Section" : { },
-    "How It Works Section" : { },
-    "Company Background Section" : { }
-  }
+    },
+    "Industry Context Section": {
+        "industry_context_heading": {
+            "type": "Text",
+            "config": {
+                "label": "Industry Context Heading"
+            }
+        },
+        "industry_context_explanation": {
+            "type": "Group",
+            "config": {
+                "fields": {
+                    "explanation_image": {
+                        "type": "Image",
+                        "config": {
+                            "constraint": {},
+                            "thumbnails": [],
+                            "label": "Explanation Image"
+                        }
+                    },
+                    "explanation_description": {
+                        "type": "Text",
+                        "config": {
+                            "label": "Explanation Description"
+                        }
+                    }
+                },
+                "label": "Industry Context Explanation"
+            }
+        },
+        "cta_button_text": {
+            "type": "Text",
+            "config": {
+                "label": "CTA Button Text"
+            }
+        },
+        "cta_button_destination": {
+            "type": "Text",
+            "config": {
+                "label": "CTA Button Destination"
+            }
+        }
+    },
+    "How It Works Section": {},
+    "Company Background Section": {}
+}
