@@ -65,5 +65,64 @@
         }
     },
     "How It Works Section": {},
-    "Company Background Section": {}
+    "Company Background Section": {
+        "company_background_section_heading": {
+            "type": "Text",
+            "config": {
+                "label": "Company Background Section Heading"
+            }
+        },
+        "company_background_description": {
+            "type": "Text",
+            "config": {
+                "label": "Company Background Description"
+            }
+        },
+        "company_team_heading": {
+            "type": "Text",
+            "config": {
+                "label": "Company Team Heading"
+            }
+        },
+        "team_member_information": {
+            "type": "Group",
+            "config": {
+                "fields": {
+                    "team_member_image": {
+                        "type": "Image",
+                        "config": {
+                            "constraint": {},
+                            "thumbnails": [],
+                            "label": "Team Member Image"
+                        }
+                    },
+                    "team_member_title": {
+                        "type": "Text",
+                        "config": {
+                            "label": "Team Member Title"
+                        }
+                    },
+                    "team_member_description": {
+                        "type": "Text",
+                        "config": {
+                            "label": "Team Member Description"
+                        }
+                    },
+                    "contact_button_text": {
+                        "type": "Text",
+                        "config": {
+                            "label": "Contact Button Text"
+                        }
+                    },
+                    "contact_button_destination": {
+                        "type": "Text",
+                        "config": {
+                            "label": "Contact Button Destination"
+                        }
+                    }
+                },
+                "label": "Team Member Information"
+            }
+        }
+    }
 }
