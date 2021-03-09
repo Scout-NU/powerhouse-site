@@ -24,6 +24,9 @@ export const query = graphql`
         industry_context_heading
         mission_description
         mission_heading
+        products_navigation_button_destination
+        products_navigation_button_text
+        company_comparison_section_heading
       }
     }
   }

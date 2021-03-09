@@ -64,7 +64,6 @@
             }
         }
     },
-    "How It Works Section": {},
     "Company Background Section": {
         "company_background_section_heading": {
             "type": "Text",
@@ -122,6 +121,76 @@
                     }
                 },
                 "label": "Team Member Information"
+            }
+        }
+    },
+    "Company Comparison Section": {
+        "company_comparison_section_heading": {
+            "type": "Text",
+            "config": {
+                "label": "Company Comparison Section Heading"
+            }
+        },
+        "product_benefit": {
+            "type": "Group",
+            "config": {
+                "fields": {
+                    "product_benefit_image": {
+                        "type": "Image",
+                        "config": {
+                            "constraint": {},
+                            "thumbnails": [],
+                            "label": "Product Benefit Image"
+                        }
+                    },
+                    "product_benefit_title": {
+                        "type": "Text",
+                        "config": {
+                            "label": "Product Benefit Title"
+                        }
+                    }
+                },
+                "label": "Product Benefit"
+            }
+        },
+        "company": {
+            "type": "Group",
+            "config": {
+                "fields": {
+                    "company_name": {
+                        "type": "Text",
+                        "config": {
+                            "label": "Company Name"
+                        }
+                    }
+                },
+                "label": "Company"
+            }
+        },
+        "product_feature": {
+            "type": "Group",
+            "config": {
+                "fields": {
+                    "product_feature_name": {
+                        "type": "Text",
+                        "config": {
+                            "label": "Product Feature Name"
+                        }
+                    }
+                },
+                "label": "Product Feature"
+            }
+        },
+        "products_navigation_button_text": {
+            "type": "Text",
+            "config": {
+                "label": "Products Navigation Button Text"
+            }
+        },
+        "products_navigation_button_destination": {
+            "type": "Text",
+            "config": {
+                "label": "Products Navigation Button Destination"
             }
         }
     }
