@@ -7,7 +7,7 @@ export default function Process({ data }) {
 
   return (
     <div>
-      <h1>TestTestTest</h1>
+      <h1>{processData.process_header}</h1>
     </div>
   )
 }
