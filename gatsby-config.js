@@ -42,7 +42,7 @@ module.exports = {
         schemas: {
           // all the schemas here
           test: require("./src/schemas/test.json"),
-          Product: require("./src/schemas/Products.json"),
+          Product: require("./src/schemas/ProductPage.json"),
         },
         typePathsFilenamePrefix: "prismic-typepaths---powerhouse-site",
       },
