@@ -1,7 +1,7 @@
 {
     "Main": {},
     "Featured Section": {
-        "products_main_heading": {
+        "product_page_main_heading": {
           "type": "Text",
           "config": {
             "label": "Products Main Heading"
