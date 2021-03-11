@@ -14,14 +14,46 @@ export const query = graphql`
       data {
         section_title
         section_description
+        section_image {
+          url
+          dimensions {
+            height
+            width
+          }
+        }
         button_text
         button_destination
         hero_button_destination
         hero_cta_text
         hero_headline
         hero_subtext
+        hero_background_image {
+          url
+          dimensions {
+            height
+            width
+          }
+        }
         impact_description
         impact_section_title
+        impact_image {
+          url
+          dimensions {
+            height
+            width
+          }
+        }
+        impact_example {
+          impact_big_text
+          impact_small_text
+          impact_example_image {
+            url
+            dimensions {
+              height
+              width
+            }
+          }
+        }
         email_description
         email_eyebrow_heading
         enter_email_label
