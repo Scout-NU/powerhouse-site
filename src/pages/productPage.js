@@ -21,6 +21,15 @@ export const query = graphql`
         featured_product_name
         learn_more_button_text
         learn_more_button_text_destination
+        model_content {
+          model_button_destination
+          model_button_text
+          model_description
+          model_name
+        }
+        model_scope {
+          model_scope_heading
+        }
         product_page_main_heading
       }
     }
