@@ -102,5 +102,19 @@
         "label": "CTA Button Destination"
       }
     }
+  },
+  "Demo": {
+    "demo_heading": {
+      "type": "Text",
+      "config": {
+        "label": "Demo Heading"
+      }
+    },
+    "demo_video": {
+      "type": "Embed",
+      "config": {
+        "label": "Demo Video"
+      }
+    }
   }
 }
