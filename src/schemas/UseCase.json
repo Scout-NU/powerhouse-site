@@ -1,0 +1,36 @@
+{
+    "Main" : {
+      "preview_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Preview Title"
+        }
+      },
+      "preview_description" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Preview Description"
+        }
+      },
+      "preview_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "Preview Image"
+        }
+      },
+      "learn_more_button_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Learn More Button Text"
+        }
+      },
+      "learn_more_button_destination" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Learn More Button Destination"
+        }
+      }
+    }
+  }
