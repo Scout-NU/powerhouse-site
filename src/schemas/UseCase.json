@@ -32,5 +32,35 @@
           "label" : "Learn More Button Destination"
         }
       }
+    }, 
+    "Overview": {
+      "overview_heading": {
+        "type": "Text",
+        "config": {
+          "label": "Overview Heading"
+        }
+      },
+      "overview_description": {
+        "type": "Text",
+        "config": {
+          "label": "Overview Description"
+        }
+      },
+      "overview_image_one": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Overview Image One"
+        }
+      },
+      "overview_image_two": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Overview Image Two"
+        }
+      }
     }
   }

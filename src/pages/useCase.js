@@ -18,6 +18,22 @@ export const query = graphql`
       data {
         learn_more_button_destination
         learn_more_button_text
+        overview_description
+        overview_heading
+        overview_image_one {
+            url
+            dimensions {
+            height
+            width
+            }
+        }
+        overview_image_two {
+            url
+            dimensions {
+            height
+            width
+            }
+        }
         preview_description
         preview_image {
             url
