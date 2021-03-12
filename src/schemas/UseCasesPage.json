@@ -33,5 +33,25 @@
                 "label": "Use Case"
             }
         }
+    },
+    "Call To Action": {
+        "call_to_action_heading": {
+            "type": "Text",
+            "config": {
+                "label": "Call To Action Heading"
+            }
+        },
+        "cta_button_text": {
+            "type": "Text",
+            "config": {
+                "label": "CTA Button Text"
+            }
+        },
+        "cta_button_destination": {
+            "type": "Text",
+            "config": {
+                "label": "CTA Button Destination"
+            }
+        }
     }
 }
