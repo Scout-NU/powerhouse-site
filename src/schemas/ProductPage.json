@@ -4,7 +4,7 @@
     "product_page_main_heading": {
       "type": "Text",
       "config": {
-        "label": "Products Main Heading"
+        "label": "Product Page Main Heading"
       }
     },
     "featured_product_heading": {
@@ -39,10 +39,10 @@
         "label": "Learn More Button Text"
       }
     },
-    "learn_more_button_destination": {
+    "learn_more_button_text_destination": {
       "type": "Text",
       "config": {
-        "label": "Learn More Button Destination"
+        "label": "Learn More Button Text Destination"
       }
     }
   },
@@ -61,44 +61,20 @@
         "label": "Model Scope"
       }
     },
-    "model_content": {
+    "products": {
       "type": "Group",
       "config": {
         "fields": {
-          "model_image": {
-            "type": "Image",
+          "product": {
+            "type": "Link",
             "config": {
-              "constraint": {},
-              "thumbnails": [],
-              "label": "Model Image"
-            }
-          },
-          "model_name": {
-            "type": "Text",
-            "config": {
-              "label": "Model Name"
-            }
-          },
-          "model_description": {
-            "type": "Text",
-            "config": {
-              "label": "Model Description"
-            }
-          },
-          "model_button_text": {
-            "type": "Text",
-            "config": {
-              "label": "Model Button Text"
-            }
-          },
-          "model_button_destination": {
-            "type": "Text",
-            "config": {
-              "label": "Model Button Destination"
+              "select": "document",
+              "customtypes": ["product"],
+              "label": "product"
             }
           }
         },
-        "label": "Model Content"
+        "label": "Products"
       }
     }
   }
