@@ -21,5 +21,17 @@
                 "label": "Tagline Image"
             }
         }
+    },
+    "Use Cases": {
+        "use_case": {
+            "type": "Link",
+            "config": {
+                "select": "document",
+                "customtypes": [
+                    "use_case"
+                ],
+                "label": "Use Case"
+            }
+        }
     }
 }

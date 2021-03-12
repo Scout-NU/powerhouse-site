@@ -25,6 +25,9 @@ export const query = graphql`
                 width
             }
         }
+        use_case {
+            link_type
+        }
       }
     }
   }
