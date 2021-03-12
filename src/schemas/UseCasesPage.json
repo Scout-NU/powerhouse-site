@@ -1,3 +1,25 @@
 {
-    "Main": {}
+    "Main": {},
+    "Tagline": {
+        "tagline_heading": {
+            "type": "Text",
+            "config": {
+                "label": "Tagline Heading"
+            }
+        },
+        "tagline_description": {
+            "type": "Text",
+            "config": {
+                "label": "Tagline Description"
+            }
+        },
+        "tagline_image": {
+            "type": "Image",
+            "config": {
+                "constraint": {},
+                "thumbnails": [],
+                "label": "Tagline Image"
+            }
+        }
+    }
 }
