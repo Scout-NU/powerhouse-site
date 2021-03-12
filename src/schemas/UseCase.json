@@ -1,66 +1,106 @@
 {
-    "Main" : {
-      "preview_title" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Preview Title"
-        }
-      },
-      "preview_description" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Preview Description"
-        }
-      },
-      "preview_image" : {
-        "type" : "Image",
-        "config" : {
-          "constraint" : { },
-          "thumbnails" : [ ],
-          "label" : "Preview Image"
-        }
-      },
-      "learn_more_button_text" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Learn More Button Text"
-        }
-      },
-      "learn_more_button_destination" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Learn More Button Destination"
-        }
+  "Main": {
+    "preview_title": {
+      "type": "Text",
+      "config": {
+        "label": "Preview Title"
       }
-    }, 
-    "Overview": {
-      "overview_heading": {
-        "type": "Text",
-        "config": {
-          "label": "Overview Heading"
-        }
-      },
-      "overview_description": {
-        "type": "Text",
-        "config": {
-          "label": "Overview Description"
-        }
-      },
-      "overview_image_one": {
-        "type": "Image",
-        "config": {
-          "constraint": {},
-          "thumbnails": [],
-          "label": "Overview Image One"
-        }
-      },
-      "overview_image_two": {
-        "type": "Image",
-        "config": {
-          "constraint": {},
-          "thumbnails": [],
-          "label": "Overview Image Two"
-        }
+    },
+    "preview_description": {
+      "type": "Text",
+      "config": {
+        "label": "Preview Description"
+      }
+    },
+    "preview_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Preview Image"
+      }
+    },
+    "learn_more_button_text": {
+      "type": "Text",
+      "config": {
+        "label": "Learn More Button Text"
+      }
+    },
+    "learn_more_button_destination": {
+      "type": "Text",
+      "config": {
+        "label": "Learn More Button Destination"
+      }
+    }
+  },
+  "Overview": {
+    "overview_heading": {
+      "type": "Text",
+      "config": {
+        "label": "Overview Heading"
+      }
+    },
+    "overview_description": {
+      "type": "Text",
+      "config": {
+        "label": "Overview Description"
+      }
+    },
+    "overview_image_one": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Overview Image One"
+      }
+    },
+    "overview_image_two": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Overview Image Two"
+      }
+    }
+  },
+  "Reasons": {
+    "reasons_main_heading": {
+      "type": "Text",
+      "config": {
+        "label": "Reasons Main Heading"
+      }
+    },
+    "specific_reason": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "specific_reason_heading": {
+            "type": "Text",
+            "config": {
+              "label": "Specific Reason Heading"
+            }
+          },
+          "specific_reason_description": {
+            "type": "Text",
+            "config": {
+              "label": "Specific Reason Description"
+            }
+          }
+        },
+        "label": "Specific Reason"
+      }
+    },
+    "cta_button_text": {
+      "type": "Text",
+      "config": {
+        "label": "CTA Button Text"
+      }
+    },
+    "cta_button_destination": {
+      "type": "Text",
+      "config": {
+        "label": "CTA Button Destination"
       }
     }
   }
+}

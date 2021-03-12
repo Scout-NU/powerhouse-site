@@ -16,6 +16,8 @@ export const query = graphql`
   query UseCaseQuery {
     prismicUseCase {
       data {
+        cta_button_destination
+        cta_button_text
         learn_more_button_destination
         learn_more_button_text
         overview_description
@@ -43,6 +45,11 @@ export const query = graphql`
             }
         }
         preview_title
+        reasons_main_heading
+        specific_reason {
+            specific_reason_description
+            specific_reason_heading
+        }
       }
     }
   }
