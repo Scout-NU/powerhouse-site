@@ -1,4 +1,6 @@
 import { graphql } from "gatsby"
+import Layout from "../components/layout"
+
 
 import React from "react"
 
@@ -6,9 +8,9 @@ export default function Process({ data }) {
   const processData = data.prismicProcessPage.data
 
   return (
-    <div>
+    <Layout>
       <h1>{processData.process_header}</h1>
-    </div>
+    </Layout>
   )
 }
 
