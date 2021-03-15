@@ -6,7 +6,6 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    `gatsby-plugin-sass`,
     {
       resolve: "@walltowall/gatsby-source-prismic-schemas",
       options: {
@@ -33,6 +32,7 @@ module.exports = {
           // all the schemas here
           test: require("./src/schemas/test.json"),
           Process: require("./src/schemas/Process.json"),
+          FAQ: require("./src/schemas/FAQ.json")
         },
         typePathsFilenamePrefix: "prismic-typepaths---powerhouse-site",
       },

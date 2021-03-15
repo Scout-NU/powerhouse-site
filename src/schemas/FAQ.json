@@ -1,0 +1,31 @@
+{
+    "Main": {},
+    "Top Questions": {
+        "main_section_heading": {
+            "type": "Text",
+            "config": {
+                "label": "Main Section Heading"
+            }
+        },
+        "frequently_asked_question": {
+            "type": "Group",
+            "config": {
+                "fields": {
+                    "question": {
+                        "type": "Text",
+                        "config": {
+                            "label": "Question"
+                        }
+                    },
+                    "answer": {
+                        "type": "Text",
+                        "config": {
+                            "label": "Answer"
+                        }
+                    }
+                },
+                "label": "Frequently Asked Question"
+            }
+        }
+    }
+}
