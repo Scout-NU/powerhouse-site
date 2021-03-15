@@ -33,6 +33,7 @@ module.exports = {
           // all the schemas here
           test: require("./src/schemas/test.json"),
           Process: require("./src/schemas/Process.json"),
+          Contact: require("./src/schemas/Contact.json")
         },
         typePathsFilenamePrefix: "prismic-typepaths---powerhouse-site",
       },
