@@ -6,22 +6,6 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    `gatsby-plugin-sass`,
-    {
-      resolve: "@walltowall/gatsby-source-prismic-schemas",
-      options: {
-        /**
-         * Provide an object of Prismic custom type JSON schemas to load into
-         * Gatsby. This is required.
-         *
-         * If you are using gatsby-source-prismic, this should be the same set of
-         * schemas provided to that plugin.
-         */
-        schemas: {
-          // Your custom types mapped to schemas
-        },
-      },
-    },
     {
       resolve: "gatsby-source-prismic",
       options: {

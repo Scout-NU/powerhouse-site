@@ -1,3 +1,25 @@
 {
-    "Main": {}
+    "Main": {},
+    "Overview": {
+        "overview_heading": {
+            "type": "Text",
+            "config": {
+                "label": "Overview Heading"
+            }
+        },
+        "overview_description": {
+            "type": "Text",
+            "config": {
+                "label": "Overview Description"
+            }
+        },
+        "overview_image": {
+            "type": "Image",
+            "config": {
+                "constraint": {},
+                "thumbnails": [],
+                "label": "Overview Image"
+            }
+        }
+    }
 }
