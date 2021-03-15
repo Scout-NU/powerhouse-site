@@ -20,7 +20,7 @@
         }
       },
       "hero_button_destination" : {
-        "type" : "Text",
+        "type" : "Link",
         "config" : {
           "label" : "Hero Button Destination"
         }

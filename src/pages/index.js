@@ -23,7 +23,9 @@ export const query = graphql`
         }
         button_text
         button_destination
-        hero_button_destination
+        hero_button_destination {
+          target
+        }
         hero_cta_text
         hero_headline
         hero_subtext
