@@ -7,7 +7,7 @@ export default function About({ data }) {
 
     return (
         <div>
-            <h1>TestTestTest</h1>
+            <h1>{aboutData.company_background_section_heading}</h1>
         </div>
     )
 }
