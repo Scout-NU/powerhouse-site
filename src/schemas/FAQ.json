@@ -27,5 +27,35 @@
                 "label": "Frequently Asked Question"
             }
         }
+    },
+    "Topics": {
+        "topics_section_heading": {
+            "type": "Text",
+            "config": {
+                "label": "Topics Section Heading"
+            }
+        },
+        "individual_topic": {
+            "type": "Group",
+            "config": {
+                "fields": {
+                    "topic_image": {
+                        "type": "Image",
+                        "config": {
+                            "constraint": {},
+                            "thumbnails": [],
+                            "label": "Topic Image"
+                        }
+                    },
+                    "topic_heading": {
+                        "type": "Text",
+                        "config": {
+                            "label": "Topic Heading"
+                        }
+                    }
+                },
+                "label": "Individual Topic"
+            }
+        }
     }
 }

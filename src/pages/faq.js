@@ -20,6 +20,17 @@ export const query = graphql`
                     question
                 }
                 main_section_heading
+                topics_section_heading
+                individual_topic {
+                    topic_heading
+                    topic_image {
+                        url
+                        dimensions {
+                            height
+                            width
+                        }
+                    }
+                }
             }
         }
     }
