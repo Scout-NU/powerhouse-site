@@ -43,5 +43,33 @@
                 "label": "Specific Contact Info"
             }
         }
+    },
+    "Form Section": {
+        "form_input": {
+            "type": "Group",
+            "config": {
+                "fields": {
+                    "input_heading": {
+                        "type": "Text",
+                        "config": {
+                            "label": "Input Heading"
+                        }
+                    },
+                    "input_instructions": {
+                        "type": "Text",
+                        "config": {
+                            "label": "Input Instructions"
+                        }
+                    }
+                },
+                "label": "Form Input"
+            }
+        },
+        "submission_button_text": {
+            "type": "Text",
+            "config": {
+                "label": "Submission Button Text"
+            }
+        }
     }
 }

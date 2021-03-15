@@ -29,6 +29,11 @@ export const query = graphql`
                     contact_details
                     contact_type
                 }
+                submission_button_text
+                form_input {
+                    input_heading
+                    input_instructions
+                }
             }
         }
     }
