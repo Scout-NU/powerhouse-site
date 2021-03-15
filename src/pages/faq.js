@@ -31,6 +31,11 @@ export const query = graphql`
                         }
                     }
                 }
+                cta_button_destination {
+                    target
+                }
+                cta_button_text
+                cta_heading
             }
         }
     }

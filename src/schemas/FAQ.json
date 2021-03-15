@@ -57,5 +57,25 @@
                 "label": "Individual Topic"
             }
         }
+    },
+    "Call To Action": {
+        "cta_heading": {
+            "type": "Text",
+            "config": {
+                "label": "CTA Heading"
+            }
+        },
+        "cta_button_text": {
+            "type": "Text",
+            "config": {
+                "label": "CTA Button Text"
+            }
+        },
+        "cta_button_destination": {
+            "type": "Link",
+            "config": {
+                "label": "CTA Button Destination"
+            }
+        }
     }
 }
