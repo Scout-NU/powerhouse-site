@@ -19,10 +19,15 @@ export const query = graphql`
                 overview_description
                 overview_heading
                 overview_image {
-                url
-                dimensions {
-                    height
-                    width
+                    url
+                    dimensions {
+                        height
+                        width
+                    }
+                }
+                specific_contact_info {
+                    contact_details
+                    contact_type
                 }
             }
         }
