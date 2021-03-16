@@ -1,15 +1,94 @@
 import { graphql } from "gatsby"
-
+import Layout from "../components/layout"
 import React from "react"
+import styled from "styled-components"
+import dimensions from "../style/dimensions"
+
+const IconPlaceholder = styled.div`
+  height: 50px;
+  width: 50px;
+  background-color: #9d9d9d;
+`
+
+const AboutHeaderText = styled.div`
+  font-size: 48px;
+  font-weight: bold;
+  padding-left: 20px;
+`
+
+const AboutHeader = styled.div`
+  display: flex;
+  align-items: center;
+  padding-top: 96px;
+`
+
+const MissionSection = styled.div`
+  padding-top: 21px;
+
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    display: flex;
+    padding-top: 96px;
+  }
+`
+
+const MissionImage = styled.div`
+  background-color: #9d9d9d;
+  height: 405px;
+  width: 45vw;
+  left: 0;
+  margin-left: -80px;
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 100vw;
+    margin-left: -16px;
+  }
+`
+
+const MissionText = styled.div`
+  position: relative;
+  padding-top: 28px;
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    width: 35vw;
+    position: relative;
+    padding-left: 75px;
+    padding-top: 0px;
+  }
+`
+
+const MissionTextHeader = styled.div`
+  font-size: 36px;
+  font-weight: bold;
+  padding-top: 19px;
+  padding-bottom: 25px;
+`
+
+const MissionTextParagraph = styled.div`
+  font-size: 20px;
+`
 
 export default function About({ data }) {
-    const aboutData = data.prismicAboutPage.data
+  const aboutData = data.prismicAboutPage.data
 
-    return (
-        <div>
-            <h1>{aboutData.company_background_section_heading}</h1>
-        </div>
-    )
+  return (
+    <Layout>
+      <AboutHeader>
+        <IconPlaceholder />
+        <AboutHeaderText>About</AboutHeaderText>
+      </AboutHeader>
+
+      <MissionSection>
+        <MissionImage></MissionImage>
+
+        <MissionText>
+          <IconPlaceholder />
+          <MissionTextHeader>{aboutData.mission_heading}</MissionTextHeader>
+
+          <MissionTextParagraph>
+            {aboutData.mission_description}
+          </MissionTextParagraph>
+        </MissionText>
+      </MissionSection>
+    </Layout>
+  )
 }
 
 export const query = graphql`
