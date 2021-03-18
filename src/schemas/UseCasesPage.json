@@ -48,7 +48,7 @@
             }
         },
         "cta_button_destination": {
-            "type": "Text",
+            "type": "Link",
             "config": {
                 "label": "CTA Button Destination"
             }

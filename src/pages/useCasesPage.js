@@ -17,7 +17,9 @@ export const query = graphql`
     prismicUseCasesPage {
       data {
         call_to_action_heading
-        cta_button_destination
+        cta_button_destination {
+          target
+        }
         cta_button_text
         tagline_description
         tagline_heading
