@@ -58,7 +58,7 @@
             }
         },
         "cta_button_destination": {
-            "type": "Text",
+            "type": "Link",
             "config": {
                 "label": "CTA Button Destination"
             }
@@ -114,7 +114,7 @@
                         }
                     },
                     "contact_button_destination": {
-                        "type": "Text",
+                        "type": "Link",
                         "config": {
                             "label": "Contact Button Destination"
                         }
@@ -188,7 +188,7 @@
             }
         },
         "products_navigation_button_destination": {
-            "type": "Text",
+            "type": "Link",
             "config": {
                 "label": "Products Navigation Button Destination"
             }
