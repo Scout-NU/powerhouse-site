@@ -27,7 +27,7 @@
       }
     },
     "learn_more_button_destination": {
-      "type": "Text",
+      "type": "Link",
       "config": {
         "label": "Learn More Button Destination"
       }
@@ -97,7 +97,7 @@
       }
     },
     "cta_button_destination": {
-      "type": "Text",
+      "type": "Link",
       "config": {
         "label": "CTA Button Destination"
       }

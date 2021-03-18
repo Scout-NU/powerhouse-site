@@ -16,14 +16,18 @@ export const query = graphql`
   query UseCaseQuery {
     prismicUseCase {
       data {
-        cta_button_destination
+        cta_button_destination {
+          target
+        }
         cta_button_text
         demo_heading
         demo_video {
             width
             url
         }
-        learn_more_button_destination
+        learn_more_button_destination {
+          target
+        }
         learn_more_button_text
         overview_description
         overview_heading
