@@ -69,12 +69,24 @@
             "type": "Link",
             "config": {
               "select": "document",
-              "customtypes": ["product"],
+              "customtypes": [
+                "product_page"
+              ],
               "label": "product"
             }
           }
         },
         "label": "Products"
+      }
+    },
+    "test": {
+      "type": "Link",
+      "config": {
+        "select": "document",
+        "customtypes": [
+          "product"
+        ],
+        "label": "test"
       }
     }
   }
