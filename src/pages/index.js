@@ -22,7 +22,9 @@ export const query = graphql`
           }
         }
         button_text
-        button_destination
+        button_destination {
+          target
+        }
         hero_button_destination {
           target
         }
@@ -59,7 +61,9 @@ export const query = graphql`
         email_description
         email_eyebrow_heading
         enter_email_label
-        sign_up_button_destination
+        sign_up_button_destination {
+          target
+        }
         sign_up_button_text
       }
     }

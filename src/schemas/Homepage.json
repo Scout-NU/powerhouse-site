@@ -54,7 +54,7 @@
         }
       },
       "button_destination" : {
-        "type" : "Text",
+        "type" : "Link",
         "config" : {
           "label" : "Button Destination"
         }
@@ -144,7 +144,7 @@
         }
       },
       "sign_up_button_destination" : {
-        "type" : "Text",
+        "type" : "Link",
         "config" : {
           "label" : "Sign up Button Destination"
         }
