@@ -6,8 +6,9 @@
 module.exports = {
   /* Your site config here */
   plugins: [
+    `gatsby-plugin-sass`,
     {
-      resolve: '@walltowall/gatsby-source-prismic-schemas',
+      resolve: "@walltowall/gatsby-source-prismic-schemas",
       options: {
         /**
          * Provide an object of Prismic custom type JSON schemas to load into
@@ -22,24 +23,21 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-prismic',
+      resolve: "gatsby-source-prismic",
       options: {
         // The name of your prismic.io repository. This is required.
         // Example: 'gatsby-source-prismic-test-site' if your prismic.io address
         // is 'gatsby-source-prismic-test-site.prismic.io'.
-        repositoryName: 'power-house',
+        repositoryName: "power-house",
         schemas: {
           // all the schemas here
           test: require("./src/schemas/test.json"),
+          Process: require("./src/schemas/Process.json"),
           Homepage: require("./src/schemas/Homepage.json"),
 
-
-       },
-       typePathsFilenamePrefix:
-       'prismic-typepaths---powerhouse-site',
-      }
+        },
+        typePathsFilenamePrefix: "prismic-typepaths---powerhouse-site",
+      },
     },
-
-
   ],
 }
