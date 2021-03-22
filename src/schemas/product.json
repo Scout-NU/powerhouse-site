@@ -1,0 +1,133 @@
+{
+    "Main" : {
+      "uid" : {
+        "type" : "UID",
+        "config" : {
+          "label" : "url"
+        }
+      },
+      "product_type" : {
+        "type" : "Select",
+        "config" : {
+          "options" : [ "Homeowner", "Commercial" ],
+          "label" : "Product Type"
+        }
+      },
+      "product_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Product Title"
+        }
+      },
+      "product_description" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph",
+          "label" : "Product Description"
+        }
+      },
+      "product_images" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "image" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "Image"
+              }
+            }
+          },
+          "label" : "Product Images"
+        }
+      }
+    },
+    "Icon Section" : {
+      "icon_section_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Icon Section Title"
+        }
+      },
+      "icons" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "icon_image" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "Icon Image"
+              }
+            },
+            "icon_text" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Icon Text"
+              }
+            }
+          },
+          "label" : "Icons"
+        }
+      }
+    },
+    "Feature Section" : {
+      "feature_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Feature Title"
+        }
+      },
+      "features" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "feature_image" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "Feature Image"
+              }
+            },
+            "feature_name" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Feature Name"
+              }
+            },
+            "feature_description" : {
+              "type" : "StructuredText",
+              "config" : {
+                "multi" : "paragraph",
+                "label" : "feature description"
+              }
+            }
+          },
+          "label" : "Features"
+        }
+      }
+    },
+    "Product CTA" : {
+      "cta_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "CTA Header"
+        }
+      },
+      "button_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Button Title"
+        }
+      },
+      "button_destination" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Button Destination"
+        }
+      }
+    }
+  }
