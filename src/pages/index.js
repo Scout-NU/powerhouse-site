@@ -1,18 +1,71 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Layout from "../components/layout"
 
 export default function Home({ data }) {
-  return <div>{data.prismicTestContent.data.test_title[0].text}</div>
+
+  const homepageData = data.prismicHomepage.data
+
+  return <Layout>{homepageData.hero_headline}</Layout>
 }
 
 export const query = graphql`
-  query TestQuery {
-    prismicTestContent {
+  query HomePageQuery {
+    prismicHomepage {
       data {
-        test_title {
-          text
-          type
+        section_title
+        section_description
+        section_image {
+          url
+          dimensions {
+            height
+            width
+          }
         }
+        button_text
+        button_destination {
+          target
+        }
+        hero_button_destination {
+          target
+        }
+        hero_cta_text
+        hero_headline
+        hero_subtext
+        hero_background_image {
+          url
+          dimensions {
+            height
+            width
+          }
+        }
+        impact_description
+        impact_section_title
+        impact_image {
+          url
+          dimensions {
+            height
+            width
+          }
+        }
+        impact_example {
+          impact_big_text
+          impact_small_text
+          impact_example_image {
+            url
+            dimensions {
+              height
+              width
+            }
+          }
+        }
+        email_description
+        email_eyebrow_heading
+        enter_email_label
+        sign_up_button_destination {
+          target
+        }
+        sign_up_button_text
       }
     }
   }
