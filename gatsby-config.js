@@ -6,17 +6,7 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    // {
-    //   resolve: ` gatsby-plugin-netlify-headers`,
-    //   options: {
-    //     headers: {}, // option to add more headers. `Link` headers are transformed by the below criteria
-    //     allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
-    //     mergeSecurityHeaders: true, // boolean to turn off the default security headers
-    //     mergeLinkHeaders: false, // boolean to turn off the default gatsby js headers (disabled by default, until gzip is fixed for server push)
-    //     mergeCachingHeaders: true, // boolean to turn off the default caching headers
-    //     transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
-    //   },
-    // },
+    `gatsby-plugin-sass`,
     {
       resolve: "@walltowall/gatsby-source-prismic-schemas",
       options: {
@@ -42,8 +32,12 @@ module.exports = {
         schemas: {
           // all the schemas here
           test: require("./src/schemas/test.json"),
+          product_page: require("./src/schemas/product_page.json"),
+          product: require("./src/schemas/product.json"),
           Process: require("./src/schemas/Process.json"),
+          Homepage: require("./src/schemas/Homepage.json"),
           UseCasesPage: require("./src/schemas/UseCasesPage.json")
+
         },
         typePathsFilenamePrefix: "prismic-typepaths---powerhouse-site",
       },
