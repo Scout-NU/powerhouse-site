@@ -1,13 +1,14 @@
 import { graphql } from "gatsby"
 
 import React from "react"
+import Layout from "../components/layout"
 
 export default function UseCasesPage({ data }) {
     const useCasesPageData = data.prismicUseCasesPage.data
 
     return (
         <div>
-            <h1>{useCasesPageData.process_header}</h1>
+            <h1>{useCasesPageData.tagline_heading}</h1>
         </div>
     )
 }
