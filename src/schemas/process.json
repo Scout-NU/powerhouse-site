@@ -1,0 +1,106 @@
+{
+    "Main" : { },
+    "Header" : {
+      "process_header" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Process Header"
+        }
+      },
+      "header_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "Header Image"
+        }
+      }
+    },
+    "How It Works" : {
+      "how_header" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "How Header"
+        }
+      },
+      "how_description" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph",
+          "label" : "How Description"
+        }
+      },
+      "how_images" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "how_image" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "How Image"
+              }
+            }
+          },
+          "label" : "How Images"
+        }
+      }
+    },
+    "Find Solution" : {
+      "find_header" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Find Header"
+        }
+      },
+      "find_description" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Find Description"
+        }
+      },
+      "find_button_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Find Button Text"
+        }
+      },
+      "find_button_destination" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Find Button Destination"
+        }
+      }
+    },
+    "Steps" : {
+      "steps" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "step_image" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "Step Image"
+              }
+            },
+            "step_title" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Step Title"
+              }
+            },
+            "step_description" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Step Description"
+              }
+            }
+          },
+          "label" : "Steps"
+        }
+      }
+    }
+  }
