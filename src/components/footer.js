@@ -16,8 +16,11 @@ const FooterMainContent = styled.div`
 `
 
 const SocialSection = styled.div`
-  margin-left: 32px;
+  padding-left: 80px;
   padding-top: 50px;
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    padding-left: 32px;
+  }
 `
 
 const FooterHeader = styled.div`
@@ -33,10 +36,9 @@ const SocialIcons = styled.div`
 const SocialPlaceholder = styled.div`
   width: 24px;
   height: 24px;
-  background-color: #A4A4A4;
+  background-color: #a4a4a4;
   border-radius: 8px;
   margin-right: 16px;
-
 `
 const EmailText = styled.div`
   text-decoration: underline;
@@ -58,7 +60,6 @@ const LinkSection = styled.div`
     padding-bottom: 47px;
     font-size: 18px;
     font-weight: bold;
-
   }
 
   a {
@@ -142,13 +143,12 @@ const AddressSection = styled.div`
   padding-top: 16px;
 `
 const ScoutSection = styled.div`
+  margin-top: 32px;
+  color: #ffffff;
 
-margin-top: 32px;
-color: #ffffff;
-
-@media (max-width: ${dimensions.maxwidthTablet}px) {
-  padding-bottom: 48px;
-}
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    padding-bottom: 48px;
+  }
 `
 
 const EmailFormHeader = styled.div``
@@ -222,20 +222,19 @@ export default function footer({ data }) {
                 />
               </form>
               <SocialIcons>
-              {data.prismicFooter.data.social_media.map(social => {
-                return (
-                  <a href={social.social_link}>
-                    <SocialPlaceholder>
-                      {/* <img src={social.social_icon.url} /> */}
-                    </SocialPlaceholder>
-                  </a>
-                )
-              })}
-            </SocialIcons>
+                {data.prismicFooter.data.social_media.map(social => {
+                  return (
+                    <a href={social.social_link}>
+                      <SocialPlaceholder>
+                        {/* <img src={social.social_icon.url} /> */}
+                      </SocialPlaceholder>
+                    </a>
+                  )
+                })}
+              </SocialIcons>
 
-            <ScoutSection>Made with love by Scout</ScoutSection>
+              <ScoutSection>Made with love by Scout</ScoutSection>
             </EmailSection>
-
           </FooterMainContent>
 
           {/* <BottomLinks>
