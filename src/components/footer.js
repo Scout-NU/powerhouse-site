@@ -4,8 +4,9 @@ import dimensions from "../style/dimensions"
 import { StaticQuery, graphql } from "gatsby"
 
 const FooterContainer = styled.div`
-  background-color: #c4c4c4;
+  background-color: #848484;
   width: 100%;
+  color: #ffffff;
 `
 
 const FooterMainContent = styled.div`
@@ -30,7 +31,12 @@ const SocialIcons = styled.div`
 `
 
 const SocialPlaceholder = styled.div`
-  margin-right: 12px;
+  width: 24px;
+  height: 24px;
+  background-color: #A4A4A4;
+  border-radius: 8px;
+  margin-right: 16px;
+
 `
 const EmailText = styled.div`
   text-decoration: underline;
@@ -43,6 +49,7 @@ const LinkSection = styled.div`
   display: flex;
   margin-left: 9vw;
   padding-top: 50px;
+
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     margin-left: 0px;
   }
@@ -51,11 +58,12 @@ const LinkSection = styled.div`
     padding-bottom: 47px;
     font-size: 18px;
     font-weight: bold;
+
   }
 
   a {
     text-decoration: none;
-    color: black;
+    color: #ffffff;
   }
 
   ul {
@@ -83,11 +91,11 @@ const EmailSection = styled.div`
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     input {
-        width: 80%;
-        height: 36px;
-        margin-top: 10px;
-        border: solid #626262 1px;
-      }
+      width: 80%;
+      height: 36px;
+      margin-top: 10px;
+      border: solid #626262 1px;
+    }
   }
 
   input::placeholder {
@@ -129,6 +137,20 @@ const BottomLinks = styled.div`
   }
 `
 
+const AddressSection = styled.div`
+  width: 177px;
+  padding-top: 16px;
+`
+const ScoutSection = styled.div`
+
+margin-top: 32px;
+color: #ffffff;
+
+@media (max-width: ${dimensions.maxwidthTablet}px) {
+  padding-bottom: 48px;
+}
+`
+
 const EmailFormHeader = styled.div``
 
 export default function footer({ data }) {
@@ -154,18 +176,10 @@ export default function footer({ data }) {
           <FooterMainContent>
             <SocialSection>
               <FooterHeader>Powerhouse</FooterHeader>
-              <SocialIcons>
-                {data.prismicFooter.data.social_media.map(social => {
-                  return (
-                    <a href={social.social_link}>
-                      <SocialPlaceholder>
-                        <img src={social.social_icon.url} />
-                      </SocialPlaceholder>
-                    </a>
-                  )
-                })}
-              </SocialIcons>
-              <EmailText>{data.prismicFooter.data.email}</EmailText>
+              <AddressSection>
+                123 Lorem Ipsum Dolor Tempor Incididunt YZ, 12345 123-456-7890
+              </AddressSection>
+              {/* <EmailText>{data.prismicFooter.data.email}</EmailText> */}
             </SocialSection>
 
             <LinkSection>
@@ -200,7 +214,6 @@ export default function footer({ data }) {
 
             <EmailSection>
               <form>
-                <EmailFormHeader>Sign Up For Our Newsletter</EmailFormHeader>
                 <input
                   type="text"
                   placeholder="your@email.com"
@@ -208,10 +221,24 @@ export default function footer({ data }) {
                   required
                 />
               </form>
+              <SocialIcons>
+              {data.prismicFooter.data.social_media.map(social => {
+                return (
+                  <a href={social.social_link}>
+                    <SocialPlaceholder>
+                      {/* <img src={social.social_icon.url} /> */}
+                    </SocialPlaceholder>
+                  </a>
+                )
+              })}
+            </SocialIcons>
+
+            <ScoutSection>Made with love by Scout</ScoutSection>
             </EmailSection>
+
           </FooterMainContent>
 
-          <BottomLinks>
+          {/* <BottomLinks>
             <ul>
               <li>
                 <a href="#">Privacy Policy</a>
@@ -223,7 +250,7 @@ export default function footer({ data }) {
                 <a href="#">Powerhouse 2021</a>
               </li>
             </ul>
-          </BottomLinks>
+          </BottomLinks> */}
         </FooterContainer>
       )}
     />
