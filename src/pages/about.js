@@ -64,10 +64,59 @@ const MissionTextHeader = styled.div`
 const MissionTextParagraph = styled.div`
   font-size: 20px;
 `
+const IndustryContextSection = styled.div`
+  padding-top: 130px;
+  padding-left: 
+`
+const IndustryContextHeader = styled.div`
+  
+`
+const IndustryContextHeaderText = styled.div`
+  font-size: 36px;
+  font-weight: bold;
+  padding-top: 26px;
+`
+
+const IndustryContextExamples = styled.div`
+  display: flex;
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    flex-wrap: wrap;
+  }
+`
+// I'm still working on the spacing between each example 
+// and changing the sizing of the content box changing as 
+// the screen size changes
+const IndustryContextGroup = styled.div`
+  padding-top: 26px;
+  margin-right: 41px;
+  width: 316px;
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 38px;
+  }
+`
+
+const IndustryContextImage = styled.div`
+  background-color: #CACACA;  
+  height: 243px;
+  width: 316px;
+`
+
+const IndustryContextExampleParagraph = styled.div`
+  font-size: 16px;
+  padding-top: 26px;
+  
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 316px;
+  }
+`
+
 
 export default function About({ data }) {
   const aboutData = data.prismicAboutPage.data
 
+  console.log(aboutData.industry_context_explanation);
   return (
     <Layout>
       <AboutHeader>
@@ -87,6 +136,24 @@ export default function About({ data }) {
           </MissionTextParagraph>
         </MissionText>
       </MissionSection>
+
+      <IndustryContextSection>
+        <IndustryContextHeader>
+          <IconPlaceholder />
+          <IndustryContextHeaderText>{aboutData.industry_context_heading}</IndustryContextHeaderText>
+        </IndustryContextHeader>
+
+        <IndustryContextExamples>
+          {aboutData.industry_context_explanation.map(example => {
+            return (
+            <IndustryContextGroup>
+              <IndustryContextImage></IndustryContextImage>
+              <IndustryContextExampleParagraph>{example.explanation_description}</IndustryContextExampleParagraph>
+            </IndustryContextGroup>
+          )})}
+        </IndustryContextExamples>
+      </IndustryContextSection>
+
     </Layout>
   )
 }
