@@ -8,11 +8,14 @@ export const Logo = styled.div`
   font-weight: bold;
   font-size: 24px;
   padding-top: 32px;
+  padding-left: 80px;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     text-align: center;
     font-size: 20px;
     padding-top: 24px;
+    padding-left: 0px;
+
   }
 `
 
