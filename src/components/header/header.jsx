@@ -1,50 +1,12 @@
 import React, { useState } from "react"
-import styled from "styled-components"
-import dimensions from "../../style/dimensions"
 import Hamburger from "../../vectors/hamburger.svg"
-
-const NavContainer = styled.div``
-
-const Logo = styled.div`
-  font-weight: bold;
-  font-size: 24px;
-  padding-top: 32px;
-
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-    text-align: center;
-    font-size: 20px;
-    padding-top: 24px;
-  }
-`
-
-const NavLinks = styled.div`
-  position: absolute;
-  right: 80px;
-  top: 40px;
-  display: flex;
-
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-    display: none;
-  }
-`
-
-const NavLink = styled.div`
-  font-weight: bold;
-  font-size: 16px;
-  padding-left: 100px;
-`
-
-const MobileIcon = styled.div`
-  @media (min-width: ${dimensions.maxwidthTablet}px) {
-    display: none;
-  }
-
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-    left: 24px;
-    top: 32px;
-    position: absolute;
-  }
-`
+import {
+  NavContainer,
+  Logo,
+  MobileIcon,
+  NavLinks,
+  NavLink,
+} from "./header-styles"
 
 export const Header = () => {
   const [open, setOpen] = useState(false)
@@ -57,10 +19,10 @@ export const Header = () => {
         <Hamburger />
       </MobileIcon>
       <NavLinks>
-        <NavLink>ABOUT</NavLink>
-        <NavLink>PROCESS</NavLink>
-        <NavLink>PRODUCTS</NavLink>
-        <NavLink>SOLUTIONS</NavLink>
+        <NavLink href="/about">ABOUT</NavLink>
+        <NavLink href="/process">PROCESS</NavLink>
+        <NavLink href="/products">PRODUCTS</NavLink>
+        <NavLink href="/solutions">SOLUTIONS</NavLink>
       </NavLinks>
     </NavContainer>
   )
