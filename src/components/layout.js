@@ -4,7 +4,7 @@ import "../style/typography.scss"
 import "../style/global.scss"
 import dimensions from "../style/dimensions"
 import { layoutPaddingDesktop, layoutPaddingMobile } from "../style/variables"
-import Footer from "../components/footer.js"
+import Footer from "../components/footer/footer"
 
 const LayoutContainer = styled.div`
 
