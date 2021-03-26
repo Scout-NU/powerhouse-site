@@ -1,0 +1,33 @@
+{
+    "Main" : { },
+    "Social" : {
+      "email" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Email"
+        }
+      },
+      "social_media" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "social_icon" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "Social Icon"
+              }
+            },
+            "social_link" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Social Link"
+              }
+            }
+          },
+          "label" : "Social Media"
+        }
+      }
+    }
+  }
