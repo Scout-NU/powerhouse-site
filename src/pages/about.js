@@ -66,57 +66,61 @@ const MissionTextParagraph = styled.div`
 `
 const IndustryContextSection = styled.div`
   padding-top: 130px;
-  padding-left: 
+  padding-left: ;
 `
-const IndustryContextHeader = styled.div`
-  
-`
+const IndustryContextHeader = styled.div``
 const IndustryContextHeaderText = styled.div`
-  font-size: 36px;
+  font-size: calc(36px + (36 - 24) * ((100vw - 300px) / (1440 - 300)));
   font-weight: bold;
   padding-top: 26px;
 `
 
 const IndustryContextExamples = styled.div`
-  display: flex;
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-    flex-wrap: wrap;
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    display: flex;
+    justify-content: space-between;
   }
 `
-// I'm still working on the spacing between each example 
-// and changing the sizing of the content box changing as 
+// I'm still working on the spacing between each example
+// and changing the sizing of the content box changing as
 // the screen size changes
 const IndustryContextGroup = styled.div`
   padding-top: 26px;
-  margin-right: 41px;
-  width: 316px;
+  // margin-right: 82px;
+  width: 22vw;
   @media (max-width: ${dimensions.maxwidthTablet}px) {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0px;
+    margin-right: 0px;
     padding-top: 38px;
+    width: 100%;
   }
 `
 
 const IndustryContextImage = styled.div`
-  background-color: #CACACA;  
+  background-color: #cacaca;
   height: 243px;
-  width: 316px;
+  width: 22vw;
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 100%;
+  }
 `
 
 const IndustryContextExampleParagraph = styled.div`
   font-size: 16px;
   padding-top: 26px;
-  
+
+  width: 22vw;
+
+
   @media (max-width: ${dimensions.maxwidthTablet}px) {
-    width: 316px;
+    width: 100%;
   }
 `
-
 
 export default function About({ data }) {
   const aboutData = data.prismicAboutPage.data
 
-  console.log(aboutData.industry_context_explanation);
+  console.log(aboutData.industry_context_explanation)
   return (
     <Layout>
       <AboutHeader>
@@ -140,20 +144,24 @@ export default function About({ data }) {
       <IndustryContextSection>
         <IndustryContextHeader>
           <IconPlaceholder />
-          <IndustryContextHeaderText>{aboutData.industry_context_heading}</IndustryContextHeaderText>
+          <IndustryContextHeaderText>
+            {aboutData.industry_context_heading}
+          </IndustryContextHeaderText>
         </IndustryContextHeader>
 
         <IndustryContextExamples>
           {aboutData.industry_context_explanation.map(example => {
             return (
-            <IndustryContextGroup>
-              <IndustryContextImage></IndustryContextImage>
-              <IndustryContextExampleParagraph>{example.explanation_description}</IndustryContextExampleParagraph>
-            </IndustryContextGroup>
-          )})}
+              <IndustryContextGroup>
+                <IndustryContextImage></IndustryContextImage>
+                <IndustryContextExampleParagraph>
+                  {example.explanation_description}
+                </IndustryContextExampleParagraph>
+              </IndustryContextGroup>
+            )
+          })}
         </IndustryContextExamples>
       </IndustryContextSection>
-
     </Layout>
   )
 }
