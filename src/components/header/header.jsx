@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import dimensions from "../../style/dimensions"
 import Hamburger from "../../vectors/hamburger.svg"
+
 const NavContainer = styled.div``
 
 const Logo = styled.div`
@@ -13,7 +14,6 @@ const Logo = styled.div`
     text-align: center;
     font-size: 20px;
     padding-top: 24px;
-
   }
 `
 
@@ -35,7 +35,7 @@ const NavLink = styled.div`
 `
 
 const MobileIcon = styled.div`
-@media (min-width: ${dimensions.maxwidthTablet}px) {
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
     display: none;
   }
 
@@ -43,16 +43,17 @@ const MobileIcon = styled.div`
     left: 24px;
     top: 32px;
     position: absolute;
-    
   }
 `
 
-export default function header() {
+export const Header = () => {
+  const [open, setOpen] = useState(false)
+
   return (
     <NavContainer>
       <Logo>PowerHouse</Logo>
 
-      <MobileIcon>
+      <MobileIcon onClick={() => setOpen(!open)} className={open ? "open" : ""}>
         <Hamburger />
       </MobileIcon>
       <NavLinks>
@@ -64,3 +65,4 @@ export default function header() {
     </NavContainer>
   )
 }
+export default Header
