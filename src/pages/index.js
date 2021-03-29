@@ -5,15 +5,12 @@ import styled from "styled-components"
 import dimensions from "../style/dimensions"
 import Homepage from "../components/homepage/index"
 
-
-
 export default function Home({ data }) {
   const homepageData = data.prismicHomepage.data
 
   return (
-    <Layout>  
+    <Layout>
       <Homepage data={homepageData} />
-
     </Layout>
   )
 }

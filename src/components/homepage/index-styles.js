@@ -27,12 +27,9 @@ export const HeroTextSection = styled.div`
 `
 
 export const HeroHeadline = styled.div`
-  font-size: calc(64px + (64 - 32) * ((100vw - 300px) / (1440 - 300)));
-  font-weight: bold;
 `
 
 export const HeroDescription = styled.div`
-  font-size: calc(24px + (24 - 16) * ((100vw - 300px) / (1440 - 300)));
 `
 
 export const HeroCTA = styled.div`

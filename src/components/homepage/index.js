@@ -1,7 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
-import styled from "styled-components"
-import dimensions from "../../style/dimensions"
+import { H1, P } from "../../style/type-styles"
 import {
   HeroContainer,
   HeroTextSection,
@@ -14,10 +12,16 @@ export default function HomePage({ data }) {
   return (
     <HeroContainer>
       <HeroTextSection>
-        <HeroHeadline>{data.hero_headline}</HeroHeadline>
-        <HeroDescription>{data.hero_subtext}</HeroDescription>
+        <HeroHeadline>
+          <H1>{data.hero_headline}</H1>
+        </HeroHeadline>
+        <HeroDescription>
+          <P>{data.hero_subtext}</P>
+        </HeroDescription>
         <HeroCTA>
-          <a href={data.hero_button_destination.text}>{data.hero_cta_text}</a>
+          <a target="_blank" rel="noreferrer" href={data.hero_button_destination.text}>
+            {data.hero_cta_text}
+          </a>
         </HeroCTA>
       </HeroTextSection>
     </HeroContainer>
