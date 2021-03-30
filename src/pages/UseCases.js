@@ -1,7 +1,6 @@
 import { graphql } from "gatsby"
 
 import React from "react"
-import Layout from "../components/layout"
 
 export default function UseCasesPage({ data }) {
     const useCasesPageData = data.prismicUseCasesPage.data
