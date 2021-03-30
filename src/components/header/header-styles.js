@@ -1,8 +1,18 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 import dimensions from "../../style/dimensions"
+import colors from "../../style/colors"
 
+export const NavContainer = styled.div`
+  background-color: ${colors.gray_image};
+  padding-bottom: 32px;
+  &.colorChange {
+    background-color: ${colors.gray_CTA};
+  }
 
-export const NavContainer = styled.div``
+  position: fixed;
+  width: 100%;
+  transition: 0.5s all ease;
+`
 
 export const Logo = styled.div`
   font-weight: bold;
@@ -15,7 +25,6 @@ export const Logo = styled.div`
     font-size: 20px;
     padding-top: 24px;
     padding-left: 0px;
-
   }
 `
 
