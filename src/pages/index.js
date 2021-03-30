@@ -1,8 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import styled from "styled-components"
-import dimensions from "../style/dimensions"
 import Homepage from "../components/homepage/index"
 
 export default function Home({ data }) {
