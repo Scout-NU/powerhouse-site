@@ -81,9 +81,7 @@ const IndustryContextExamples = styled.div`
     justify-content: space-between;
   }
 `
-// I'm still working on the spacing between each example
-// and changing the sizing of the content box changing as
-// the screen size changes
+
 const IndustryContextGroup = styled.div`
   padding-top: 26px;
   // margin-right: 82px;
@@ -117,6 +115,100 @@ const IndustryContextExampleParagraph = styled.div`
   }
 `
 
+
+const CompanyComparisonSection = styled.div`
+  padding-top: 148px;
+`
+
+const CompanyComparisonSectionHeading = styled.div`
+  text-align: center;
+  font-size: calc(36px + (36 - 24) * ((100vw - 300px) / (1440 - 300)));
+  font-weight: bold;
+`
+
+const ProductBenefitSection = styled.div`
+  padding-top: 68px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+`
+
+const BenefitGroup = styled.div`
+  width: 15vw;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    flex: 50%;
+  }
+`
+
+const BenefitImage = styled.div`
+  background-color: #9d9d9d;
+  height: 11vw;
+  width: 11vw;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 125px;
+    height: 125px;
+  }
+`
+
+const BenefitTitle = styled.div`
+  font-size: calc(28px + (28 - 16) * ((100vw - 300px) / (1440 - 300)));
+  font-weight: bold;
+`
+
+const ProductComparison = styled.div`
+  margin-top: 170px;
+  display: flex;
+`
+
+
+const FeatureTitleColumn = styled.div`
+  margin-top: 110px;
+`
+
+const FeatureTitle = styled.div`
+  font-size: calc(28px + (28 - 14) * ((100vw - 300px) / (1440 - 300)));
+  font-weight: bold;
+  margin-top: 50px;
+`
+
+const CompetitorColumnGroup = styled.div`
+  display: flex;
+  margin-left: 12px;
+
+`
+
+const CompetitorColumn = styled.div`
+  margin-left: 51px;
+`
+
+
+const CompetitorName = styled.div`
+  font-size: calc(36px + (36 - 8) * ((100vw - 300px) / (1440 - 300)));
+  font-weight: bold;
+  
+`
+
+const IconGroup = styled.div`
+  margin-top: 68px;
+`
+
+const CompetitorIcon = styled.div`
+  width: 60px;
+  height: 60px;
+  background-color: #626262;
+  margin-top: 36px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 31px;
+    height: 31px;
+    margin-left: 4vw;
+  }
+`
+
+
 export default function About({ data }) {
   const aboutData = data.prismicAboutPage.data
 
@@ -148,7 +240,6 @@ export default function About({ data }) {
             {aboutData.industry_context_heading}
           </IndustryContextHeaderText>
         </IndustryContextHeader>
-
         <IndustryContextExamples>
           {aboutData.industry_context_explanation.map(example => {
             return (
@@ -162,6 +253,46 @@ export default function About({ data }) {
           })}
         </IndustryContextExamples>
       </IndustryContextSection>
+
+      <CompanyComparisonSection>
+        <CompanyComparisonSectionHeading>{aboutData.company_comparison_section_heading}</CompanyComparisonSectionHeading>
+        <ProductBenefitSection>
+          {aboutData.product_benefit.map(benefit => {
+            return (
+              <BenefitGroup>
+                <BenefitImage></BenefitImage>
+                <BenefitTitle>{benefit.product_benefit_title}</BenefitTitle>
+              </BenefitGroup>
+            )
+          })}
+        </ProductBenefitSection>
+
+        <ProductComparison>
+          <FeatureTitleColumn>
+            {aboutData.product_feature.map(feature => {
+              return (
+                <FeatureTitle>{feature.product_feature_name}</FeatureTitle>
+              )
+            })}
+          </FeatureTitleColumn>
+          <CompetitorColumnGroup>
+            {aboutData.company.map(competitor => {
+              return (
+                <CompetitorColumn>
+                  <CompetitorName>{competitor.company_name}</CompetitorName>
+                  <IconGroup>
+                    <CompetitorIcon />
+                    <CompetitorIcon />
+                    <CompetitorIcon />
+                    <CompetitorIcon />
+                    <CompetitorIcon />
+                  </IconGroup>
+                </CompetitorColumn>
+              )
+            })}
+          </CompetitorColumnGroup>
+        </ProductComparison>
+      </CompanyComparisonSection>
     </Layout>
   )
 }
