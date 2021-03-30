@@ -1,12 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Homepage from "../components/homepage/index"
 
 export default function Home({ data }) {
-
   const homepageData = data.prismicHomepage.data
 
-  return <Layout>{homepageData.hero_headline}</Layout>
+  return (
+    <Layout>
+      <Homepage data={homepageData} />
+    </Layout>
+  )
 }
 
 export const query = graphql`

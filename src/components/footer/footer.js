@@ -1,6 +1,4 @@
 import React from "react"
-import styled from "styled-components"
-import dimensions from "../../style/dimensions"
 import { StaticQuery, graphql } from "gatsby"
 
 import {
