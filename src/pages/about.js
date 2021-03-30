@@ -184,7 +184,6 @@ const CompetitorColumn = styled.div`
   margin-left: 51px;
 `
 
-
 const CompetitorName = styled.div`
   font-size: calc(36px + (36 - 8) * ((100vw - 300px) / (1440 - 300)));
   font-weight: bold;
@@ -206,6 +205,93 @@ const CompetitorIcon = styled.div`
     height: 31px;
     margin-left: 4vw;
   }
+`
+
+const CompanyBackgroundSection = styled.div`
+  margin-top: 150px;    
+`
+
+const GeneralDescriptionSection = styled.div`
+  width: 46vw;
+  margin-left: auto;
+  margin-right: auto;
+  
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 100%;
+  }
+`
+
+const CompanyBackgroundHeading = styled.div`
+  font-weight: bold;
+  font-size: calc(36px + (36 - 24) * ((100vw - 300px) / (1440 - 300)));
+  text-align: center;
+  padding-bottom: 50px;
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    padding-bottom: 30px;
+  }
+`
+
+const CompanyBackgroundDescription = styled.div`
+  font-size: calc(20px + (20 - 14) * ((100vw - 300px) / (1440 - 300)));
+`
+
+const CompanyTeamSection = styled.div`
+  margin-top: 90px;
+  width: 65vw;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 100%;
+  }
+`
+
+const CompanyTeamHeading = styled.div`
+  font-weight: bold;
+  font-size: calc(28px + (28 - 24) * ((100vw - 300px) / (1440 - 300)));
+  padding-bottom: 40px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    text-align: center;
+  }
+`
+
+const CompanyTeamMemberGroup = styled.div`
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    display: flex;
+    justify-content: space-between;
+  }
+`
+
+const TeamMember = styled.div`
+  width: 30vw;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 100%;
+    padding-bottom: 32px;
+  }
+`
+
+const MemberImage = styled.div`
+  background-color: #CACACA;
+  width: 30vw;
+  height: 292px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 100%;
+  }
+`
+
+const MemberTitle = styled.div`
+  font-weight: bold;
+  font-size: calc(28px + (28 - 24) * ((100vw - 300px) / (1440 - 300)));
+  padding-top: 16px;
+  padding-bottom: 16px;
+`
+
+const MemberDescription = styled.div`
+  font-size: calc(16px + (16 - 14) * ((100vw - 300px) / (1440 - 300)));
 `
 
 
@@ -293,6 +379,27 @@ export default function About({ data }) {
           </CompetitorColumnGroup>
         </ProductComparison>
       </CompanyComparisonSection>
+
+      <CompanyBackgroundSection>
+        <GeneralDescriptionSection>
+          <CompanyBackgroundHeading>{aboutData.company_background_section_heading}</CompanyBackgroundHeading>
+          <CompanyBackgroundDescription>{aboutData.company_background_description}</CompanyBackgroundDescription>
+        </GeneralDescriptionSection>
+        <CompanyTeamSection>
+          <CompanyTeamHeading>{aboutData.company_team_heading}</CompanyTeamHeading>
+          <CompanyTeamMemberGroup>
+            {aboutData.team_member_information.map(member => {
+              return (
+                <TeamMember>
+                  <MemberImage></MemberImage>
+                  <MemberTitle>{member.team_member_title}</MemberTitle>
+                  <MemberDescription>{member.team_member_description}</MemberDescription>
+                </TeamMember>
+              )
+            })}
+          </CompanyTeamMemberGroup>
+        </CompanyTeamSection>
+      </CompanyBackgroundSection>
     </Layout>
   )
 }
