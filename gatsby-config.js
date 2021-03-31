@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
+
 module.exports = {
   /* Your site config here */
   plugins: [
@@ -32,13 +33,17 @@ module.exports = {
         schemas: {
           // all the schemas here
           test: require("./src/schemas/test.json"),
+          product_page: require("./src/schemas/product_page.json"),
+          product: require("./src/schemas/product.json"),
+          Process: require("./src/schemas/process.json"),
+          Homepage: require("./src/schemas/Homepage.json"),
+          use_cases_page: require("./src/schemas/use_cases_page.json"),
+          use_case: require("./src/schemas/use_case.json"),
           About: require("./src/schemas/About.json"),
-          Process: require("./src/schemas/Process.json"),
 
-       },
-       typePathsFilenamePrefix:
-       'prismic-typepaths---powerhouse-site',
-      }
+        },
+        typePathsFilenamePrefix: "prismic-typepaths---powerhouse-site",
+      },
     },
   ],
 }
