@@ -1,16 +1,85 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Layout from "../components/layout"
+import styled from "styled-components"
+import dimensions from "../style/dimensions"
+
+const ProductPageHeading = styled.div`
+  font-size: calc(90px + (90 - 32) * ((100vw - 300px) / (1440 - 300)));
+  font-weight: bold;
+`
+
+const FeaturedProductSection = styled.div`
+  width: 100%;
+  padding-top: 40px;
+
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    width: 86vw;
+    display: flex;
+  }
+`
+
+const FeaturedProductImage = styled.div`
+  width: 47vw;
+  height: 432px;
+  background-color: #C4C4C4;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 100%;
+    height: 225px;
+  }
+`
+
+const FeaturedProductText = styled.div`
+  padding-left: 5vw;
+  padding-top: 52px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    padding-left: 0vw;
+    padding-top: 26px;
+  }
+`
+
+const FeaturedProductHeading = styled.div`
+  font-size: calc(20px + (20 - 16) * ((100vw - 300px) / (1440 - 300)));
+  text-transform: uppercase;
+`
+
+const FeaturedProductName = styled.div`
+  font-size: calc(40px + (40 - 24) * ((100vw - 300px) / (1440 - 300)));
+  font-weight: bold;
+  padding-top: 17px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    padding-top: 8px;
+  }
+`
+
+const FeaturedProductDescription = styled.div`
+  font-size: calc(18px + (18 - 16) * ((100vw - 300px) / (1440 - 300)));
+  padding-top: 32px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    padding-top: 15px;
+    
+  }
+`
 
 export default function ProductSection({ data }) {
   const productSectionData = data.prismicProductPage.data
 
   return (
-    <div>
-      {/* Mapping over individual products.  TODO: separate products based on category (homeowner or commerical) */}
-      {productSectionData.products.map(product => {
-        return <h1>{product.product.document.data.product_title}</h1>
-      })}
-    </div>
+    <Layout>
+      <ProductPageHeading>{productSectionData.product_page_main_heading}</ProductPageHeading>
+      <FeaturedProductSection>
+        <FeaturedProductImage></FeaturedProductImage>
+        <FeaturedProductText>
+          <FeaturedProductHeading>{productSectionData.featured_product_heading}</FeaturedProductHeading>
+          <FeaturedProductName>{productSectionData.featured_product_name}</FeaturedProductName>
+          <FeaturedProductDescription>{productSectionData.featured_product_description}</FeaturedProductDescription>
+        </FeaturedProductText>
+      </FeaturedProductSection>
+    </Layout>
   )
 }
 
