@@ -62,9 +62,9 @@ export default function About({ data }) {
           </IndustryContextHeaderText>
         </IndustryContextHeader>
         <IndustryContextExamples>
-          {data.industry_context_explanation.map(example => {
+          {data.industry_context_explanation.map((example, id) => {
             return (
-              <IndustryContextGroup>
+              <IndustryContextGroup key={id}>
                 <IndustryContextImage></IndustryContextImage>
                 <IndustryContextExampleParagraph>
                   {example.explanation_description}
@@ -126,16 +126,16 @@ export default function About({ data }) {
         <table>
           <tr>
             <th></th>
-            {data.company.map(competitor => (
+            {data.company.map((competitor, id) => (
               <>
-                <th>
+                <th key={id}>
                   <CompetitorName>{competitor.company_name}</CompetitorName>
                 </th>
               </>
             ))}
           </tr>
-          {data.product_feature.map(feature => (
-            <tr>
+          {data.product_feature.map((feature, id) => (
+            <tr key={id}>
               <td>
                 <FeatureTitle>{feature.product_feature_name}</FeatureTitle>
               </td>
@@ -168,9 +168,9 @@ export default function About({ data }) {
             {data.company_team_heading}
           </CompanyTeamHeading>
           <CompanyTeamMemberGroup>
-            {data.team_member_information.map(member => {
+            {data.team_member_information.map((member, id) => {
               return (
-                <TeamMember>
+                <TeamMember key={id}>
                   <MemberImage></MemberImage>
                   <MemberTitle>{member.team_member_title}</MemberTitle>
                   <MemberDescription>
