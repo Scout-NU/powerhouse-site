@@ -39,9 +39,8 @@ export const NavLinks = styled.div`
   }
 `
 
-export const NavLink = styled.a`
+export const NavLink = styled.div`
   font-weight: bold;
-  font-size: 16px;
   padding-left: 100px;
   text-decoration: none;
   color: #000000;

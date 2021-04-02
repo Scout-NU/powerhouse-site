@@ -8,32 +8,41 @@ import {
   NavLink,
 } from "./header-styles"
 
+import { NavText } from "../../style/type-styles"
+
 export const Header = () => {
   const [open, setOpen] = useState(false)
-  const [colorChange, setColorchange] = useState(false);
-  const changeNavbarColor = () =>{
-     if(typeof window !== "undefined" && window.scrollY >= 80){
-       setColorchange(true);
-     }
-     else{
-       setColorchange(false);
-     }
-  };
-  typeof window !== "undefined" && window.addEventListener('scroll', changeNavbarColor);
-
+  const [colorChange, setColorchange] = useState(false)
+  const changeNavbarColor = () => {
+    if (typeof window !== "undefined" && window.scrollY >= 80) {
+      setColorchange(true)
+    } else {
+      setColorchange(false)
+    }
+  }
+  typeof window !== "undefined" &&
+    window.addEventListener("scroll", changeNavbarColor)
 
   return (
-    <NavContainer className={colorChange ? 'navbar colorChange' : 'navbar'}>
+    <NavContainer className={colorChange ? "navbar colorChange" : "navbar"}>
       <Logo>PowerHouse</Logo>
 
       <MobileIcon onClick={() => setOpen(!open)} className={open ? "open" : ""}>
         <Hamburger />
       </MobileIcon>
       <NavLinks>
-        <NavLink href="/about">ABOUT</NavLink>
-        <NavLink href="/process">PROCESS</NavLink>
-        <NavLink href="/products">PRODUCTS</NavLink>
-        <NavLink href="/solutions">SOLUTIONS</NavLink>
+        <NavLink href="/about">
+          <NavText>ABOUT</NavText>
+        </NavLink>
+        <NavLink href="/process">
+          <NavText>PROCESS</NavText>
+        </NavLink>
+        <NavLink href="/products">
+          <NavText>PRODUCTS</NavText>
+        </NavLink>
+        <NavLink href="/solutions">
+          <NavText>SOLUTIONS</NavText>
+        </NavLink>
       </NavLinks>
     </NavContainer>
   )
