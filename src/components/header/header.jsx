@@ -19,7 +19,7 @@ export const Header = () => {
        setColorchange(false);
      }
   };
-  window.addEventListener('scroll', changeNavbarColor);
+  typeof window !== "undefined" && window.addEventListener('scroll', changeNavbarColor);
 
 
   return (
