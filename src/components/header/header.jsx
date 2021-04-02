@@ -10,18 +10,20 @@ import {
 
 export const Header = () => {
   const [open, setOpen] = useState(false)
-  const [colorChange, setColorchange] = useState(false)
-  const changeNavbarColor = () => {
-    if (typeof window !== "undefined" && window.scrollY >= 80) {
-      setColorchange(true)
-    } else {
-      setColorchange(false)
-    }
-  }
-  window.addEventListener("scroll", changeNavbarColor)
+  const [colorChange, setColorchange] = useState(false);
+  const changeNavbarColor = () =>{
+     if(typeof window !== "undefined" && window.scrollY >= 80){
+       setColorchange(true);
+     }
+     else{
+       setColorchange(false);
+     }
+  };
+  window.addEventListener('scroll', changeNavbarColor);
+
 
   return (
-    <NavContainer className={colorChange ? "navbar colorChange" : "navbar"}>
+    <NavContainer className={colorChange ? 'navbar colorChange' : 'navbar'}>
       <Logo>PowerHouse</Logo>
 
       <MobileIcon onClick={() => setOpen(!open)} className={open ? "open" : ""}>
