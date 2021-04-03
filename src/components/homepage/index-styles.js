@@ -26,11 +26,9 @@ export const HeroTextSection = styled.div`
   }
 `
 
-export const HeroHeadline = styled.div`
-`
+export const HeroHeadline = styled.div``
 
-export const HeroDescription = styled.div`
-`
+export const HeroDescription = styled.div``
 
 export const HeroCTA = styled.div`
   margin-top: 64px;
@@ -45,3 +43,74 @@ export const HeroCTA = styled.div`
     padding-bottom: 16px;
   }
 `
+
+export const FutureSection = styled.div`
+  height: 100vh;
+  position: relative;
+  padding-top: 64px;
+
+
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    display: flex;
+    align-items: center;
+    padding-top: 0px;
+
+
+  }
+`
+
+export const FutureText = styled.div``
+
+export const FutureImage = styled.div`
+  background-color: #c4c4c4;
+  width: 100%;
+  height: 450px;
+  margin-top: 80px;
+
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    position: absolute;
+    right: 0;
+    width: 42vw;
+    height: 768px;
+  }
+`
+
+export const FutureHeader = styled.div`
+  font-weight: bold;
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+  }
+`
+
+export const FutureSolarIcon = styled.div`
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  background-color: #a4a4a4;
+  margin-bottom: 48px;
+`
+
+export const FutureDescription = styled.div`
+  margin-top: 32px;
+  font-size: 18px;
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    font-size: 16px;
+  }
+`
+export const FutureCTA = styled.div`
+  margin-top: 64px;
+
+  a {
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border: solid #646464 1px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #646464;
+  }
+`
+
+export const HomePageContainer = styled.div``
