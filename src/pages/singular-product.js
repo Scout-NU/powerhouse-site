@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SingularProduct from "../components/singular-product/singular-product"
 
 export default function Home({ data }) {
-  const productData = data.prismicHomepage.data
+  const productData = data.prismicProduct.data
 
   return (
     <Layout>
