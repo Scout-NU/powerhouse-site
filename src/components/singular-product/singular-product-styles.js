@@ -83,3 +83,35 @@ export const ProductDescription = styled.div`
     padding-top: 24px;
   }
 `
+
+export const IconSection = styled.div`
+  margin-top: 127px;
+`
+
+export const IconSectionHeading = styled.div`
+  text-transform: uppercase;
+  font-size: 20px;
+`
+
+export const IconContainer = styled.div`
+  display: flex;
+  padding-top: 80px;
+  justify-content: space-between;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    flex: 50%;
+    padding-top: 54px;
+  }
+`
+
+export const Icon = styled.div``
+
+export const IconImage = styled.div`
+  width: 4vw;
+  height: 55px;
+  background-color: #C4C4C4;
+`
+
+export const IconCaption = styled.div`
+  font-size: 15px;
+`

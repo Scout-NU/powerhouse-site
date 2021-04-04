@@ -11,6 +11,12 @@ import {
     ProductType,
     ProductName,
     ProductDescription,
+    IconSection,
+    IconSectionHeading,
+    IconContainer,
+    Icon,
+    IconImage,
+    IconCaption,
   } from "./singular-product-styles"
 
   export default function SingularProductPage({ data }) {
@@ -33,6 +39,19 @@ import {
                 <ProductDescription>{data.product_description.text}</ProductDescription>
               </TextContainer>
           </HeroSection>
+          <IconSection>
+            <IconSectionHeading>{data.icon_section_title}</IconSectionHeading>
+            <IconContainer>
+              {data.icons.map(icon => {
+                return (
+                  <Icon>
+                    <IconImage></IconImage>
+                    <IconCaption>{icon.icon_text}</IconCaption>
+                  </Icon>
+                )
+              })}
+            </IconContainer>
+          </IconSection>
       </SingularProductContainer>
     )
   }
