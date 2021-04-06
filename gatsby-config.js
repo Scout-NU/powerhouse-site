@@ -43,5 +43,13 @@ module.exports = {
         typePathsFilenamePrefix: "prismic-typepaths---powerhouse-site",
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /vectors/ // See below to configure properly
+        }
+      }
+    }
   ],
 }
