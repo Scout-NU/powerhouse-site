@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import dimensions from "../../style/dimensions"
+
 import {
   layoutPaddingDesktop,
   layoutPaddingMobile,
@@ -62,7 +63,7 @@ export const FutureSection = styled.div`
 export const FutureText = styled.div``
 
 export const FutureImage = styled.div`
-  background-color: #c4c4c4;
+  background-color: ${colors.gray_icon};
   width: 100%;
   height: 450px;
   margin-top: 80px;
@@ -85,7 +86,7 @@ export const FutureSolarIcon = styled.div`
   width: 64px;
   height: 64px;
   border-radius: 8px;
-  background-color: #a4a4a4;
+  background-color: ${colors.gray_icon};
   margin-bottom: 48px;
 `
 
@@ -104,12 +105,12 @@ export const FutureCTA = styled.div`
     padding-left: 60px;
     padding-top: 16px;
     padding-bottom: 16px;
-    border: solid #646464 1px;
+    border: solid ${colors.gray_CTA}; 1px;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
-    color: #646464;
+    color: ${colors.gray_CTA};
   }
 `
 
