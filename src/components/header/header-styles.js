@@ -3,6 +3,7 @@ import dimensions from "../../style/dimensions"
 import colors from "../../style/colors"
 
 export const NavContainer = styled.div`
+  z-index: 1;
   background-color: ${colors.gray_image};
   padding-bottom: 32px;
   &.colorChange {

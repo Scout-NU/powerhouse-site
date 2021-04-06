@@ -114,4 +114,8 @@ export const FutureCTA = styled.div`
   }
 `
 
-export const HomePageContainer = styled.div``
+export const HomePageContainer = styled.div`
+position: relative;
+z-index: 0;
+
+`
