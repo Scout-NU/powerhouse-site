@@ -43,7 +43,7 @@ export const NavLink = styled.div`
   font-weight: bold;
   padding-left: 100px;
   text-decoration: none;
-  color: #000000;
+  color: ${colors.black900};
 `
 
 export const MobileIcon = styled.div`
