@@ -1,5 +1,5 @@
 import React from "react"
-import { H1, H2, P } from "../../style/type-styles"
+import { H1, P, H2 } from "../../style/type-styles"
 import {
   HomePageContainer,
   HeroContainer,
@@ -14,6 +14,13 @@ import {
   ImpactExample,
   ImpactStat,
   ImpactStatIcon,
+  FutureSection,
+  FutureText,
+  FutureSolarIcon,
+  FutureHeader,
+  FutureDescription,
+  FutureCTA,
+  FutureImage,
 } from "./index-styles"
 
 export default function HomePage({ data }) {
@@ -30,6 +37,7 @@ export default function HomePage({ data }) {
           <HeroCTA>
             <a
               target="_blank"
+              s
               rel="noreferrer"
               href={data.hero_button_destination.text}
             >
@@ -38,7 +46,22 @@ export default function HomePage({ data }) {
           </HeroCTA>
         </HeroTextSection>
       </HeroContainer>
+      <FutureSection>
+        <FutureText>
+          <FutureSolarIcon></FutureSolarIcon>
+          <FutureHeader>
+            <H2>{data.section_title}</H2>
+          </FutureHeader>
+          <FutureDescription>
+            <P>{data.section_description}</P>
+          </FutureDescription>
 
+          <FutureCTA>
+            <a href={data.button_destination}>{data.button_text}</a>
+          </FutureCTA>
+        </FutureText>
+        <FutureImage></FutureImage>
+      </FutureSection>
       <ImpactSection>
         <ImpactHeader>
           <ImpactIcon />
@@ -57,6 +80,7 @@ export default function HomePage({ data }) {
           ))}
         </ImpactStats>
       </ImpactSection>
+
     </HomePageContainer>
   )
 }
