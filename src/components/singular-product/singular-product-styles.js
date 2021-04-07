@@ -115,3 +115,52 @@ export const IconImage = styled.div`
 export const IconCaption = styled.div`
   font-size: 15px;
 `
+
+export const FeatureSpecSection = styled.div`
+  margin-top: 100px;
+`
+
+export const FeatureIcon = styled.div`
+  width: 3vw;
+  height: 45px;
+  background-color: #9D9D9D;
+`
+
+export const FeatureSpecHeading = styled.div`
+  font-size: calc(40px + (40 - 32) * ((100vw - 300px) / (1440 - 300)));
+  font-weight: bold;
+  padding-top: 20px;
+`
+
+export const FeatureSpecFeatures = styled.div`
+`
+
+export const Feature = styled.div`
+  padding-top: 90px;
+
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    display: flex;
+  }
+`
+
+export const FeatureName = styled.div`
+  text-transform: uppercase;
+  font-size: calc(20px + (20 - 16) * ((100vw - 300px) / (1440 - 300)));
+  width: 20vw;
+  padding-right: 2vw;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 100%;
+    padding-right: 0px;
+  }
+`
+
+export const FeatureDescription = styled.div`
+  font-size: 15px;
+  width: 35vw;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 100%;
+    padding-top: 16px;
+  }
+`

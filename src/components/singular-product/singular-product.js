@@ -17,6 +17,13 @@ import {
     Icon,
     IconImage,
     IconCaption,
+    FeatureSpecSection,
+    FeatureIcon,
+    FeatureSpecHeading,
+    FeatureSpecFeatures,
+    Feature,
+    FeatureName,
+    FeatureDescription,
   } from "./singular-product-styles"
 
   export default function SingularProductPage({ data }) {
@@ -52,6 +59,20 @@ import {
               })}
             </IconContainer>
           </IconSection>
+          <FeatureSpecSection>
+            <FeatureIcon></FeatureIcon>
+            <FeatureSpecHeading>{data.feature_title}</FeatureSpecHeading>
+            <FeatureSpecFeatures>
+              {data.features.map(feature => {
+                return (
+                  <Feature>
+                    <FeatureName>{feature.feature_name}</FeatureName>
+                    <FeatureDescription>{feature.feature_description.text}</FeatureDescription>
+                  </Feature>
+                )
+              })}
+            </FeatureSpecFeatures>
+          </FeatureSpecSection>
       </SingularProductContainer>
     )
   }
