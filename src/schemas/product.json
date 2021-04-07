@@ -129,5 +129,35 @@
           "label" : "Button Destination"
         }
       }
+    }, 
+    "Image Highlight Section": {
+      "image_highlight_heading": {
+        "type": "Text",
+        "config": {
+          "label": "Image Highlight Heading"
+        }
+      },
+      "image_highlight_group": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "highlighted_image": {
+              "type": "Image",
+              "config": {
+                "constraint": {},
+                "thumbnails": [],
+                "label": "Highlighted Image"
+              }
+            },
+            "image_highlight_description": {
+              "type": "Text",
+              "config": {
+                "label": "Image Highlight Description"
+              }
+            }
+          },
+          "label": "Image Highlight Group"
+        }
+      }
     }
   }

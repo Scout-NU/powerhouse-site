@@ -59,6 +59,17 @@ export const query = graphql`
           }
           product_title
           product_type
+          image_highlight_group {
+            highlighted_image {
+              dimensions {
+                height
+                width
+              }
+              url
+            }
+            image_highlight_description
+          }
+          image_highlight_heading
         }
       }
   }
