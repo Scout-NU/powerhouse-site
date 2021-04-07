@@ -17,6 +17,12 @@ import {
     Icon,
     IconImage,
     IconCaption,
+    ImageHighlightSection,
+    ImageHighlightHeading,
+    ImageHighlightGroupContainer,
+    ImageHighlightGroup,
+    HighlightedImage,
+    ImageHighlightDescription,
   } from "./singular-product-styles"
 
   export default function SingularProductPage({ data }) {
@@ -52,6 +58,19 @@ import {
               })}
             </IconContainer>
           </IconSection>
+          <ImageHighlightSection>
+            <ImageHighlightHeading>{data.image_highlight_heading}</ImageHighlightHeading>
+            <ImageHighlightGroupContainer>
+              {data.image_highlight_group.map(highlight => {
+                return (
+                  <ImageHighlightGroup>
+                    <HighlightedImage></HighlightedImage>
+                    <ImageHighlightDescription>{highlight.image_highlight_description}</ImageHighlightDescription>
+                  </ImageHighlightGroup>
+                )
+              })}
+            </ImageHighlightGroupContainer>
+          </ImageHighlightSection>
       </SingularProductContainer>
     )
   }

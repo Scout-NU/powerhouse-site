@@ -115,3 +115,43 @@ export const IconImage = styled.div`
 export const IconCaption = styled.div`
   font-size: 15px;
 `
+
+export const ImageHighlightSection = styled.div`
+  padding-top: 76px;
+  
+`
+
+export const ImageHighlightHeading = styled.div`
+  font-size: calc(64px + (64 - 32) * ((100vw - 300px) / (1440 - 300)));
+  font-weight: bold;
+  padding-top: 147px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    padding-top: 43px;
+  }  
+`
+
+export const ImageHighlightGroupContainer = styled.div`
+  
+`
+
+export const ImageHighlightGroup = styled.div`
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    display: flex;
+  }  
+`
+
+export const HighlightedImage = styled.div`
+  
+`
+
+export const ImageHighlightDescription = styled.div`
+  font-size: calc(18px + (18 - 16) * ((100vw - 300px) / (1440 - 300)));
+  width: 35vw;
+  
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 100%;
+    padding-top: 32px;
+  }  
+
+`
