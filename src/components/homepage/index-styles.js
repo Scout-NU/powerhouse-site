@@ -8,6 +8,20 @@ import {
 import "../../style/colors"
 import colors from "../../style/colors"
 
+
+export const HeroImage = styled.div`
+position: absolute;
+top: 0;
+z-index: 0;
+img {
+
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+
+}
+`
+
 export const HeroContainer = styled.div`
   height: 100vh;
   background-color: ${colors.gray_image};
@@ -21,6 +35,9 @@ export const HeroContainer = styled.div`
 
 export const HeroTextSection = styled.div`
   padding-top: 275px;
+  z-index: 2;
+  color: ${colors.white900};
+  position: relative;
   padding-left: ${layoutPaddingDesktop};
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     padding-left: ${layoutPaddingMobile};
@@ -34,7 +51,7 @@ export const HeroDescription = styled.div``
 export const HeroCTA = styled.div`
   margin-top: 64px;
   a {
-    background-color: ${colors.gray_CTA};
+    background-color: ${colors.orange900};
     text-transform: uppercase;
     color: ${colors.white900};
     padding-left: 48px;

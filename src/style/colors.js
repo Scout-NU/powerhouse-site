@@ -6,6 +6,8 @@ const colors = {
 
   black900: "#000000",
   white900: "#FFFFFF",
+
+  orange900: '#F27A28'
 }
 
 export default colors

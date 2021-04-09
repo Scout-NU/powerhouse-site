@@ -4,15 +4,16 @@ import colors from "../../style/colors"
 
 export const NavContainer = styled.div`
   z-index: 1;
-  background-color: ${colors.gray_image};
   padding-bottom: 32px;
   &.colorChange {
-    background-color: ${colors.gray_CTA};
+    background-color: rgb(0, 0, 0, 0.55);
   }
 
   position: fixed;
   width: 100%;
   transition: 0.5s all ease;
+  color: ${colors.white900};
+
 `
 
 export const Logo = styled.div`
@@ -44,7 +45,7 @@ export const NavLink = styled.div`
   font-weight: bold;
   padding-left: 100px;
   text-decoration: none;
-  color: ${colors.black900};
+  color: ${colors.white900};
 `
 
 export const MobileIcon = styled.div`

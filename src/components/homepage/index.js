@@ -14,12 +14,16 @@ import {
   FutureCTA,
   FutureImage,
   HomePageContainer,
+  HeroImage
 } from "./index-styles"
 
 export default function HomePage({ data }) {
   return (
     <HomePageContainer>
       <HeroContainer>
+        <HeroImage>
+          <img src={data.hero_background_image.url} />
+        </HeroImage>
         <HeroTextSection>
           <HeroHeadline>
             <H1>{data.hero_headline}</H1>
