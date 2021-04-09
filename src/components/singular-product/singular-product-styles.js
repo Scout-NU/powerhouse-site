@@ -125,9 +125,8 @@ export const ImageHighlightSection = styled.div`
 `
 
 export const ImageHighlightHeading = styled.div`
-  font-size: calc(64px + (64 - 32) * ((100vw - 300px) / (1440 - 300)));
-  font-weight: bold;
   padding-top: 147px;
+  margin-left: 4vw;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     padding-top: 43px;
@@ -140,7 +139,7 @@ export const ImageHighlightGroup = styled.div`
   &.second-section {
     position: absolute;
     right: 0;
-    top: 244px;
+    top: 200px;
   }
 
   @media (min-width: ${dimensions.maxwidthTablet}px) {
@@ -152,6 +151,7 @@ export const HighlightedImage = styled.div`
   &.first-image {
     img {
       margin-left: -${layoutPaddingDesktop};
+      margin-top: 60px;
     }
   }
 `
@@ -159,6 +159,7 @@ export const HighlightedImage = styled.div`
 export const ImageHighlightDescription = styled.div`
   font-size: calc(18px + (18 - 16) * ((100vw - 300px) / (1440 - 300)));
   width: 35vw;
+
   &.second-section {
     padding-top: 88px;
   }
@@ -171,11 +172,12 @@ export const ImageHighlightDescription = styled.div`
 
 export const ThirdSection = styled.div`
   &.third-section {
-
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     margin-top: 97px;
-    margin-right: -${layoutPaddingDesktop}
+    margin-right: -${layoutPaddingDesktop}; 
+    justify-content: space-between;
   }
 `
+

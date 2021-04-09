@@ -80,7 +80,7 @@ export default function SingularProductPage({ data }) {
                     <img src={highlight.highlighted_image.url} />
                   </HighlightedImage>
                   <ImageHighlightDescription
-                    className={id == 1 ? "second-section" : ""}
+                    className={id == 1 ? "second-section" : ""} 
                   >
                     {highlight.image_highlight_description}
                   </ImageHighlightDescription>
