@@ -28,7 +28,7 @@ export const Header = () => {
       <Logo>PowerHouse</Logo>
 
       <MobileIcon onClick={() => setOpen(!open)} className={open ? "open" : ""}>
-        <Hamburger />
+        <Hamburger className="hamburger" />
       </MobileIcon>
       <NavLinks>
         <NavLink href="/about">

@@ -49,6 +49,7 @@ export const NavLink = styled.div`
 `
 
 export const MobileIcon = styled.div`
+
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     display: none;
   }
