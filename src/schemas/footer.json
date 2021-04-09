@@ -1,33 +1,56 @@
 {
-    "Main" : { },
-    "Social" : {
-      "email" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Email"
-        }
-      },
-      "social_media" : {
-        "type" : "Group",
-        "config" : {
-          "fields" : {
-            "social_icon" : {
-              "type" : "Image",
-              "config" : {
-                "constraint" : { },
-                "thumbnails" : [ ],
-                "label" : "Social Icon"
-              }
-            },
-            "social_link" : {
-              "type" : "Text",
-              "config" : {
-                "label" : "Social Link"
-              }
+  "Main" : {
+    "footer_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Footer image"
+      }
+    }
+  },
+  "Social" : {
+    "email" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Email"
+      }
+    },
+    "social_media" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "social_icon" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "Social Icon"
             }
           },
-          "label" : "Social Media"
-        }
+          "social_link" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Social Link"
+            }
+          }
+        },
+        "label" : "Social Media"
+      }
+    }
+  },
+  "Sock" : {
+    "sock_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Sock Title"
+      }
+    },
+    "sock_description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Sock Description"
       }
     }
   }
+}

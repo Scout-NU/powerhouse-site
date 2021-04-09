@@ -1,10 +1,15 @@
 import styled from "styled-components"
 import dimensions from "../../style/dimensions"
+import {
+  layoutPaddingDesktop,
+  layoutPaddingMobile,
+} from "../../style/variables"
+
 export const FooterContainer = styled.div`
-  background-color: #848484;
+  background-color: rgb(0, 0, 0, 0.55);
   width: 100%;
   color: #ffffff;
-  position: relative;
+  position: absolute;
 `
 
 export const FooterMainContent = styled.div`
@@ -146,5 +151,92 @@ export const ScoutSection = styled.div`
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     padding-bottom: 48px;
+  }
+`
+
+export const FooterSection = styled.div`
+  position: relative;
+  // height: 725px;
+`
+
+export const SockContainer = styled.div`
+  z-index: 1;
+  position: relative;
+`
+
+export const SockContent = styled.div`
+  padding-left: ${layoutPaddingDesktop};
+  padding-right: ${layoutPaddingDesktop};
+
+  padding-top: 89px;
+  margin-bottom: 91px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    padding-left: ${layoutPaddingMobile};
+    padding-right: ${layoutPaddingMobile};
+  }
+`
+
+export const ConnectTitle = styled.div``
+
+export const SockEmailForm = styled.form`
+  margin-top: 32px;
+  margin-bottom: 32px;
+
+  input[type="text"] {
+    padding-top: 32px;
+    background: transparent;
+    border: none;
+    width: 36vw;
+    border-bottom: 4px solid #302f51;
+  }
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    input[type="text"] {
+      padding-top: 32px;
+      background: transparent;
+      border: none;
+      width: 100%;
+      border-bottom: 4px solid #302f51;
+    }
+  }
+
+  input[type="text"]::placeholder {
+    font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1440 - 320)));
+    color: #302f51;
+  }
+`
+
+export const SockDescription = styled.div`
+  width: 36vw;
+  margin-bottom: 48px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 100%;
+  }
+`
+
+export const SockCTA = styled.a`
+  font-size: 16px;
+  padding-right: 60px;
+  padding-left: 60px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: #f36135;
+  text-transform: uppercase;
+  color: #ffffff;
+`
+export const FooterImage = styled.div`
+  position: absolute;
+  z-index: 0;
+  height: 753px;
+
+  img {
+    width: 100vw;
+    object-fit: cover;
+    height: 100%;
+    
+
+
   }
 `
