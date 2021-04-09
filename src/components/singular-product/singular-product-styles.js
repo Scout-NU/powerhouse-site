@@ -1,5 +1,9 @@
 import styled from "styled-components"
 import dimensions from "../../style/dimensions"
+import {
+  layoutPaddingDesktop,
+  layoutPaddingMobile,
+} from "../../style/variables"
 
 export const SingularProductContainer = styled.div``
 
@@ -17,7 +21,7 @@ export const ImageContainer = styled.div``
 export const MainImage = styled.div`
   width: 47vw;
   height: 432px;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     width: 100%;
@@ -27,7 +31,7 @@ export const MainImage = styled.div`
 
 export const SmallImageContainer = styled.div`
   display: flex;
-  
+
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     justify-content: center;
   }
@@ -38,13 +42,13 @@ export const SmallImage = styled.div`
   height: 56px;
   margin-right: 18px;
   margin-top: 44px;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
-      width: 3vw;
-      height: 39px;
-      margin-right: 12px;
-      margin-top: 32px;
+    width: 3vw;
+    height: 39px;
+    margin-right: 12px;
+    margin-top: 32px;
   }
 `
 
@@ -71,7 +75,6 @@ export const ProductName = styled.div`
   padding-top: 27px;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
-    
   }
 `
 
@@ -109,7 +112,7 @@ export const Icon = styled.div``
 export const IconImage = styled.div`
   width: 4vw;
   height: 55px;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
 `
 
 export const IconCaption = styled.div`
@@ -118,7 +121,7 @@ export const IconCaption = styled.div`
 
 export const ImageHighlightSection = styled.div`
   padding-top: 76px;
-  
+  position: relative;
 `
 
 export const ImageHighlightHeading = styled.div`
@@ -128,30 +131,51 @@ export const ImageHighlightHeading = styled.div`
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     padding-top: 43px;
-  }  
+  }
 `
 
-export const ImageHighlightGroupContainer = styled.div`
-  
-`
+export const ImageHighlightGroupContainer = styled.div``
 
 export const ImageHighlightGroup = styled.div`
+  &.second-section {
+    position: absolute;
+    right: 0;
+    top: 244px;
+  }
+
   @media (min-width: ${dimensions.maxwidthTablet}px) {
-    display: flex;
-  }  
+    // display: flex;
+  }
 `
 
 export const HighlightedImage = styled.div`
-  
+  &.first-image {
+    img {
+      margin-left: -${layoutPaddingDesktop};
+    }
+  }
 `
 
 export const ImageHighlightDescription = styled.div`
   font-size: calc(18px + (18 - 16) * ((100vw - 300px) / (1440 - 300)));
   width: 35vw;
-  
+  &.second-section {
+    padding-top: 88px;
+  }
+
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     width: 100%;
     padding-top: 32px;
-  }  
+  }
+`
 
+export const ThirdSection = styled.div`
+  &.third-section {
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 97px;
+    margin-right: -${layoutPaddingDesktop}
+  }
 `
