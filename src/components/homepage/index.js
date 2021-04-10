@@ -17,9 +17,14 @@ import {
   HeroImage
 } from "./index-styles"
 
+import { Helmet } from "react-helmet"
+
+
 export default function HomePage({ data }) {
   return (
     <HomePageContainer>
+      <Helmet bodyAttributes={{ class: 'portfolio-page' }} />
+
       <HeroContainer>
         <HeroImage>
           <img src={data.hero_background_image.url} />
