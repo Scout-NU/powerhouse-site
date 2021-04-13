@@ -10,6 +10,7 @@ export const FooterContainer = styled.div`
   width: 100%;
   color: #ffffff;
   position: absolute;
+  bottom:
 `
 
 export const FooterMainContent = styled.div`
@@ -21,6 +22,8 @@ export const FooterMainContent = styled.div`
 export const SocialSection = styled.div`
   padding-left: 80px;
   padding-top: 50px;
+
+
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     padding-left: 32px;
   }
@@ -34,6 +37,9 @@ export const FooterHeader = styled.div`
 export const SocialIcons = styled.div`
   display: flex;
   padding-top: 15px;
+  img {
+    padding-right: 16px;
+  }
 `
 
 export const SocialPlaceholder = styled.div`
@@ -146,7 +152,7 @@ export const AddressSection = styled.div`
   padding-top: 16px;
 `
 export const ScoutSection = styled.div`
-  margin-top: 32px;
+  margin-top: 65px;
   color: #ffffff;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
@@ -162,6 +168,7 @@ export const FooterSection = styled.div`
 export const SockContainer = styled.div`
   z-index: 1;
   position: relative;
+  
 `
 
 export const SockContent = styled.div`
@@ -201,7 +208,8 @@ export const SockEmailForm = styled.form`
     }
   }
 
-  input[type="text"]::placeholder {
+  input[type="text"],
+  select {
     font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1440 - 320)));
     color: #302f51;
   }
@@ -229,14 +237,15 @@ export const SockCTA = styled.a`
 export const FooterImage = styled.div`
   position: absolute;
   z-index: 0;
-  height: 753px;
+  height: 768px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    height: 1080px;
+  }
 
   img {
     width: 100vw;
     object-fit: cover;
     height: 100%;
-    
-
-
   }
 `

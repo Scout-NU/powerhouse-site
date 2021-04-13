@@ -110,19 +110,11 @@ export default function footer({ data }) {
               </LinkSection>
 
               <EmailSection>
-                <form>
-                  <input
-                    type="text"
-                    placeholder="your@email.com"
-                    name="email"
-                    required
-                  />
-                </form>
                 <SocialIcons>
                   {data.prismicFooter.data.social_media.map(social => {
                     return (
                       <a href={social.social_link}>
-                        <SocialPlaceholder />
+                        <img src={social.social_icon.url} />
                       </a>
                     )
                   })}
