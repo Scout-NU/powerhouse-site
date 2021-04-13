@@ -7,7 +7,6 @@ import {
   SocialSection,
   FooterHeader,
   SocialIcons,
-  SocialPlaceholder,
   LinkSection,
   LinkColumn,
   EmailSection,
@@ -24,7 +23,7 @@ import {
 } from "./footer-styles"
 import BackgroundImage from "gatsby-background-image"
 
-import { Sub1, H3, Body } from "../../style/type-styles"
+import { Sub1, Body } from "../../style/type-styles"
 
 export default function footer({ data }) {
   return (
@@ -52,7 +51,7 @@ export default function footer({ data }) {
       render={data => (
         <FooterSection>
           <FooterImage>
-            <img src={data.prismicFooter.data.footer_image.url} />
+            <img alt="footer background image" src={data.prismicFooter.data.footer_image.url} />
           </FooterImage>
           <SockContainer>
             <SockContent>
@@ -114,7 +113,7 @@ export default function footer({ data }) {
                   {data.prismicFooter.data.social_media.map(social => {
                     return (
                       <a href={social.social_link}>
-                        <img src={social.social_icon.url} />
+                        <img alt="social icon" src={social.social_icon.url} />
                       </a>
                     )
                   })}

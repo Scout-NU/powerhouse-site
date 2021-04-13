@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import dimensions from "../../style/dimensions"
+import colors from "../../style/colors"
 import {
   layoutPaddingDesktop,
   layoutPaddingMobile,
@@ -8,7 +9,7 @@ import {
 export const FooterContainer = styled.div`
   background-color: rgb(0, 0, 0, 0.55);
   width: 100%;
-  color: #ffffff;
+  color: ${colors.white900};
   position: absolute;
   bottom:
 `
@@ -45,7 +46,7 @@ export const SocialIcons = styled.div`
 export const SocialPlaceholder = styled.div`
   width: 24px;
   height: 24px;
-  background-color: #a4a4a4;
+  background-color: ${colors.gray_icon};
   border-radius: 8px;
   margin-right: 16px;
 `
@@ -73,7 +74,7 @@ export const LinkSection = styled.div`
 
   a {
     text-decoration: none;
-    color: #ffffff;
+    color: ${colors.white900};
   }
 
   ul {
@@ -96,7 +97,7 @@ export const EmailSection = styled.div`
     width: 20vw;
     height: 36px;
     margin-top: 10px;
-    border: solid #626262 1px;
+    border: solid ${colors.blue900} 1px;
   }
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
@@ -104,7 +105,7 @@ export const EmailSection = styled.div`
       width: 80%;
       height: 36px;
       margin-top: 10px;
-      border: solid #626262 1px;
+      border: solid ${colors.blue900} 1px;
     }
   }
 
@@ -153,7 +154,7 @@ export const AddressSection = styled.div`
 `
 export const ScoutSection = styled.div`
   margin-top: 65px;
-  color: #ffffff;
+  color: ${colors.white900};
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     padding-bottom: 48px;
@@ -184,7 +185,11 @@ export const SockContent = styled.div`
   }
 `
 
-export const ConnectTitle = styled.div``
+export const ConnectTitle = styled.div`
+color: ${colors.blue900};
+
+
+`
 
 export const SockEmailForm = styled.form`
   margin-top: 32px;
@@ -195,7 +200,11 @@ export const SockEmailForm = styled.form`
     background: transparent;
     border: none;
     width: 36vw;
-    border-bottom: 4px solid #302f51;
+    border-bottom: 4px solid ${colors.blue900};
+  }
+
+  input[type="text"]::placeholder {
+    color: ${colors.blue900};
   }
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
@@ -204,14 +213,14 @@ export const SockEmailForm = styled.form`
       background: transparent;
       border: none;
       width: 100%;
-      border-bottom: 4px solid #302f51;
+      border-bottom: 4px solid ${colors.blue900};
     }
   }
 
   input[type="text"],
   select {
     font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1440 - 320)));
-    color: #302f51;
+    color: ${colors.blue900};
   }
 `
 
@@ -230,9 +239,9 @@ export const SockCTA = styled.a`
   padding-left: 60px;
   padding-top: 16px;
   padding-bottom: 16px;
-  background-color: #f36135;
+  background-color: ${colors.orange900};
   text-transform: uppercase;
-  color: #ffffff;
+  color: ${colors.white900};
 `
 export const FooterImage = styled.div`
   position: absolute;
