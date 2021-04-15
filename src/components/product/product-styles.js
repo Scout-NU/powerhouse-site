@@ -12,16 +12,33 @@ export const HeroSection = styled.div`
   }
 `
 
-export const ImageContainer = styled.div``
+export const ImageContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
 
-export const MainImage = styled.div`
-  width: 47vw;
-  height: 432px;
-  background-color: #C4C4C4;
+  img {
+    width: 4vw;
+    height: 56px;
+    margin-right: 18px;
+    margin-top: 44px;
 
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-    width: 100%;
-    height: 225px;
+    @media (max-width: ${dimensions.maxwidthTablet}px) {
+      width: 3vw;
+      height: 39px;
+      margin-right: 12px;
+      margin-top: 32px;
+    }
+
+    &.main-image {
+      width: 47vw;
+      height: 432px;
+      flex: 100%;
+      
+      @media (max-width: ${dimensions.maxwidthTablet}px) {
+        width: 100%;
+        height: 225px;
+      }
+    }
   }
 `
 
@@ -30,21 +47,6 @@ export const SmallImageContainer = styled.div`
   
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     justify-content: center;
-  }
-`
-
-export const SmallImage = styled.div`
-  width: 4vw;
-  height: 56px;
-  margin-right: 18px;
-  margin-top: 44px;
-  background-color: #C4C4C4;
-
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-      width: 3vw;
-      height: 39px;
-      margin-right: 12px;
-      margin-top: 32px;
   }
 `
 

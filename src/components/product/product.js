@@ -4,28 +4,22 @@ import {
     SingularProductContainer,
     HeroSection,
     ImageContainer,
-    MainImage,
-    SmallImageContainer,
-    SmallImage,
     TextContainer,
     ProductType,
     ProductName,
     ProductDescription,
-  } from "./singular-product-styles"
+  } from "./product-styles"
 
   export default function SingularProductPage({ data }) {
     return (
       <SingularProductContainer>
           <HeroSection>
               <ImageContainer>
-                  <MainImage></MainImage>
-                  <SmallImageContainer>
-                      <SmallImage></SmallImage>
-                      <SmallImage></SmallImage>
-                      <SmallImage></SmallImage>
-                      <SmallImage></SmallImage>
-                      <SmallImage></SmallImage>
-                  </SmallImageContainer>
+                {data.product_images.map((image, id) => {
+                  return (
+                    <img src={image.url} alt="Product 1" key={id} className={id === 0? "main-image" : ""}/>
+                  )
+                })}
               </ImageContainer>
               <TextContainer>
                 <ProductType>{data.product_type}</ProductType>

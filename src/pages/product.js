@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import SingularProduct from "../components/singular-product/singular-product"
+import SingularProduct from "../components/product/product"
 
-export default function Home({ data }) {
+export default function Product({ data }) {
   const productData = data.prismicProduct.data
 
   return (
