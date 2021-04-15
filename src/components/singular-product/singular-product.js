@@ -45,7 +45,9 @@ import {
               {data.icons.map(icon => {
                 return (
                   <Icon>
-                    <IconImage></IconImage>
+                    <IconImage>
+                      <img src={icon.icon_image.url} alt="Icon"/>
+                    </IconImage>
                     <IconCaption>{icon.icon_text}</IconCaption>
                   </Icon>
                 )

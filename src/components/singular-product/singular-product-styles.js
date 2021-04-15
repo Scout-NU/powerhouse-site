@@ -91,27 +91,40 @@ export const IconSection = styled.div`
 export const IconSectionHeading = styled.div`
   text-transform: uppercase;
   font-size: 20px;
+  font-weight: bold;
 `
 
 export const IconContainer = styled.div`
   display: flex;
-  padding-top: 80px;
+  margin-top: 80px;
   justify-content: space-between;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
-    flex: 50%;
-    padding-top: 54px;
+    flex-wrap: wrap;
+    margin-top: 54px;
   }
 `
 
-export const Icon = styled.div``
+export const Icon = styled.div`
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    margin-top: 30px;
+  }
+`
 
 export const IconImage = styled.div`
-  width: 4vw;
+  width: 54px;
   height: 55px;
-  background-color: #C4C4C4;
+  margin-left: auto;
+  margin-right: auto;
 `
 
 export const IconCaption = styled.div`
-  font-size: 15px;
+  font-size: calc(18px + (18 - 16) * ((100vw - 300px) / (1440 - 300)));
+  margin-top: 25px;
+  width: 12vw;
+  text-align: center;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 44vw;
+  }
 `
