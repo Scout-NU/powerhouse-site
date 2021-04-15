@@ -27,7 +27,7 @@ export default function HomePage({ data }) {
       <HomePageContainer>
         <HeroContainer>
           <HeroImage>
-            <img src={data.hero_background_image.url} />
+            <img alt="hero image" src={data.hero_background_image.url} />
           </HeroImage>
           <HeroTextSection>
             <HeroHeadline>
@@ -51,7 +51,7 @@ export default function HomePage({ data }) {
 
         <FutureSection>
           <FutureText>
-            <FutureSolarIcon></FutureSolarIcon>
+            <FutureSolarIcon alt="Future of Solar Icon"></FutureSolarIcon>
             <FutureHeader>
               <H2>{data.section_title}</H2>
             </FutureHeader>

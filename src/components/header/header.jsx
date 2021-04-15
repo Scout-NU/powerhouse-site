@@ -22,15 +22,14 @@ export const Header = ({ home }) => {
   }
   typeof window !== "undefined" &&
     window.addEventListener("scroll", changeNavbarColor)
-  //
   return (
     <NavContainer
       className={
         (colorChange ? "navbar colorChange" : "navbar") ||
-        (home == true ? "home-header" : "")
+        (home === true ? "home-header" : "")
       }
     >
-      <Logo className={home === true ? "home-header" : ""}>PowerHouse</Logo>
+      <Logo alt="PowerHouse Logo" className={home === true ? "home-header" : ""}>PowerHouse</Logo>
 
       <MobileIcon onClick={() => setOpen(!open)} className={open ? "open" : ""}>
         <Hamburger className="hamburger" />
