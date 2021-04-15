@@ -11,7 +11,6 @@ export const FooterContainer = styled.div`
   width: 100%;
   color: ${colors.white900};
   position: absolute;
-  bottom:
 `
 
 export const FooterMainContent = styled.div`
@@ -163,7 +162,6 @@ export const ScoutSection = styled.div`
 
 export const FooterSection = styled.div`
   position: relative;
-  // height: 725px;
 `
 
 export const SockContainer = styled.div`

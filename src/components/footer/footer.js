@@ -21,8 +21,6 @@ import {
   SockCTA,
   FooterImage,
 } from "./footer-styles"
-import BackgroundImage from "gatsby-background-image"
-
 import { Sub1, Body } from "../../style/type-styles"
 
 export default function footer({ data }) {
@@ -32,13 +30,16 @@ export default function footer({ data }) {
         query prismicFooter {
           prismicFooter {
             data {
+              powerhouse_title
               sock_description
               sock_title
+              address
               footer_image {
                 url
               }
               email
               social_media {
+                social_type
                 social_icon {
                   url
                 }
@@ -51,12 +52,17 @@ export default function footer({ data }) {
       render={data => (
         <FooterSection>
           <FooterImage>
-            <img alt="footer background image" src={data.prismicFooter.data.footer_image.url} />
+            <img
+              alt="PowerHouse house footer background image"
+              src={data.prismicFooter.data.footer_image.url}
+            />
           </FooterImage>
           <SockContainer>
             <SockContent>
               <ConnectTitle>
-                <Sub1>{data.prismicFooter.data.sock_title}</Sub1>
+                <Sub1>
+                  <label>{data.prismicFooter.data.sock_title}</label>
+                </Sub1>
                 <SockEmailForm>
                   <input type="text" placeholder="Enter your email" />
                 </SockEmailForm>
@@ -64,7 +70,9 @@ export default function footer({ data }) {
                   <Body>{data.prismicFooter.data.sock_description}</Body>
                 </SockDescription>
 
-                <SockCTA>Sign Up</SockCTA>
+                <SockCTA role="button" type="submit">
+                  Sign Up
+                </SockCTA>
               </ConnectTitle>
             </SockContent>
           </SockContainer>
@@ -72,9 +80,11 @@ export default function footer({ data }) {
           <FooterContainer>
             <FooterMainContent>
               <SocialSection>
-                <FooterHeader>Powerhouse</FooterHeader>
+                <FooterHeader>
+                  {data.prismicFooter.data.powerhouse_title}
+                </FooterHeader>
                 <AddressSection>
-                  123 Lorem Ipsum Dolor Tempor Incididunt YZ, 12345 123-456-7890
+                  {data.prismicFooter.data.address}{" "}
                 </AddressSection>
               </SocialSection>
 
@@ -110,10 +120,13 @@ export default function footer({ data }) {
 
               <EmailSection>
                 <SocialIcons>
-                  {data.prismicFooter.data.social_media.map(social => {
+                  {data.prismicFooter.data.social_media.map((social, idx) => {
                     return (
-                      <a href={social.social_link}>
-                        <img alt="social icon" src={social.social_icon.url} />
+                      <a key={idx} href={social.social_link}>
+                        <img
+                          alt={social.social_type}
+                          src={social.social_icon.url}
+                        />
                       </a>
                     )
                   })}
