@@ -18,10 +18,10 @@ const LayoutBody = styled.div`
   }
 `
 
-const Layout = ({ children }) => {
+const Layout = ({ children, home }) => {
   return (
     <LayoutContainer>
-      <Header />
+      <Header home={home} />
       <LayoutBody>{children}</LayoutBody>
       <Footer />
     </LayoutContainer>
