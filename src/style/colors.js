@@ -4,8 +4,15 @@ const colors = {
   gray_icon: "#A4A4A4",
   gray_CTA: "#646464",
 
-  black900: "#000000",
+  black900: "#253253",
   white900: "#FFFFFF",
+
+  orange900: "#F27A28",
+  blue900: "#245373",
+  lightblue900: "#6480A5",
+  lighterblue900: "#6EA8C0",
+  softblue900: "#ECF3F7",
+  gray900: "#585858",
 }
 
 export default colors

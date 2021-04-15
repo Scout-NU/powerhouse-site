@@ -1,14 +1,15 @@
 import { graphql } from "gatsby"
 
 import React from "react"
+import Layout from "../components/layout"
 
 export default function About({ data }) {
     const aboutData = data.prismicAboutPage.data
 
     return (
-        <div>
+        <Layout>
             <h1>{aboutData.company_background_section_heading}</h1>
-        </div>
+        </Layout>
     )
 }
 
