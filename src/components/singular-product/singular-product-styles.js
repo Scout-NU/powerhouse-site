@@ -123,7 +123,6 @@ export const FeatureSpecSection = styled.div`
 export const FeatureIcon = styled.div`
   width: 3vw;
   height: 45px;
-  background-color: #9D9D9D;
 `
 
 export const FeatureSpecHeading = styled.div`
@@ -132,8 +131,7 @@ export const FeatureSpecHeading = styled.div`
   padding-top: 20px;
 `
 
-export const FeatureSpecFeatures = styled.div`
-`
+export const FeatureSpecFeatures = styled.div``
 
 export const Feature = styled.div`
   padding-top: 90px;
@@ -152,6 +150,20 @@ export const FeatureName = styled.div`
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     width: 100%;
     padding-right: 0px;
+  }
+`
+
+export const FeatureImage = styled.div`
+  img {
+    &.not-image {
+      display: none;
+    }
+  }
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    img {
+      width: 87vw;
+    }
   }
 `
 

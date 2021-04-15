@@ -74,6 +74,14 @@
       }
     },
     "Feature Section" : {
+      "feature_icon": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Feature Icon"
+        }
+      },
       "feature_title" : {
         "type" : "Text",
         "config" : {

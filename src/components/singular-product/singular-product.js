@@ -23,6 +23,7 @@ import {
     FeatureSpecFeatures,
     Feature,
     FeatureName,
+    FeatureImage,
     FeatureDescription,
   } from "./singular-product-styles"
 
@@ -60,13 +61,22 @@ import {
             </IconContainer>
           </IconSection>
           <FeatureSpecSection>
-            <FeatureIcon></FeatureIcon>
+            <FeatureIcon>
+              <img src={data.feature_icon.url} alt="Orange checklist icon"/>
+            </FeatureIcon>
             <FeatureSpecHeading>{data.feature_title}</FeatureSpecHeading>
             <FeatureSpecFeatures>
-              {data.features.map(feature => {
+              {data.features.map((feature, id) => {
                 return (
                   <Feature>
                     <FeatureName>{feature.feature_name}</FeatureName>
+                    <FeatureImage>
+                      <img key={id} 
+                      className={id === 0? "first-image" : ""} 
+                      className={id !== 0? "not-image" : ""}
+                      src={feature.feature_image.url} 
+                      alt="Feature of a product"/>
+                    </FeatureImage>
                     <FeatureDescription>{feature.feature_description.text}</FeatureDescription>
                   </Feature>
                 )
