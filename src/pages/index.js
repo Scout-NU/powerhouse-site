@@ -7,7 +7,7 @@ export default function Home({ data }) {
   const homepageData = data.prismicHomepage.data
 
   return (
-    <Layout>
+    <Layout home={true}>
       <Homepage data={homepageData} />
     </Layout>
   )
