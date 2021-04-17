@@ -43,7 +43,7 @@ const P = styled.p`
   font-size: ${fontSizes.p};
 `
 
-const NavText = styled.a`
+const NavText = styled.div`
   font-size: ${fontSizes.nav};
 
 
