@@ -38,13 +38,13 @@ export const Header = ({ home }) => {
         <NavLink href="/about">
           <NavText>ABOUT</NavText>
         </NavLink>
-        <NavLink href="/process">
+        <NavLink href="/about">
           <NavText>PROCESS</NavText>
         </NavLink>
-        <NavLink href="/products">
+        <NavLink href="/about">
           <NavText>PRODUCTS</NavText>
         </NavLink>
-        <NavLink href="/UseCases">
+        <NavLink href="/about">
           <NavText>SOLUTIONS</NavText>
         </NavLink>
       </NavLinks>
