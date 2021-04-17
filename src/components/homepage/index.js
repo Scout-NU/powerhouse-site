@@ -67,7 +67,7 @@ export default function HomePage({ data }) {
             </FutureCTA>
           </FutureText>
           <FutureImage>
-            <img src={data.section_image.url} />
+            <img alt={data.section_image_alt} src={data.section_image.url} />
           </FutureImage>
         </FutureSection>
       </HomePageContainer>

@@ -19,6 +19,7 @@ export const query = graphql`
       data {
         section_title
         section_description
+        section_image_alt
         section_image {
           url
           dimensions {
