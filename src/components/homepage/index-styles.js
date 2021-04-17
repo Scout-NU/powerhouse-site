@@ -8,18 +8,15 @@ import {
 import "../../style/colors"
 import colors from "../../style/colors"
 
-
 export const HeroImage = styled.div`
-position: absolute;
-top: 0;
-z-index: 0;
-img {
-
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-
-}
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
 `
 
 export const HeroContainer = styled.div`
@@ -67,13 +64,10 @@ export const FutureSection = styled.div`
   position: relative;
   padding-top: 64px;
 
-
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     display: flex;
     align-items: center;
     padding-top: 0px;
-
-
   }
 `
 
@@ -132,7 +126,66 @@ export const FutureCTA = styled.div`
 `
 
 export const HomePageContainer = styled.div`
-position: relative;
-z-index: 0;
+  position: relative;
+  z-index: 0;
+`
 
+export const SolutionsSection = styled.div`
+  height: 100vh;
+  margin-top: 100px;
+  color: ${colors.blue900};
+  padding-bottom: 100px;
+
+`
+
+export const SolutionsCard = styled.div`
+  a {
+    text-decoration: none;
+    color: ${colors.blue900};
+  }
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    margin-bottom: 48px;
+    margin-top: 48px;
+  }
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    img {
+      width: 25vw;
+      height: 248px;
+
+      object-fit: cover;
+    }
+  }
+
+  text-align: center;
+`
+
+export const SolutionsCards = styled.div`
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    display: flex;
+    justify-content: space-between;
+  }
+`
+
+export const SolutionsCTA = styled.div`
+margin-top: 64px;
+display: flex;
+justify-content: center;
+
+a {
+  padding-right: 60px;
+  padding-left: 60px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border: solid ${colors.orange900}; 1px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: ${colors.orange900};
+}
 `
