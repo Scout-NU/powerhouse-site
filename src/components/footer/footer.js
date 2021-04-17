@@ -34,6 +34,7 @@ export default function footer({ data }) {
               sock_description
               sock_title
               address
+              footer_image_alt
               footer_image {
                 url
               }
@@ -53,7 +54,7 @@ export default function footer({ data }) {
         <FooterSection>
           <FooterImage>
             <img
-              alt="PowerHouse house footer background image"
+              alt={data.prismicFooter.data.footer_image_alt}
               src={data.prismicFooter.data.footer_image.url}
             />
           </FooterImage>

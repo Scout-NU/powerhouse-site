@@ -7,7 +7,7 @@ import {
 } from "../../style/variables"
 
 export const FooterContainer = styled.div`
-  background-color: rgb(0, 0, 0, 0.55);
+  background-color: ${colors.black_overlay};
   width: 100%;
   color: ${colors.white900};
   position: absolute;
