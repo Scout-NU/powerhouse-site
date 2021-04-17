@@ -57,7 +57,9 @@ export default function HomePage({ data }) {
 
         <FutureSection>
           <FutureText>
-            <FutureSolarIcon alt="Future of Solar Icon"></FutureSolarIcon>
+            <FutureSolarIcon alt="Future of Solar Icon">
+              <SunIcon />
+            </FutureSolarIcon>
             <FutureHeader>
               <H2>{data.section_title}</H2>
             </FutureHeader>
@@ -69,7 +71,9 @@ export default function HomePage({ data }) {
               <a href={data.button_destination}>{data.button_text}</a>
             </FutureCTA>
           </FutureText>
-          <FutureImage></FutureImage>
+          <FutureImage>
+            <img alt={data.section_image_alt} src={data.section_image.url} />
+          </FutureImage>
         </FutureSection>
 
         <SolutionsSection>

@@ -13,6 +13,7 @@ const colors = {
   lighterblue900: "#6EA8C0",
   softblue900: "#ECF3F7",
   gray900: "#585858",
+  black_overlay: "rgb(0, 0, 0, 0.55)"
 }
 
 export default colors
