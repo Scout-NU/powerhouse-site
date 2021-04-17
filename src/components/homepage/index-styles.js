@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import dimensions from "../../style/dimensions"
-
 import {
   layoutPaddingDesktop,
   layoutPaddingMobile,
@@ -8,18 +7,15 @@ import {
 import "../../style/colors"
 import colors from "../../style/colors"
 
-
 export const HeroImage = styled.div`
-position: absolute;
-top: 0;
-z-index: 0;
-img {
-
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-
-}
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
 `
 
 export const HeroContainer = styled.div`
@@ -67,27 +63,28 @@ export const FutureSection = styled.div`
   position: relative;
   padding-top: 64px;
 
-
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     display: flex;
     align-items: center;
     padding-top: 0px;
-
-
   }
 `
 
 export const FutureText = styled.div``
 
 export const FutureImage = styled.div`
-  background-color: ${colors.gray_icon};
   width: 100%;
   height: 450px;
   margin-top: 80px;
 
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     position: absolute;
-    right: 0;
+    right: -${layoutPaddingDesktop};
     width: 42vw;
     height: 768px;
   }
@@ -95,6 +92,7 @@ export const FutureImage = styled.div`
 
 export const FutureHeader = styled.div`
   font-weight: bold;
+  color: ${colors.blue900};
   @media (min-width: ${dimensions.maxwidthTablet}px) {
   }
 `
@@ -102,14 +100,23 @@ export const FutureHeader = styled.div`
 export const FutureSolarIcon = styled.div`
   width: 64px;
   height: 64px;
-  border-radius: 8px;
-  background-color: ${colors.gray_icon};
   margin-bottom: 48px;
+
+
+
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    svg {
+      width: 118px;
+      height: 42px;
+    }
+  }
 `
 
 export const FutureDescription = styled.div`
   margin-top: 32px;
   font-size: 18px;
+  color: ${colors.blue900};
+
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     font-size: 16px;
   }
@@ -122,17 +129,16 @@ export const FutureCTA = styled.div`
     padding-left: 60px;
     padding-top: 16px;
     padding-bottom: 16px;
-    border: solid ${colors.gray_CTA}; 1px;
+    border: solid ${colors.orange900}; 1px;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
-    color: ${colors.gray_CTA};
+    color: ${colors.orange900};
   }
 `
 
 export const HomePageContainer = styled.div`
-position: relative;
-z-index: 0;
-
+  position: relative;
+  z-index: 0;
 `
