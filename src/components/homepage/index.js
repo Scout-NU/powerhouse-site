@@ -22,7 +22,7 @@ import {
 } from "./index-styles"
 
 import TreeIcon from "../../vectors/renewable-tree-icon.svg"
-
+import SunIcon from "../../vectors/sun-icon.svg"
 import { Helmet } from "react-helmet"
 
 export default function HomePage({ data }) {
