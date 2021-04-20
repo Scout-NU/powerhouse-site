@@ -1,5 +1,9 @@
 import styled from "styled-components"
 import dimensions from "../../style/dimensions"
+import {
+  layoutPaddingDesktop,
+  layoutPaddingMobile,
+} from "../../style/variables"
 
 export const SingularProductContainer = styled.div``
 
@@ -118,6 +122,64 @@ export const IconCaption = styled.div`
   text-align: center;
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     width: 44vw;
+  }
+`
+
+export const ImageHighlightSection = styled.div`
+  padding-top: 76px;
+  position: relative;
+`
+
+export const ImageHighlightHeading = styled.div`
+  padding-top: 147px;
+  margin-left: 4vw;
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    padding-top: 43px;
+  }
+`
+
+export const ImageHighlightGroupContainer = styled.div``
+
+export const ImageHighlightGroup = styled.div`
+  &.second-section {
+    position: absolute;
+    right: 0;
+    top: 200px;
+  }
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    // display: flex;
+  }
+`
+
+export const HighlightedImage = styled.div`
+  &.first-image {
+    img {
+      margin-left: -${layoutPaddingDesktop};
+      margin-top: 60px;
+    }
+  }
+`
+
+export const ImageHighlightDescription = styled.div`
+  font-size: calc(18px + (18 - 16) * ((100vw - 300px) / (1440 - 300)));
+  width: 35vw;
+  &.second-section {
+    padding-top: 88px;
+  }
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 100%;
+    padding-top: 32px;
+  }
+`
+
+export const ThirdSection = styled.div`
+  &.third-section {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 97px;
+    margin-right: -${layoutPaddingDesktop}; 
+    justify-content: space-between;
   }
 `
 

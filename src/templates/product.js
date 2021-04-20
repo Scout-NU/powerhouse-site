@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import {H3, P} from "../style/type-styles"
+import {H1, H3, P} from "../style/type-styles"
 import {
   SingularProductContainer,
   HeroSection,
@@ -17,6 +17,13 @@ import {
   Icon,
   IconImage,
   IconCaption,
+  ImageHighlightSection,
+  ImageHighlightHeading,
+  ImageHighlightGroupContainer,
+  ImageHighlightGroup,
+  HighlightedImage,
+  ImageHighlightDescription,
+  ThirdSection,
   FeatureSpecSection,
   FeatureIcon,
   FeatureSpecHeading,
@@ -69,6 +76,34 @@ export default function Product({ data }) {
           })}
         </IconContainer>
       </IconSection>
+
+      <ImageHighlightSection>
+      <ImageHighlightHeading>
+          <H1>{products.data.image_highlight_heading}</H1>
+        </ImageHighlightHeading>
+        <ImageHighlightGroupContainer>
+          {products.data.image_highlight_group.map((highlight, id) => {
+            return (
+              <ImageHighlightGroup
+                key={id}
+                className={id == 0 ? "first" : ""}
+                className={id == 1 ? "second-section" : ""}
+              >
+                <ThirdSection className={id == 2 ? "third-section" : ""}>
+                  <HighlightedImage className={id == 0 ? "first-image" : ""}>
+                    <img src={highlight.highlighted_image.url} />
+                  </HighlightedImage>
+                  <ImageHighlightDescription
+                    className={id == 1 ? "second-section" : ""} 
+                  >
+                    {highlight.image_highlight_description}
+                  </ImageHighlightDescription>
+                </ThirdSection>
+              </ImageHighlightGroup>
+            )
+          })}
+        </ImageHighlightGroupContainer>
+      </ImageHighlightSection>
 
       <FeatureSpecSection>
         <FeatureIcon>
@@ -147,6 +182,17 @@ export const query = graphql`
               }
             }
             product_type
+            image_highlight_group {
+              highlighted_image {
+                dimensions {
+                  height
+                  width
+                }
+                url
+              }
+              image_highlight_description
+            }
+            image_highlight_heading
           }
         }
       }
