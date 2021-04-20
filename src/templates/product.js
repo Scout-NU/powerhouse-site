@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import {H3, P} from "../style/type-styles"
 import {
   SingularProductContainer,
   HeroSection,
@@ -12,7 +13,6 @@ import {
   ProductName,
   ProductDescription,
   IconSection,
-  IconSectionHeading,
   IconContainer,
   Icon,
   IconImage,
@@ -53,14 +53,17 @@ export default function Product({ data }) {
           </ProductDescription>
         </TextContainer>
       </HeroSection>
+
       <IconSection>
-        <IconSectionHeading>{products.data.icon_section_title}</IconSectionHeading>
+        <H3>{products.data.icon_section_title}</H3>
         <IconContainer>
-          {products.data.icons.map(icon => {
+          {products.data.icons.map((icon, id) => {
             return (
-              <Icon>
-                <IconImage></IconImage>
-                <IconCaption>{icon.icon_text}</IconCaption>
+              <Icon key={id}>
+                <IconImage>
+                  <img src={icon.icon_image.url}/>
+                </IconImage>
+                <IconCaption><P>{icon.icon_text}</P></IconCaption>
               </Icon>
             )
           })}
