@@ -71,6 +71,24 @@ export const query = graphql`
           target
         }
         sign_up_button_text
+        solutions_header
+        use_cases {
+          use_case {
+            document {
+              ... on PrismicUseCase {
+                id
+                url
+                uid
+                data {
+                  preview_title
+                  preview_image {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -1,5 +1,5 @@
 import React from "react"
-import { H1, P, H2 } from "../../style/type-styles"
+import { H1, P, H2, H3 } from "../../style/type-styles"
 import {
   HeroContainer,
   HeroTextSection,
@@ -15,8 +15,13 @@ import {
   FutureImage,
   HomePageContainer,
   HeroImage,
+  SolutionsSection,
+  SolutionsCard,
+  SolutionsCards,
+  SolutionsCTA,
 } from "./index-styles"
 
+import TreeIcon from "../../vectors/renewable-tree-icon.svg"
 import SunIcon from "../../vectors/sun-icon.svg"
 import { Helmet } from "react-helmet"
 
@@ -70,6 +75,33 @@ export default function HomePage({ data }) {
             <img alt={data.section_image_alt} src={data.section_image.url} />
           </FutureImage>
         </FutureSection>
+
+        <SolutionsSection>
+          <TreeIcon />
+          <H2>{data.solutions_header}</H2>
+
+          <SolutionsCards>
+            {data.use_cases.map((use_case, idx) => {
+              return (
+                <SolutionsCard key={idx}>
+                  <a href={use_case.use_case.document.uid}>
+                    <img
+                      alt={use_case.use_case.document.data.preview_title}
+                      src={use_case.use_case.document.data.preview_image.url}
+                    />
+                    <H3>{use_case.use_case.document.data.preview_title}</H3>
+                  </a>
+                </SolutionsCard>
+              )
+            })}
+          </SolutionsCards>
+
+          <SolutionsCTA>
+            <a target="_blank" s rel="noreferrer" href="/solutions">
+              View use cases
+            </a>{" "}
+          </SolutionsCTA>
+        </SolutionsSection>
       </HomePageContainer>
     </>
   )
