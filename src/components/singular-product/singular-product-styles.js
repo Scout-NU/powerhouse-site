@@ -2,31 +2,50 @@ import styled from "styled-components"
 import dimensions from "../../style/dimensions"
 import {
   layoutPaddingDesktop,
-  layoutPaddingMobile,
 } from "../../style/variables"
 
 export const SingularProductContainer = styled.div``
 
 export const HeroSection = styled.div`
-  padding-top: 60px;
+  padding-top: 130px;
 
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     display: flex;
-    padding-top: 45px;
+    padding-top: 114px;
   }
 `
 
-export const ImageContainer = styled.div``
+export const ImageContainer = styled.div`
+  display: flex;
+    flex-wrap: wrap;
+    img {
+      width: 4vw;
+      height: 56px;
+      margin-right: 18px;
+      margin-top: 44px;
 
-export const MainImage = styled.div`
-  width: 47vw;
-  height: 432px;
-  background-color: #C4C4C4;
+      @media (max-width: ${dimensions.maxwidthTablet}px) {
+        width: 3vw;
+        height: 39px;
+        margin-right: 12px;
+        margin-top: 32px;
+      }
 
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-    width: 100%;
-    height: 225px;
-  }
+      &.main-image {
+        width: 47vw;
+        height: 432px;
+        flex: 100%;
+        
+        @media (max-width: ${dimensions.maxwidthTablet}px) {
+          width: 100%;
+          height: 225px;
+        }
+      }
+    }
+
+    @media (max-width: ${dimensions.maxwidthTablet}px) {
+      justify-content: center;
+    }
 `
 
 export const SmallImageContainer = styled.div`
@@ -34,21 +53,6 @@ export const SmallImageContainer = styled.div`
   
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     justify-content: center;
-  }
-`
-
-export const SmallImage = styled.div`
-  width: 4vw;
-  height: 56px;
-  margin-right: 18px;
-  margin-top: 44px;
-  background-color: #C4C4C4;
-
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-      width: 3vw;
-      height: 39px;
-      margin-right: 12px;
-      margin-top: 32px;
   }
 `
 
@@ -61,30 +65,10 @@ export const TextContainer = styled.div`
 `
 
 export const ProductType = styled.div`
-  text-transform: uppercase;
   padding-top: 49px;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
-    padding-top: 63px;
-  }
-`
-
-export const ProductName = styled.div`
-  font-weight: bold;
-  font-size: calc(50px + (50 - 32) * ((100vw - 300px) / (1440 - 300)));
-  padding-top: 27px;
-
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-    
-  }
-`
-
-export const ProductDescription = styled.div`
-  font-size: calc(18px + (18 - 16) * ((100vw - 300px) / (1440 - 300)));
-  padding-top: 32px;
-
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-    padding-top: 24px;
+    padding-top: 26px;
   }
 `
 
@@ -133,21 +117,28 @@ export const ImageHighlightSection = styled.div`
 export const ImageHighlightHeading = styled.div`
   padding-top: 147px;
   margin-left: 4vw;
+
   @media (max-width: ${dimensions.maxwidthTablet}px) {
-    padding-top: 43px;
+    position: absolute;
+    top: 910px;
+    margin-left: 0px;
   }
 `
 
-export const ImageHighlightGroupContainer = styled.div``
+export const ImageHighlightGroupContainer = styled.div`
+
+`
 
 export const ImageHighlightGroup = styled.div`
   &.second-section {
     position: absolute;
     right: 0;
     top: 200px;
-  }
-  @media (min-width: ${dimensions.maxwidthTablet}px) {
-    // display: flex;
+
+    @media (max-width: ${dimensions.maxwidthTablet}px) {
+      position: relative;
+      top: 0px;
+    }
   }
 `
 
@@ -156,6 +147,21 @@ export const HighlightedImage = styled.div`
     img {
       margin-left: -${layoutPaddingDesktop};
       margin-top: 60px;
+
+      @media (max-width: ${dimensions.maxwidthTablet}px) {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  img {
+    @media (max-width: ${dimensions.maxwidthTablet}px) {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 25px;
     }
   }
 `
@@ -163,12 +169,17 @@ export const HighlightedImage = styled.div`
 export const ImageHighlightDescription = styled.div`
   font-size: calc(18px + (18 - 16) * ((100vw - 300px) / (1440 - 300)));
   width: 35vw;
+
   &.second-section {
     padding-top: 88px;
+
+    @media (max-width: ${dimensions.maxwidthTablet}px) {
+      margin-top: 310px;
+    }
   }
+
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     width: 100%;
-    padding-top: 32px;
   }
 `
 
@@ -180,6 +191,17 @@ export const ThirdSection = styled.div`
     margin-top: 97px;
     margin-right: -${layoutPaddingDesktop}; 
     justify-content: space-between;
+
+    @media (max-width: ${dimensions.maxwidthTablet}px) {
+      display: block;
+      width: 100%;
+      margin-top: 25px;
+
+      img {
+        position: absolute;
+        top: 800px;
+      }
+    }
   }
 `
 
@@ -192,14 +214,6 @@ export const FeatureIcon = styled.div`
   height: 45px;
 `
 
-export const FeatureSpecHeading = styled.div`
-  font-size: calc(40px + (40 - 32) * ((100vw - 300px) / (1440 - 300)));
-  font-weight: bold;
-  padding-top: 20px;
-`
-
-export const FeatureSpecFeatures = styled.div``
-
 export const Feature = styled.div`
   padding-top: 90px;
 
@@ -209,8 +223,6 @@ export const Feature = styled.div`
 `
 
 export const FeatureName = styled.div`
-  text-transform: uppercase;
-  font-size: calc(20px + (20 - 16) * ((100vw - 300px) / (1440 - 300)));
   width: 20vw;
   padding-right: 2vw;
 
