@@ -169,7 +169,7 @@
           "fields" : {
             "use_case" : {
               "type" : "Link",
-              "config" : {
+              "config" : { 
                 "select" : "document",
                 "customtypes" : [ "use_case" ],
                 "label" : "Use Case"
