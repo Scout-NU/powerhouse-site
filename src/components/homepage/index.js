@@ -86,6 +86,7 @@ export default function HomePage({ data }) {
                 <SolutionsCard key={idx}>
                   <a href={use_case.use_case.document.uid}>
                     <img
+                      alt={use_case.use_case.document.data.preview_title}
                       src={use_case.use_case.document.data.preview_image.url}
                     />
                     <H3>{use_case.use_case.document.data.preview_title}</H3>
