@@ -7,6 +7,8 @@ const minSize = {
   sub1: 16,
   p: 16,
   nav: 16,
+  sub1: 25,
+  body: 14,
 }
 
 const devices = {
@@ -24,6 +26,8 @@ const fontSizes = {
   sub1: `calc(${minSize.sub1}px + (20 - ${minSize.sub1}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
   p: `calc(${minSize.p}px + (24 - ${minSize.p}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
   NavText: `calc(${minSize.nav}px + (24 - ${minSize.nav}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
+  Sub1: `calc(${minSize.sub1}px + (36 - ${minSize.sub1}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
+  body: `calc(${minSize.body}px + (18 - ${minSize.body}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
 }
 
 const H1 = styled.h1`
@@ -41,19 +45,21 @@ const H3 = styled.h3`
   font-weight: bold;
 `
 
-const Sub1 = styled.h4 `
-  font-size: ${fontSizes.sub1};
-  text-transform: uppercase;
-  font-weight: normal;
-  //margin-top: 0px;
-`
-
 const P = styled.p`
   font-size: ${fontSizes.p};
 `
 
-const NavText = styled.a`
+const NavText = styled.div`
   font-size: ${fontSizes.nav};
 `
 
-export { H1, H2, H3, Sub1, P, NavText }
+const Sub1 = styled.div`
+  font-size: ${fontSizes.Sub1};
+  text-transform: uppercase;
+`
+
+const Body = styled.div`
+  font-size: ${fontSizes.body};
+`
+
+export { H1, H2, H3, P, NavText, Sub1, Body }
