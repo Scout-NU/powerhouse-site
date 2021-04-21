@@ -59,6 +59,12 @@
           "label" : "Button Destination"
         }
       },
+      "section_image_alt" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "section image alt"
+        }
+      },
       "section_image" : {
         "type" : "Image",
         "config" : {
@@ -117,7 +123,7 @@
           "label" : "Impact Example"
         }
       }
-    }, 
+    },
     "Email Section" : {
       "email_eyebrow_heading" : {
         "type" : "Text",
@@ -146,7 +152,39 @@
       "sign_up_button_destination" : {
         "type" : "Link",
         "config" : {
-          "label" : "Sign up Button Destination"
+          "label" : "Sign Up Button Destination"
+        }
+      }
+    },
+    "Solutions" : {
+      "solutions_header" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Solutions Header"
+        }
+      },
+      "use_cases" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "use_case" : {
+              "type" : "Link",
+              "config" : { 
+                "select" : "document",
+                "customtypes" : [ "use_case" ],
+                "label" : "Use Case"
+              }
+            }
+          },
+          "label" : "Use Cases"
+        }
+      },
+      "use" : {
+        "type" : "Link",
+        "config" : {
+          "select" : "document",
+          "customtypes" : [ "use_case" ],
+          "label" : "use"
         }
       }
     }

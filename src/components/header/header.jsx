@@ -10,7 +10,7 @@ import {
 
 import { NavText } from "../../style/type-styles"
 
-export const Header = () => {
+export const Header = ({ home }) => {
   const [open, setOpen] = useState(false)
   const [colorChange, setColorchange] = useState(false)
   const changeNavbarColor = () => {
@@ -22,15 +22,19 @@ export const Header = () => {
   }
   typeof window !== "undefined" &&
     window.addEventListener("scroll", changeNavbarColor)
-
   return (
-    <NavContainer className={colorChange ? "navbar colorChange" : "navbar"}>
-      <Logo>PowerHouse</Logo>
+    <NavContainer
+      className={
+        (colorChange ? "navbar colorChange" : "navbar") ||
+        (home === true ? "home-header" : "")
+      }
+    >
+      <Logo alt="PowerHouse Logo" className={home === true ? "home-header" : ""}>PowerHouse</Logo>
 
       <MobileIcon onClick={() => setOpen(!open)} className={open ? "open" : ""}>
-        <Hamburger />
+        <Hamburger className="hamburger" />
       </MobileIcon>
-      <NavLinks>
+      <NavLinks className={home === true ? "home-header" : ""}>
         <NavLink href="/about">
           <NavText>ABOUT</NavText>
         </NavLink>
@@ -40,7 +44,7 @@ export const Header = () => {
         <NavLink href="/products">
           <NavText>PRODUCTS</NavText>
         </NavLink>
-        <NavLink href="/solutions">
+        <NavLink href="/UseCases">
           <NavText>SOLUTIONS</NavText>
         </NavLink>
       </NavLinks>
