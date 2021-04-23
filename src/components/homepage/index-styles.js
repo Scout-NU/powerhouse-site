@@ -59,6 +59,9 @@ export const HeroCTA = styled.div`
 `
 
 export const ImpactSection = styled.div`
+
+  display: flex;
+  justify-content: center;
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     min-height: 100vh;
   }
@@ -70,10 +73,7 @@ export const ImpactHeader = styled.div`
   }
 `
 export const ImpactIcon = styled.div`
-  width: 64px;
-  height: 64px;
-  background-color: ${colors.gray_icon};
-  border-radius: 8px;
+
   margin-top: 128px;
 `
 
@@ -83,7 +83,7 @@ export const ImpactStats = styled.div`
 
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     margin-top: 132px;
     margin-bottom: 64px;
   }
@@ -91,6 +91,12 @@ export const ImpactStats = styled.div`
 
 export const ImpactExample = styled.div`
   padding-right: 9vw;
+
+  svg {
+    margin-top: 48px;
+    position: relative;
+    z-index: 1;
+  }
 `
 
 export const ImpactStat = styled.div`
@@ -248,4 +254,15 @@ a {
   text-transform: uppercase;
   color: ${colors.orange900};
 }
+`
+export const NodeLine = styled.div`
+position: absolute;
+height: 3px;
+width: 66vw;
+left: -80px;
+margin-top: 64px;
+z-index: 0;
+background-color: #F27A28;
+
+
 `

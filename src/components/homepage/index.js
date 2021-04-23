@@ -26,7 +26,11 @@ import {
   SolutionsCard,
   SolutionsCards,
   SolutionsCTA,
+  NodeLine
 } from "./index-styles"
+
+import Circle from "../../vectors/circle.svg"
+import PlantIcon from "../../vectors/holding-plant-icon.svg"
 
 import TreeIcon from "../../vectors/renewable-tree-icon.svg"
 import SunIcon from "../../vectors/sun-icon.svg"
@@ -85,15 +89,20 @@ export default function HomePage({ data }) {
         <ImpactSection>
           <div>
             <ImpactHeader>
-              <ImpactIcon />
+              <ImpactIcon>
+              <PlantIcon />
+
+              </ImpactIcon>
               <H2>{data.impact_section_title}</H2>
             </ImpactHeader>
             <ImpactStats>
-              {data.impact_example.map(example => (
+              {data.impact_example.map((example, idx) => (
                 <ImpactExample>
                   <ImpactStat>
                     <H1>{example.impact_big_text}</H1>
                     <P>{example.impact_small_text}</P>
+                    {idx === 2 && <NodeLine />}
+                    <Circle />
                   </ImpactStat>
                 </ImpactExample>
               ))}
