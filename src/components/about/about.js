@@ -1,20 +1,22 @@
 import React from "react"
-import { H1, P } from "../../style/type-styles"
+import { H2, H3, P, Body } from "../../style/type-styles"
 import {
-  AboutHeader,
   IconPlaceholder,
   AboutHeaderText,
   MissionSection,
   MissionImage,
-  MissionTextHeader,
   MissionTextParagraph,
   IndustryContextSection,
-  IndustryContextHeaderText,
+  IndustryContextContainer,
   IndustryContextExamples,
   IndustryContextGroup,
-  IndustryContextHeader,
   IndustryContextImage,
   IndustryContextExampleParagraph,
+  ProductBenefitHeader,
+  ProductBenefitsContainer,
+  BenefitGroup,
+  BenefitImage,
+  BenefitTitle,
   CompanyComparisonSection,
   CompetitorName,
   FeatureTitle,
@@ -22,13 +24,10 @@ import {
   CompanyBackgroundSection,
   GeneralDescriptionSection,
   CompanyBackgroundHeading,
-  CompanyBackgroundDescription,
   CompanyTeamHeading,
   CompanyTeamMemberGroup,
   TeamMember,
   MemberImage,
-  MemberTitle,
-  MemberDescription,
   MissionText,
   CompanyTeamSection
 } from "./about-style"
@@ -36,44 +35,71 @@ import {
 export default function About({ data }) {
   return (
     <>
-      <AboutHeader>
-        <IconPlaceholder />
-        <AboutHeaderText>About</AboutHeaderText>
-      </AboutHeader>
+      <AboutHeaderText>
+        <H2>About</H2>
+      </AboutHeaderText>
 
       <MissionSection>
-        <MissionImage></MissionImage>
+        <MissionImage>
+          <img src={data.mission_image.url}/>
+        </MissionImage>
 
         <MissionText>
-          <IconPlaceholder />
-          <MissionTextHeader>{data.mission_heading}</MissionTextHeader>
-
+          <IconPlaceholder>
+            <img src={data.mission_icon.url}/>
+          </IconPlaceholder>
+          <H2>{data.mission_heading}</H2>
           <MissionTextParagraph>
-            {data.mission_description}
+            <Body>{data.mission_description}</Body>
           </MissionTextParagraph>
         </MissionText>
       </MissionSection>
 
-      <IndustryContextSection>
-        <IndustryContextHeader>
-          <IconPlaceholder />
-          <IndustryContextHeaderText>
-            {data.industry_context_heading}
-          </IndustryContextHeaderText>
-        </IndustryContextHeader>
-        <IndustryContextExamples>
-          {data.industry_context_explanation.map((example, id) => {
+
+      <IndustryContextSection>   
+        <IndustryContextContainer>
+          <IconPlaceholder>
+            <img src={data.industry_context_icon.url} />
+          </IconPlaceholder>
+          <H2>{data.industry_context_heading}</H2>
+          <IndustryContextExamples>
+            {data.industry_context_explanation.map((example, id) => {
+              return (
+                <IndustryContextGroup key={id}>
+                  <IndustryContextImage>
+                    <img src={example.explanation_image.url}/>
+                  </IndustryContextImage>
+                  <IndustryContextExampleParagraph>
+                    <Body>{example.explanation_description}</Body>
+                  </IndustryContextExampleParagraph>
+                </IndustryContextGroup>
+              )
+            })}
+          </IndustryContextExamples>
+        </IndustryContextContainer> 
+      </IndustryContextSection>
+
+      <div>
+        <ProductBenefitHeader>
+          <H2>{data.company_comparison_section_heading}</H2>
+        </ProductBenefitHeader>
+        <ProductBenefitsContainer>
+          {data.product_benefit.map((benefit, id) => {
             return (
-              <IndustryContextGroup key={id}>
-                <IndustryContextImage></IndustryContextImage>
-                <IndustryContextExampleParagraph>
-                  {example.explanation_description}
-                </IndustryContextExampleParagraph>
-              </IndustryContextGroup>
+              <BenefitGroup key={id}>
+                <BenefitImage>
+                  <img src={benefit.product_benefit_image.url}/>
+                </BenefitImage>
+                <BenefitTitle>
+                  <Body>{benefit.product_benefit_title}</Body>
+                </BenefitTitle>
+                  
+                
+              </BenefitGroup>
             )
           })}
-        </IndustryContextExamples>
-      </IndustryContextSection>
+        </ProductBenefitsContainer>
+    </div>
 
       {/* <CompanyComparisonSection>
     <CompanyComparisonSectionHeading>
@@ -129,7 +155,9 @@ export default function About({ data }) {
             {data.company.map((competitor, id) => (
               <>
                 <th key={id}>
-                  <CompetitorName>{competitor.company_name}</CompetitorName>
+                  <CompetitorName>
+                    <H3>{competitor.company_name}</H3>
+                  </CompetitorName>
                 </th>
               </>
             ))}
@@ -137,7 +165,9 @@ export default function About({ data }) {
           {data.product_feature.map((feature, id) => (
             <tr key={id}>
               <td>
-                <FeatureTitle>{feature.product_feature_name}</FeatureTitle>
+                <FeatureTitle>
+                  <P>{feature.product_feature_name}</P>
+                </FeatureTitle>
               </td>
               <td>
                 <CompetitorIcon />
@@ -157,25 +187,23 @@ export default function About({ data }) {
       <CompanyBackgroundSection>
         <GeneralDescriptionSection>
           <CompanyBackgroundHeading>
-            {data.company_background_section_heading}
+            <H2>{data.company_background_section_heading}</H2>
           </CompanyBackgroundHeading>
-          <CompanyBackgroundDescription>
-            {data.company_background_description}
-          </CompanyBackgroundDescription>
+          <Body>{data.company_background_description}</Body>
         </GeneralDescriptionSection>
         <CompanyTeamSection>
           <CompanyTeamHeading>
-            {data.company_team_heading}
+            <H2>{data.company_team_heading}</H2>
           </CompanyTeamHeading>
           <CompanyTeamMemberGroup>
             {data.team_member_information.map((member, id) => {
               return (
                 <TeamMember key={id}>
-                  <MemberImage></MemberImage>
-                  <MemberTitle>{member.team_member_title}</MemberTitle>
-                  <MemberDescription>
-                    {member.team_member_description}
-                  </MemberDescription>
+                  <MemberImage>
+                    <img src={member.team_member_image.url}/>
+                  </MemberImage>
+                  <H3>{member.team_member_title}</H3>
+                  <Body>{member.team_member_description}</Body>
                 </TeamMember>
               )
             })}

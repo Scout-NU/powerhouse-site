@@ -26,26 +26,53 @@ export const query = graphql`
         company_background_section_heading
         company_comparison_section_heading
         company_team_heading
-        cta_button_destination
+        cta_button_destination {
+          url
+        }
         cta_button_text
         industry_context_explanation {
           explanation_description
+          explanation_image {
+            url
+          }
         }
         industry_context_heading
+        industry_context_icon {
+          url
+        }
+        industry_context_background_image {
+          url
+        }
         mission_description
         mission_heading
+        mission_icon {
+          url
+        }
+        mission_image {
+          url
+        }
         product_benefit {
+          product_benefit_image {
+            url
+          }
           product_benefit_title
         }
         product_feature {
           product_feature_name
         }
-        products_navigation_button_destination
+        products_navigation_button_destination {
+          url
+        }
         products_navigation_button_text
         team_member_information {
-          contact_button_destination
+          contact_button_destination {
+            url
+          }
           contact_button_text
           team_member_description
+          team_member_image {
+            url
+          }
           team_member_title
         }
       }

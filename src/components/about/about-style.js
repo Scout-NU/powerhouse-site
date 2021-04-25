@@ -1,41 +1,36 @@
 import styled from "styled-components"
 import dimensions from "../../style/dimensions"
+
 export const IconPlaceholder = styled.div`
-  height: 50px;
-  width: 50px;
-  background-color: #9d9d9d;
+  img {
+    width: 6vw;
+    @media (max-width: ${dimensions.maxwidthTablet}px) {
+      width: 10vw;
+    }
+  }
 `
 
 export const AboutHeaderText = styled.div`
-  font-size: 48px;
-  font-weight: bold;
-  padding-left: 20px;
-`
-
-export const AboutHeader = styled.div`
-  display: flex;
-  align-items: center;
-  padding-top: 96px;
+  margin-top: 89px;
 `
 
 export const MissionSection = styled.div`
-  padding-top: 21px;
-
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     display: flex;
-    padding-top: 96px;
   }
 `
 
 export const MissionImage = styled.div`
-  background-color: #9d9d9d;
-  height: 405px;
-  width: 45vw;
-  left: 0;
-  margin-left: -80px;
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-    width: 100vw;
-    margin-left: -16px;
+  img {
+    height: 405px;
+    width: 45vw;
+    left: 0;
+    margin-left: -80px;
+    @media (max-width: ${dimensions.maxwidthTablet}px) {
+      height: 100%;
+      width: 100vw;
+      margin-left: -16px;
+    }
   }
 `
 
@@ -50,25 +45,30 @@ export const MissionText = styled.div`
   }
 `
 
-export const MissionTextHeader = styled.div`
-  font-size: 36px;
-  font-weight: bold;
-  padding-top: 19px;
-  padding-bottom: 25px;
-`
-
 export const MissionTextParagraph = styled.div`
-  font-size: 20px;
+  width: 44vw;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 100%;
+  }
+
 `
 export const IndustryContextSection = styled.div`
-  padding-top: 130px;
-  padding-left: ;
+  margin-top: 130px;
+  background-color: black;
+  width: 100%;
 `
-export const IndustryContextHeader = styled.div``
-export const IndustryContextHeaderText = styled.div`
-  font-size: calc(36px + (36 - 24) * ((100vw - 300px) / (1440 - 300)));
-  font-weight: bold;
-  padding-top: 26px;
+
+export const IndustryContextContainer = styled.div`
+  background-color: white;
+  width: 89%;
+  margin-top: 70px;
+  margin-bottom: 80px;
+  padding-top: 42px;
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-bottom: 54px;
+
 `
 
 export const IndustryContextExamples = styled.div`
@@ -79,9 +79,9 @@ export const IndustryContextExamples = styled.div`
 `
 
 export const IndustryContextGroup = styled.div`
-  padding-top: 26px;
-  // margin-right: 82px;
+  margin-top: 26px;
   width: 22vw;
+
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     margin-left: 0px;
     margin-right: 0px;
@@ -91,23 +91,56 @@ export const IndustryContextGroup = styled.div`
 `
 
 export const IndustryContextImage = styled.div`
-  background-color: #cacaca;
-  height: 243px;
+  img {
+    width: 22vw;
+    @media (max-width: ${dimensions.maxwidthTablet}px) {
+      width: 100%;
+    }
+  }
+`
+
+export const IndustryContextExampleParagraph = styled.div`
   width: 22vw;
+
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     width: 100%;
   }
 `
 
-export const IndustryContextExampleParagraph = styled.div`
-  font-size: 16px;
-  padding-top: 26px;
+export const ProductBenefitHeader = styled.div`
+  text-align: center;
+`
 
-  width: 22vw;
+export const ProductBenefitsContainer = styled.div`
+  margin-top: 68px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
-    width: 100%;
+    margin-top: 40px;
   }
+`
+
+export const BenefitGroup = styled.div`
+  width: 15vw;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    flex: 50%;
+  }
+`
+
+export const BenefitImage = styled.div`
+  height: 118px;
+  text-align: center;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    height: 125px;
+  }
+`
+
+export const BenefitTitle = styled.div`
+  text-align: center;
 `
 
 export const CompanyComparisonSection = styled.div`
@@ -130,37 +163,6 @@ export const CompanyComparisonSection = styled.div`
 export const CompanyComparisonSectionHeading = styled.div`
   text-align: center;
   font-size: calc(36px + (36 - 24) * ((100vw - 300px) / (1440 - 300)));
-  font-weight: bold;
-`
-
-export const ProductBenefitSection = styled.div`
-  padding-top: 68px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-`
-
-export const BenefitGroup = styled.div`
-  width: 15vw;
-
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-    flex: 50%;
-  }
-`
-
-export const BenefitImage = styled.div`
-  background-color: #9d9d9d;
-  height: 11vw;
-  width: 11vw;
-
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-    width: 125px;
-    height: 125px;
-  }
-`
-
-export const BenefitTitle = styled.div`
-  font-size: calc(28px + (28 - 16) * ((100vw - 300px) / (1440 - 300)));
   font-weight: bold;
 `
 
@@ -235,21 +237,15 @@ export const GeneralDescriptionSection = styled.div`
 `
 
 export const CompanyBackgroundHeading = styled.div`
-  font-weight: bold;
-  font-size: calc(36px + (36 - 24) * ((100vw - 300px) / (1440 - 300)));
   text-align: center;
-  padding-bottom: 50px;
+
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     padding-bottom: 30px;
   }
 `
 
-export const CompanyBackgroundDescription = styled.div`
-  font-size: calc(20px + (20 - 14) * ((100vw - 300px) / (1440 - 300)));
-`
-
 export const CompanyTeamSection = styled.div`
-  margin-top: 90px;
+  margin-top: 154px;
   width: 65vw;
   margin-left: auto;
   margin-right: auto;
@@ -260,9 +256,6 @@ export const CompanyTeamSection = styled.div`
 `
 
 export const CompanyTeamHeading = styled.div`
-  font-weight: bold;
-  font-size: calc(28px + (28 - 24) * ((100vw - 300px) / (1440 - 300)));
-  padding-bottom: 40px;
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     text-align: center;
   }
@@ -279,28 +272,17 @@ export const TeamMember = styled.div`
   width: 30vw;
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     width: 100%;
-    padding-bottom: 32px;
+    padding-bottom: 80px;
   }
 `
 
 export const MemberImage = styled.div`
-  background-color: #cacaca;
-  width: 30vw;
-  height: 292px;
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-    width: 100%;
+  img {
+    width: 30vw;
+    @media (max-width: ${dimensions.maxwidthTablet}px) {
+      width: 100%;
+    }
   }
-`
-
-export const MemberTitle = styled.div`
-  font-weight: bold;
-  font-size: calc(28px + (28 - 24) * ((100vw - 300px) / (1440 - 300)));
-  padding-top: 16px;
-  padding-bottom: 16px;
-`
-
-export const MemberDescription = styled.div`
-  font-size: calc(16px + (16 - 14) * ((100vw - 300px) / (1440 - 300)));
 `
 
 export const FeatureSection = styled.div`

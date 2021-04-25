@@ -5,6 +5,7 @@ const minSize = {
   h2: 30,
   h3: 20,
   p: 16,
+  body: 16,
 }
 
 const devices = {
@@ -20,6 +21,7 @@ const fontSizes = {
   h2: `calc(${minSize.h2}px + (48 - ${minSize.h2}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
   h3: `calc(${minSize.h3}px + (32 - ${minSize.h3}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
   p: `calc(${minSize.p}px + (24 - ${minSize.p}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
+  body: `calc(${minSize.p}px + (18 - ${minSize.p}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
 }
 
 const H1 = styled.h1`
@@ -41,4 +43,8 @@ const P = styled.p`
   font-size: ${fontSizes.p};
 `
 
-export { H1, H2, H3, P }
+const Body = styled.p`
+  font-size: ${fontSizes.body};
+`
+
+export { H1, H2, H3, P, Body }

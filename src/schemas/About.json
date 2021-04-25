@@ -1,6 +1,14 @@
 {
     "Main": {},
     "Mission Section": {
+        "mission_icon": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Mission Icon"
+            }
+        },
         "mission_heading": {
             "type": "Text",
             "config": {
@@ -23,6 +31,22 @@
         }
     },
     "Industry Context Section": {
+        "industry_context_icon": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Industry Context Icon"
+            }
+        },
+        "industry_context_background_image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Industry Context Background Image"
+            }
+          },
         "industry_context_heading": {
             "type": "Text",
             "config": {
