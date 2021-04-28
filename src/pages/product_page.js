@@ -19,6 +19,10 @@ export const query = graphql`
       data {
         featured_product_description
         featured_product_heading
+        featured_product_image {
+          alt
+          url
+        }
         featured_product_name
         learn_more_button_text
         learn_more_button_text_destination
