@@ -14,7 +14,7 @@ import {
     ProductImage,
     ProductName,
     ProductDescription,
-} from "./products-styles"
+} from "./product-page-styles"
 
 export default function ProductSection({ data }) {
     return (

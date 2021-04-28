@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import ProductPage from "../components/products/products"
+import ProductPage from "../components/product_page/product-page"
 
 export default function ProductSection({ data }) {
   const productSectionData = data.prismicProductPage.data
