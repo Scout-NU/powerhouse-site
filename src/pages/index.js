@@ -70,6 +70,12 @@ export const query = graphql`
         sign_up_button_destination {
           target
         }
+
+        quotes {
+          name
+          quote
+          title
+        }
         sign_up_button_text
         solutions_header
         use_cases {

@@ -19,6 +19,8 @@ import {
   SolutionsCard,
   SolutionsCards,
   SolutionsCTA,
+  QuoteSection,
+  QuoteOverlay
 } from "./index-styles"
 
 import TreeIcon from "../../vectors/renewable-tree-icon.svg"
@@ -102,6 +104,15 @@ export default function HomePage({ data }) {
             </a>{" "}
           </SolutionsCTA>
         </SolutionsSection>
+
+        <QuoteSection>
+          <QuoteOverlay>
+           <h1>{data.quotes[0].quote}</h1> 
+          </QuoteOverlay>
+
+        </QuoteSection>
+
+
       </HomePageContainer>
     </>
   )

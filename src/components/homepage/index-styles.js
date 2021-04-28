@@ -202,3 +202,11 @@ a {
   color: ${colors.orange900};
 }
 `
+export const QuoteSection = styled.div`
+
+
+`
+
+export const QuoteOverlay = styled.div`
+
+`
