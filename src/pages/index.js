@@ -76,6 +76,10 @@ export const query = graphql`
           quote
           title
         }
+
+        quote_image {
+          url
+        }
         sign_up_button_text
         solutions_header
         use_cases {

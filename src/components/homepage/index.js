@@ -1,5 +1,5 @@
 import React from "react"
-import { H1, P, H2, H3 } from "../../style/type-styles"
+import { H1, P, H2, H3, Sub1, Sub2 } from "../../style/type-styles"
 import {
   HeroContainer,
   HeroTextSection,
@@ -20,11 +20,20 @@ import {
   SolutionsCards,
   SolutionsCTA,
   QuoteSection,
-  QuoteOverlay
+  QuoteOverlay,
+  QuoteText,
+  QuoteName,
+  QuoteTitle,
+  QuoteImage,
+  BottomSection,
+  CarouselButtons,
 } from "./index-styles"
 
 import TreeIcon from "../../vectors/renewable-tree-icon.svg"
 import SunIcon from "../../vectors/sun-icon.svg"
+import LeftButton from "../../vectors/leftbutton.svg"
+import RightButton from "../../vectors/rightbutton.svg"
+
 import { Helmet } from "react-helmet"
 
 export default function HomePage({ data }) {
@@ -106,13 +115,29 @@ export default function HomePage({ data }) {
         </SolutionsSection>
 
         <QuoteSection>
+          <QuoteImage>
+            <img src={data.quote_image.url} />
+          </QuoteImage>
           <QuoteOverlay>
-           <h1>{data.quotes[0].quote}</h1> 
+            <QuoteText>
+              <H2>{data.quotes[0].quote}</H2>{" "}
+            </QuoteText>
+            <BottomSection>
+              <div>
+                <QuoteName>
+                  <Sub1>{data.quotes[0].name}</Sub1>
+                </QuoteName>
+                <QuoteTitle>
+                  <Sub2>{data.quotes[0].title}</Sub2>
+                </QuoteTitle>
+              </div>
+              <CarouselButtons>
+                <LeftButton />
+                <RightButton />
+              </CarouselButtons>
+            </BottomSection>
           </QuoteOverlay>
-
         </QuoteSection>
-
-
       </HomePageContainer>
     </>
   )

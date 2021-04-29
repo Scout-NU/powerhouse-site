@@ -189,6 +189,14 @@
     }
   },
   "Quote Section" : {
+    "quote_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "quote image"
+      }
+    },
     "quotes" : {
       "type" : "Group",
       "config" : {

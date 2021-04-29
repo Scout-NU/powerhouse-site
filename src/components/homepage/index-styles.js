@@ -102,8 +102,6 @@ export const FutureSolarIcon = styled.div`
   height: 64px;
   margin-bottom: 48px;
 
-
-
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     svg {
       width: 118px;
@@ -144,11 +142,13 @@ export const HomePageContainer = styled.div`
 `
 
 export const SolutionsSection = styled.div`
-  height: 100vh;
   margin-top: 100px;
   color: ${colors.blue900};
   padding-bottom: 100px;
 
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    height: 100vh;
+  }
 `
 
 export const SolutionsCard = styled.div`
@@ -202,11 +202,78 @@ a {
   color: ${colors.orange900};
 }
 `
-export const QuoteSection = styled.div`
-
-
-`
+export const QuoteSection = styled.div``
 
 export const QuoteOverlay = styled.div`
+  background-color: ${colors.black_overlay};
+  margin-right: -${layoutPaddingDesktop};
+  position: relative;
+  z-index: 1;
 
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    margin-right: -${layoutPaddingMobile};
+  }
+`
+
+export const QuoteText = styled.div`
+  padding-left: 109px;
+  padding-right: ${layoutPaddingDesktop};
+  padding-top: 80px;
+  padding-bottom: 48px;
+  color: ${colors.white900};
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    padding-left: 43px;
+  }
+`
+
+export const QuoteName = styled.div`
+  padding-left: 109px;
+  color: ${colors.white900};
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    padding-left: 43px;
+  }
+`
+
+export const QuoteTitle = styled.div`
+  padding-left: 109px;
+  color: ${colors.white900};
+  padding-bottom: 80px;
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    padding-left: 43px;
+  }
+`
+
+export const BottomSection = styled.div`
+  display: flex;
+`
+
+export const QuoteImage = styled.div`
+  position: relative;
+  width: 100%;
+  img {
+    left: -${layoutPaddingDesktop};
+    position: absolute;
+    width: 100vw;
+    top: -80px;
+    z-index: 0;
+  }
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    img {
+      left: -${layoutPaddingMobile};
+      position: absolute;
+      top: -80px;
+      z-index: 0;
+      object-fit: cover;
+      height: 100vh;
+    }
+  }
+`
+export const CarouselButtons = styled.div`
+  margin-left: 48px;
+
+  svg {
+    padding-right: 16px;
+  }
 `
