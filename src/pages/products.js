@@ -1,18 +1,18 @@
-import React from "react"
-import { graphql } from "gatsby"
+// import React from "react"
+// import { graphql } from "gatsby"
 
-export default function ProductSection({ data }) {
-  // const productSectionData = data.prismicProductPage.data
+// export default function ProductSection({ data }) {
+//   const productSectionData = data.prismicProductPage.data
 
-  return (
-    <div>
-      {/* Mapping over individual products.  TODO: separate products based on category (homeowner or commerical) */}
-      {/* {productSectionData.products.map(product => {
-        return <h1>{product.product.document.data.product_title}</h1>
-      })} */}
-    </div>
-  )
-}
+//   return (
+//     <div>
+//       {/* Mapping over individual products.  TODO: separate products based on category (homeowner or commerical) */}
+//       {productSectionData.products.map(product => {
+//         return <h1>{product.product.document.data.product_title}</h1>
+//       })}
+//     </div>
+//   )
+// }
 
 // export const query = graphql`
 //   query ProductPageQuery {
