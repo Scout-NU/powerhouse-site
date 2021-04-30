@@ -80,3 +80,12 @@ export const ProductDescription = styled.div`
     visibility: hidden;
   }
 `
+
+export const HomeownerSection = styled.div`
+
+
+`
+
+export const CommercialSection = styled.div`
+
+`
