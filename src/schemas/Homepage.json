@@ -1,191 +1,219 @@
 {
-    "Main" : { },
-    "Hero Section" : {
-      "hero_headline" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Hero Headline"
-        }
-      },
-      "hero_subtext" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Hero Subtext"
-        }
-      },
-      "hero_cta_text" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Hero Button Text"
-        }
-      },
-      "hero_button_destination" : {
-        "type" : "Link",
-        "config" : {
-          "label" : "Hero Button Destination"
-        }
-      },
-      "hero_background_image" : {
-        "type" : "Image",
-        "config" : {
-          "constraint" : { },
-          "thumbnails" : [ ],
-          "label" : "Hero Background Image"
-        }
+  "Main" : { },
+  "Hero Section" : {
+    "hero_headline" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Hero Headline"
       }
     },
-    "Intro to Solar" : {
-      "section_title" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Section title"
-        }
-      },
-      "section_description" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Section Description"
-        }
-      },
-      "button_text" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Button Text"
-        }
-      },
-      "button_destination" : {
-        "type" : "Link",
-        "config" : {
-          "label" : "Button Destination"
-        }
-      },
-      "section_image_alt" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "section image alt"
-        }
-      },
-      "section_image" : {
-        "type" : "Image",
-        "config" : {
-          "constraint" : { },
-          "thumbnails" : [ ],
-          "label" : "Section Image"
-        }
+    "hero_subtext" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Hero Subtext"
       }
     },
-    "Impact Section" : {
-      "impact_section_title" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Impact Section Title"
-        }
-      },
-      "impact_description" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Impact Description"
-        }
-      },
-      "impact_image" : {
-        "type" : "Image",
-        "config" : {
-          "constraint" : { },
-          "thumbnails" : [ ],
-          "label" : "Impact Image"
-        }
-      },
-      "impact_example" : {
-        "type" : "Group",
-        "config" : {
-          "fields" : {
-            "impact_example_image" : {
-              "type" : "Image",
-              "config" : {
-                "constraint" : { },
-                "thumbnails" : [ ],
-                "label" : "Impact Example Image"
-              }
-            },
-            "impact_big_text" : {
-              "type" : "Text",
-              "config" : {
-                "label" : "Impact Big Text"
-              }
-            },
-            "impact_small_text" : {
-              "type" : "Text",
-              "config" : {
-                "label" : "Impact Small Text"
-              }
+    "hero_cta_text" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Hero Button Text"
+      }
+    },
+    "hero_button_destination" : {
+      "type" : "Link",
+      "config" : {
+        "label" : "Hero Button Destination"
+      }
+    },
+    "hero_background_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Hero Background Image"
+      }
+    }
+  },
+  "Intro to Solar" : {
+    "section_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Section title"
+      }
+    },
+    "section_description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Section Description"
+      }
+    },
+    "button_text" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Button Text"
+      }
+    },
+    "button_destination" : {
+      "type" : "Link",
+      "config" : {
+        "label" : "Button Destination"
+      }
+    },
+    "section_image_alt" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "section image alt"
+      }
+    },
+    "section_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Section Image"
+      }
+    }
+  },
+  "Impact Section" : {
+    "impact_section_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Impact Section Title"
+      }
+    },
+    "impact_description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Impact Description"
+      }
+    },
+    "impact_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Impact Image"
+      }
+    },
+    "impact_example" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "impact_example_image" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "Impact Example Image"
             }
           },
-          "label" : "Impact Example"
-        }
-      }
-    },
-    "Email Section" : {
-      "email_eyebrow_heading" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Email Eyebrow Heading"
-        }
-      },
-      "enter_email_label" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Enter Email Label"
-        }
-      },
-      "email_description" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Email Description"
-        }
-      },
-      "sign_up_button_text" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Sign Up Button Text"
-        }
-      },
-      "sign_up_button_destination" : {
-        "type" : "Link",
-        "config" : {
-          "label" : "Sign Up Button Destination"
-        }
-      }
-    },
-    "Solutions" : {
-      "solutions_header" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Solutions Header"
-        }
-      },
-      "use_cases" : {
-        "type" : "Group",
-        "config" : {
-          "fields" : {
-            "use_case" : {
-              "type" : "Link",
-              "config" : { 
-                "select" : "document",
-                "customtypes" : [ "use_case" ],
-                "label" : "Use Case"
-              }
+          "impact_big_text" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Impact Big Text"
             }
           },
-          "label" : "Use Cases"
-        }
-      },
-      "use" : {
-        "type" : "Link",
-        "config" : {
-          "select" : "document",
-          "customtypes" : [ "use_case" ],
-          "label" : "use"
-        }
+          "impact_small_text" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Impact Small Text"
+            }
+          }
+        },
+        "label" : "Impact Example"
+      }
+    }
+  },
+  "Email Section" : {
+    "email_eyebrow_heading" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Email Eyebrow Heading"
+      }
+    },
+    "enter_email_label" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Enter Email Label"
+      }
+    },
+    "email_description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Email Description"
+      }
+    },
+    "sign_up_button_text" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Sign Up Button Text"
+      }
+    },
+    "sign_up_button_destination" : {
+      "type" : "Link",
+      "config" : {
+        "label" : "Sign Up Button Destination"
+      }
+    }
+  },
+  "Solutions" : {
+    "solutions_header" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Solutions Header"
+      }
+    },
+    "use_cases" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "use_case" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "customtypes" : [ "use_case" ],
+              "label" : "Use Case"
+            }
+          }
+        },
+        "label" : "Use Cases"
+      }
+    },
+    "use" : {
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "customtypes" : [ "use_case" ],
+        "label" : "use"
+      }
+    }
+  },
+  "Quote Section" : {
+    "quotes" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "quote" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Quote"
+            }
+          },
+          "name" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Name"
+            }
+          },
+          "title" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Title"
+            }
+          }
+        },
+        "label" : "Quotes"
       }
     }
   }
+}
