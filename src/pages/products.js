@@ -60,9 +60,11 @@ export const query = graphql`
                   }
                   product_images {
                     image {
+                      alt
                       url
                     }
                   }
+                  product_price
                   product_type
                 }
               }

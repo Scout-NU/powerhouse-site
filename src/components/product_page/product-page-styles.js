@@ -32,31 +32,17 @@ export const FeaturedProductText = styled.div`
   }
 `
 
-export const ModelScope = styled.div`
-  margin-top: 200px;
-
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-    margin-top: 105px;
-  }
-`
-
 export const ProductsGroup = styled.div`
+  margin-top: 20px;
+
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     display: flex;
     justify-content: space-between;
-  }
-`
-
-export const Product = styled.div`
-  padding-top: 33px;
-
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-    padding-top: 35px;
+    margin-top: 35px;
   }
 `
 
 export const ProductImage = styled.div`
-  background-color: #C4C4C4;
   width: 21vw;
   height: 245px;
 
@@ -65,27 +51,6 @@ export const ProductImage = styled.div`
   }
 `
 
-export const ProductName = styled.div`
-  padding-top: 49px;
+export const HomeownerSection = styled.div``
 
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-    padding-top: 24px;
-  }
-`
-
-export const ProductDescription = styled.div`
-  padding-top: 15px;
-
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-    visibility: hidden;
-  }
-`
-
-export const HomeownerSection = styled.div`
-
-
-`
-
-export const CommercialSection = styled.div`
-
-`
+export const CommercialSection = styled.div``

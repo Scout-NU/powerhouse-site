@@ -4,12 +4,8 @@ import {
   FeaturedProductSection,
   FeaturedProductImage,
   FeaturedProductText,
-  ModelScope,
   ProductsGroup,
-  Product,
   ProductImage,
-  ProductName,
-  ProductDescription,
   HomeownerSection,
   CommercialSection,
 } from "./product-page-styles"
@@ -32,50 +28,48 @@ export default function ProductSection({ data }) {
         </FeaturedProductText>
       </FeaturedProductSection>
 
-      {/* <div>
-                {data.model_scope.map(scope => {
-                    return (
-                        <ModelScope>
-                            <Sub1>{scope.model_scope_heading}</Sub1>
-                            <ProductsGroup>
-                                {data.products.map(product => {
-                                    return (
-                                        <Product>
-                                            <ProductImage></ProductImage>
-                                            <ProductName>
-                                                {product.product_title}
-                                            </ProductName>
-                                            <H3></H3>
-                                            <Body>{product.product_description}</Body>
-                                        </Product>
-                                    )
-                                })}
-                            </ProductsGroup>
-                        </ModelScope>
-                    )
-                })}
-            </div> */}
       <HomeownerSection>
-        <h1>{data.model_scope[0].model_scope_heading}</h1>
-
-        {data.products.map(product => {
-          return (
-            product.product.document.data.product_type === "Homeowner" && (
-              <h1> {product.product.document.data.product_type}</h1>
+        <Sub1>{data.model_scope[0].model_scope_heading}</Sub1>
+        <ProductsGroup>
+          {data.products.map(product => {
+            return (
+              product.product.document.data.product_type === "Homeowner" && (
+                <div>
+                  <ProductImage>
+                    <img 
+                      src={product.product.document.data.product_images[0].image.url}
+                      alt={product.product.document.data.product_images[0].image.alt}/>
+                  </ProductImage>
+                  <H2>{product.product.document.data.product_title}</H2>
+                  <H3>{product.product.document.data.product_price}</H3>
+                  <Body></Body>
+                </div>
+              )
             )
-          )
-        })}
+          })}
+        </ProductsGroup>
       </HomeownerSection>
 
       <CommercialSection>
-        <h1>{data.model_scope[1].model_scope_heading}</h1>
-        {data.products.map(product => {
-          return (
-            product.product.document.data.product_type === "Commercial" && (
-              <h1> {product.product.document.data.product_type}</h1>
+        <Sub1>{data.model_scope[1].model_scope_heading}</Sub1>
+        <ProductsGroup>
+          {data.products.map(product => {
+            return (
+              product.product.document.data.product_type === "Commercial" && (
+                <div>
+                  <ProductImage>
+                    <img 
+                      src={product.product.document.data.product_images[0].image.url}
+                      alt={product.product.document.data.product_images[0].image.alt}/>
+                  </ProductImage>
+                  <H2>{product.product.document.data.product_title}</H2>
+                  <H3>{product.product.document.data.product_price}</H3>
+                  <Body></Body>
+                </div>
+              )
             )
-          )
-        })}
+          })}
+        </ProductsGroup>
       </CommercialSection>
     </div>
   )
