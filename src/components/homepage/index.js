@@ -26,7 +26,10 @@ import {
   SolutionsCard,
   SolutionsCards,
   SolutionsCTA,
-  NodeLine
+  NodeLine,
+  MobileNodeLine,
+  ImpactImage,
+  ImpactCTA,
 } from "./index-styles"
 
 import Circle from "../../vectors/circle.svg"
@@ -86,12 +89,15 @@ export default function HomePage({ data }) {
             <img alt={data.section_image_alt} src={data.section_image.url} />
           </FutureImage>
         </FutureSection>
+
+        <ImpactImage>
+          <img src={data.impact_image.url} />
+        </ImpactImage>
         <ImpactSection>
           <div>
             <ImpactHeader>
               <ImpactIcon>
-              <PlantIcon />
-
+                <PlantIcon />
               </ImpactIcon>
               <H2>{data.impact_section_title}</H2>
             </ImpactHeader>
@@ -102,11 +108,18 @@ export default function HomePage({ data }) {
                     <H1>{example.impact_big_text}</H1>
                     <P>{example.impact_small_text}</P>
                     {idx === 2 && <NodeLine />}
+                    <MobileNodeLine />
                     <Circle />
                   </ImpactStat>
                 </ImpactExample>
               ))}
             </ImpactStats>
+
+            <ImpactCTA>
+              <FutureCTA>
+                <a href={data.button_destination}>{data.button_text}</a>
+              </FutureCTA>
+            </ImpactCTA>
           </div>
         </ImpactSection>
         <SolutionsSection>
