@@ -36,12 +36,20 @@ module.exports = {
           product_page: require("./src/schemas/product_page.json"),
           product: require("./src/schemas/product.json"),
           Process: require("./src/schemas/process.json"),
-          Homepage: require("./src/schemas/Homepage.json"),
+          homepage: require("./src/schemas/Homepage.json"),
           use_cases_page: require("./src/schemas/use_cases_page.json"),
           use_case: require("./src/schemas/use_case.json"),
         },
         typePathsFilenamePrefix: "prismic-typepaths---powerhouse-site",
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /vectors/ // See below to configure properly
+        }
+      }
+    }
   ],
 }

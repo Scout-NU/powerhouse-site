@@ -7,6 +7,8 @@ const minSize = {
   nav: 16,
   sub1: 25,
   p: 16,
+  nav: 16,
+  sub1: 25,
   body: 14,
 }
 
