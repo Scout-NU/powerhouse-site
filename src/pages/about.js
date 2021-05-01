@@ -1,17 +1,17 @@
-// import { graphql } from "gatsby"
+import { graphql } from "gatsby"
 
-// import React from "react"
-// import Layout from "../components/layout"
+import React from "react"
+import Layout from "../components/layout"
 
-// export default function About({ data }) {
-//     const aboutData = data.prismicAboutPage.data
+export default function About({ data }) {
+    const aboutData = data.prismicAboutPage.data
 
-//     return (
-//         <Layout>
-//             <h1>{aboutData.company_background_section_heading}</h1>
-//         </Layout>
-//     )
-// }
+    return (
+        <Layout>
+            <h1>{aboutData.company_background_section_heading}</h1>
+        </Layout>
+    )
+}
 
 export const query = graphql`
   query AboutQuery {
