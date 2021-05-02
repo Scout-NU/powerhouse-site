@@ -217,7 +217,6 @@ export const CTAImage = styled.div`
 
   margin-left: -${layoutPaddingMobile};
 
-
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     img {
       object-fit: cover;
