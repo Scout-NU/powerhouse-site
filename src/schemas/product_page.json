@@ -1,0 +1,89 @@
+{
+  "Main" : { },
+  "Featured Section" : {
+    "product_page_main_heading" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Product Page Main Heading"
+      }
+    },
+    "featured_product_heading" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Featured Product Heading"
+      }
+    },
+    "featured_product_name" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Featured Product Name"
+      }
+    },
+    "featured_product_description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Featured Product Description"
+      }
+    },
+    "featured_product_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Featured Product Image"
+      }
+    },
+    "learn_more_button_text" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Learn More Button Text"
+      }
+    },
+    "learn_more_button_text_destination" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Learn More Button Text Destination"
+      }
+    }
+  },
+  "Models Section" : {
+    "model_scope" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "model_scope_heading" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Model Scope Heading"
+            }
+          }
+        },
+        "label" : "Model Scope"
+      }
+    },
+    "products" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "product" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "customtypes" : [ "product" ],
+              "label" : "product"
+            }
+          }
+        },
+        "label" : "Products"
+      }
+    },
+    "test" : {
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "customtypes" : [ "product" ],
+        "label" : "test"
+      }
+    }
+  }
+}

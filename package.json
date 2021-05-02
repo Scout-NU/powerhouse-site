@@ -16,12 +16,18 @@
   "dependencies": {
     "@walltowall/gatsby-source-prismic-schemas": "^1.1.0",
     "gatsby": "^2.26.1",
+    "gatsby-background-image": "^1.5.0",
+    "gatsby-plugin-exclude": "^1.0.2",
     "gatsby-plugin-netlify-headers": "^1.0.1",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^4.0.2",
     "gatsby-source-prismic": "^3.3.3",
+    "install": "^0.13.0",
     "node-sass": "^5.0.0",
+    "npm": "^7.9.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
     "sass": "^1.32.8",
     "styled-components": "^5.2.1"
   },

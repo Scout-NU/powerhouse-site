@@ -1,0 +1,74 @@
+{
+  "Main" : {
+    "powerhouse_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "PowerHouse Title"
+      }
+    },
+    "address" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Address"
+      }
+    },
+    "footer_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Footer image"
+      }
+    }
+  },
+  "Social" : {
+    "email" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Email"
+      }
+    },
+    "social_media" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "social_icon" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "Social Icon"
+            }
+          },
+          "social_type" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "social type"
+            }
+          },
+          "social_link" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Social Link"
+            }
+          }
+        },
+        "label" : "Social Media"
+      }
+    }
+  },
+  "Sock" : {
+    "sock_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Sock Title"
+      }
+    },
+    "sock_description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Sock Description"
+      }
+    }
+  }
+}
