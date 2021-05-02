@@ -19,10 +19,16 @@ import {
   SolutionsCard,
   SolutionsCards,
   SolutionsCTA,
+  CTASection,
+  CTAImage,
+  CTAContent,
+  CTAText,
+  CTAButton,
 } from "./index-styles"
 
 import TreeIcon from "../../vectors/renewable-tree-icon.svg"
 import SunIcon from "../../vectors/sun-icon.svg"
+import PlantIcon from "../../vectors/plant-icon.svg"
 import { Helmet } from "react-helmet"
 
 export default function HomePage({ data }) {
@@ -102,6 +108,24 @@ export default function HomePage({ data }) {
             </a>{" "}
           </SolutionsCTA>
         </SolutionsSection>
+
+        <CTASection>
+          <CTAContent>
+            <CTAImage>
+              <img src={data.cta_image.url} />
+            </CTAImage>
+
+            <CTAText>
+              <PlantIcon />
+              <H2>{data.cta_text}</H2>
+              <CTAButton>
+                <a target="_blank" s rel="noreferrer" href="/solutions">
+                  Contact Us
+                </a>{" "}
+              </CTAButton>
+            </CTAText>
+          </CTAContent>
+        </CTASection>
       </HomePageContainer>
     </>
   )

@@ -102,8 +102,6 @@ export const FutureSolarIcon = styled.div`
   height: 64px;
   margin-bottom: 48px;
 
-
-
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     svg {
       width: 118px;
@@ -148,7 +146,6 @@ export const SolutionsSection = styled.div`
   margin-top: 100px;
   color: ${colors.blue900};
   padding-bottom: 100px;
-
 `
 
 export const SolutionsCard = styled.div`
@@ -188,6 +185,68 @@ export const SolutionsCTA = styled.div`
 margin-top: 64px;
 display: flex;
 justify-content: center;
+
+a {
+  padding-right: 60px;
+  padding-left: 60px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border: solid ${colors.orange900}; 1px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: ${colors.orange900};
+}
+`
+export const CTASection = styled.div`
+  height: 100vh;
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    margin-top: 480px;
+  }
+`
+
+export const CTAImage = styled.div`
+  margin-top: 100px;
+  margin-bottom: 100px;
+  img {
+    object-fit: cover;
+    width: 351px;
+    height: 234px;
+  }
+
+  margin-left: -${layoutPaddingMobile};
+
+
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    img {
+      object-fit: cover;
+      width: 50vw;
+      height: 472px;
+    }
+
+    margin-left: -${layoutPaddingDesktop};
+  }
+`
+
+export const CTAContent = styled.div`
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    display: flex;
+    align-items: center;
+  }
+`
+
+export const CTAText = styled.div`
+  color: ${colors.blue900};
+
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    margin-left: 133px;
+  }
+`
+
+export const CTAButton = styled.div`
+margin-top: 64px;
+display: flex;
 
 a {
   padding-right: 60px;
