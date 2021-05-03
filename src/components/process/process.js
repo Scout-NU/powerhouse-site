@@ -15,7 +15,7 @@ import {
   StepsSection,
   Step,
   StepImage,
-  StepText
+  StepText,
 } from "./process-styles"
 import { H1, P, H2, H3, Body } from "../../style/type-styles"
 
@@ -65,24 +65,18 @@ export default function Process({ data }) {
       <StepsSection>
         {console.log(data.prismicProcessPage.data.steps[0])}
         {data.prismicProcessPage.data.steps.map(step => {
-            return (
-                <Step>
+          return (
+            <Step>
+              <StepImage>
+                <img src={step.step_image.url} />
+              </StepImage>
 
-                    <StepImage>
-                        <img src={step.step_image.url} />
-                    </StepImage>
-
-                    <StepText>
-                        <H2>
-                            {step.step_title}
-                        </H2>
-                        <Body>
-                        {step.step_description}
-
-                        </Body>
-                    </StepText>
-                </Step>
-            )
+              <StepText>
+                <H2>{step.step_title}</H2>
+                <Body>{step.step_description}</Body>
+              </StepText>
+            </Step>
+          )
         })}
       </StepsSection>
     </ProcessContainer>

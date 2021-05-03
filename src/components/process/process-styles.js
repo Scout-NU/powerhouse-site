@@ -20,37 +20,60 @@ export const HowHeader = styled.div`
 
 export const HowImage = styled.div`
   img {
-    width: 627px;
-    height: 581px;
+    width: 100%;
+    height: 299px;
     object-fit: cover;
+  }
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    img {
+      width: 627px;
+      height: 581px;
+      object-fit: cover;
+    }
   }
 `
 
 export const HowCarousel = styled.div`
-  display: flex;
   margin-bottom: 242px;
+
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    display: flex;
+  }
 `
 
 export const HowText = styled.div`
-  width: 36vw;
-  background-color: ${colors.white900};
-  height: 581px;
+  width: 100%;
+
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    height: 581px;
+    width: 36vw;
+    background-color: ${colors.white900};
+  }
 `
 
 export const HowParagraph = styled.div`
-  padding-left: 90px;
-  padding-top: 108px;
-  padding-right: 72px;
+  padding-top: 24px;
+
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    padding-left: 90px;
+    padding-top: 108px;
+    padding-right: 72px;
+  }
 `
 
 export const BlueBackground = styled.div`
-  width: 63vw;
   position: absolute;
-  right: 0;
+  width: 188px;
+  left: 0;
   min-height: calc(100vh + 242px);
   background-color: ${colors.softblue900};
   top: 127px;
   z-index: 0;
+
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    right: 0;
+    width: 63vw;
+  }
 `
 
 export const FindSection = styled.div`
@@ -61,11 +84,22 @@ export const FindSection = styled.div`
 export const FindImage = styled.div`
   img {
     width: 100vw;
-    left: -${layoutPaddingDesktop};
+    left: -${layoutPaddingMobile};
     position: absolute;
     z-index: 0;
     height: 100vh;
     object-fit: cover;
+  }
+
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    img {
+      width: 100vw;
+      left: -${layoutPaddingDesktop};
+      position: absolute;
+      z-index: 0;
+      height: 100vh;
+      object-fit: cover;
+    }
   }
 `
 export const FindText = styled.div`
@@ -85,27 +119,29 @@ export const FindButton = styled.a`
   padding-bottom: 16px;
 `
 
-export const StepsSection = styled.div`
-
-
-`
+export const StepsSection = styled.div``
 
 export const Step = styled.div`
-
-display: flex;
-align-items: center;
-
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    display: flex;
+    align-items: center;
+  }
 `
 
 export const StepImage = styled.div`
+  margin-top: 230px;
+  margin-left: -${layoutPaddingDesktop};
 
-margin-top: 230px;
-margin-left: -${layoutPaddingDesktop};
-
+  img {
+    width: 100%;
+  }
 `
 
 export const StepText = styled.div`
-justify-content: center;
-padding-left: 238px;
-width: 32vw;
+  padding-left: 98px;
+
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    padding-left: 238px;
+    width: 32vw;
+  }
 `
