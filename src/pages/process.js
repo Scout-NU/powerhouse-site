@@ -1,13 +1,14 @@
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import React from "react"
+import ProcessComponent from "../components/process/process"
 
 export default function Process({ data }) {
   const processData = data.prismicProcessPage.data
 
   return (
     <Layout>
-      <h1>{processData.process_header}</h1>
+      <ProcessComponent data={data} />
     </Layout>
   )
 }
@@ -16,40 +17,27 @@ export const query = graphql`
   query ProcessQuery {
     prismicProcessPage {
       data {
-        find_button_destination
-        find_button_text
-        find_description
-        find_header
-        header_image {
-          url
-          dimensions {
-            width
-            height
-          }
-        }
-        how_description {
-          text
-        }
         how_header
         how_images {
           how_image {
             url
-            dimensions {
-              width
-              height
-            }
+          }
+          how_paragraph {
+            text
           }
         }
-        process_header
+        find_header
+        find_image {
+          url
+        }
+
+        find_button_text
+
         steps {
-          step_description
           step_image {
             url
-            dimensions {
-              width
-              height
-            }
           }
+          step_description
           step_title
         }
       }
