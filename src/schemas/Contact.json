@@ -1,75 +1,75 @@
 {
-    "Main": {},
-    "Overview": {
-        "overview_heading": {
-            "type": "Text",
-            "config": {
-                "label": "Overview Heading"
-            }
-        },
-        "overview_description": {
-            "type": "Text",
-            "config": {
-                "label": "Overview Description"
-            }
-        },
-        "overview_image": {
-            "type": "Image",
-            "config": {
-                "constraint": {},
-                "thumbnails": [],
-                "label": "Overview Image"
-            }
+    "Main" : { },
+    "Overview" : {
+      "overview_heading" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Overview Heading"
         }
+      },
+      "overview_description" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Overview Description"
+        }
+      },
+      "overview_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "Overview Image"
+        }
+      }
     },
-    "Contact Information": {
-        "specific_contact_info": {
-            "type": "Group",
-            "config": {
-                "fields": {
-                    "contact_type": {
-                        "type": "Text",
-                        "config": {
-                            "label": "Contact Type"
-                        }
-                    },
-                    "contact_details": {
-                        "type": "Text",
-                        "config": {
-                            "label": "Contact Details"
-                        }
-                    }
-                },
-                "label": "Specific Contact Info"
+    "Contact Information" : {
+      "specific_contact_info" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "contact_type" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Contact Type"
+              }
+            },
+            "contact_details" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Contact Details"
+              }
             }
+          },
+          "label" : "Specific Contact Info"
         }
+      }
     },
-    "Form Section": {
-        "form_input": {
-            "type": "Group",
-            "config": {
-                "fields": {
-                    "input_heading": {
-                        "type": "Text",
-                        "config": {
-                            "label": "Input Heading"
-                        }
-                    },
-                    "input_instructions": {
-                        "type": "Text",
-                        "config": {
-                            "label": "Input Instructions"
-                        }
-                    }
-                },
-                "label": "Form Input"
+    "Form Section" : {
+      "form_input" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "input_heading" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Input Heading"
+              }
+            },
+            "input_instructions" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Input Instructions"
+              }
             }
-        },
-        "submission_button_text": {
-            "type": "Text",
-            "config": {
-                "label": "Submission Button Text"
-            }
+          },
+          "label" : "Form Input"
         }
+      },
+      "submission_button_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Submission Button Text"
+        }
+      }
     }
-}
+  }
