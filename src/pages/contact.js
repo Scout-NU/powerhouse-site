@@ -29,6 +29,8 @@ export const query = graphql`
         overview_image {
           url
         }
+
+        submission_button_text
       }
     }
   }

@@ -2,6 +2,7 @@ const colors = {
   //lofi colors:
   gray_image: "#C4C4C4",
   gray_icon: "#A4A4A4",
+  input_gray: "#a2a2a2",
   gray_CTA: "#646464",
 
   black900: "#253253",
