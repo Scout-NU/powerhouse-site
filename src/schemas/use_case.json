@@ -1,125 +1,134 @@
 {
-  "Main" : {
-    "uid" : {
-      "type" : "UID",
-      "config" : {
-        "label" : "uid"
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "uid"
       }
     },
-    "preview_title" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "Preview Title"
+    "preview_title": {
+      "type": "Text",
+      "config": {
+        "label": "Preview Title"
       }
     },
-    "preview_description" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "Preview Description"
+    "preview_description": {
+      "type": "Text",
+      "config": {
+        "label": "Preview Description"
       }
     },
-    "preview_image" : {
-      "type" : "Image",
-      "config" : {
-        "constraint" : { },
-        "thumbnails" : [ ],
-        "label" : "Preview Image"
+    "preview_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Preview Image"
       }
     },
-    "learn_more_button_text" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "Learn More Button Text"
+    "learn_more_button_text": {
+      "type": "Text",
+      "config": {
+        "label": "Learn More Button Text"
       }
     },
-    "learn_more_button_destination" : {
-      "type" : "Link",
-      "config" : {
-        "label" : "Learn More Button Destination"
+    "learn_more_button_destination": {
+      "type": "Link",
+      "config": {
+        "label": "Learn More Button Destination"
       }
     }
   },
-  "Overview" : {
-    "overview_heading" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "Overview Heading"
+  "Overview": {
+    "overview_heading": {
+      "type": "Text",
+      "config": {
+        "label": "Overview Heading"
       }
     },
-    "overview_description" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "Overview Description"
+    "overview_description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "Overview Description"
       }
     },
-    "overview_image_one" : {
-      "type" : "Image",
-      "config" : {
-        "constraint" : { },
-        "thumbnails" : [ ],
-        "label" : "Overview Image One"
+    "overview_image_one": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Overview Image One"
       }
     },
-    "overview_image_two" : {
-      "type" : "Image",
-      "config" : {
-        "constraint" : { },
-        "thumbnails" : [ ],
-        "label" : "Overview Image Two"
+    "overview_image_two": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Overview Image Two"
       }
     }
   },
-  "Reasons" : {
-    "reasons_main_heading" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "Reasons Main Heading"
+  "Reasons": {
+    "reasons_main_heading": {
+      "type": "Text",
+      "config": {
+        "label": "Reasons Main Heading"
       }
     },
-    "specific_reason" : {
-      "type" : "Group",
-      "config" : {
-        "fields" : {
-          "specific_reason_heading" : {
-            "type" : "Text",
-            "config" : {
-              "label" : "Specific Reason Heading"
+    "specific_reason": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "reason_image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Reason Image"
             }
           },
-          "specific_reason_description" : {
-            "type" : "Text",
-            "config" : {
-              "label" : "Specific Reason Description"
+          "specific_reason_heading": {
+            "type": "Text",
+            "config": {
+              "label": "Specific Reason Heading"
+            }
+          },
+          "specific_reason_description": {
+            "type": "Text",
+            "config": {
+              "label": "Specific Reason Description"
             }
           }
         },
-        "label" : "Specific Reason"
+        "label": "Specific Reason"
       }
     },
-    "cta_button_text" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "CTA Button Text"
+    "cta_button_text": {
+      "type": "Text",
+      "config": {
+        "label": "CTA Button Text"
       }
     },
-    "cta_button_destination" : {
-      "type" : "Link",
-      "config" : {
-        "label" : "CTA Button Destination"
+    "cta_button_destination": {
+      "type": "Link",
+      "config": {
+        "label": "CTA Button Destination"
       }
     }
   },
-  "Demo" : {
-    "demo_heading" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "Demo Heading"
+  "Demo": {
+    "demo_heading": {
+      "type": "Text",
+      "config": {
+        "label": "Demo Heading"
       }
     },
-    "demo_video" : {
-      "type" : "Embed",
-      "config" : {
-        "label" : "Demo Video"
+    "demo_video_url": {
+      "type": "Text",
+      "config": {
+        "label": "Demo Video Url"
       }
     }
   }

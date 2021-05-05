@@ -2,36 +2,51 @@ import { graphql } from "gatsby"
 
 import React from "react"
 
-export default function UseCasesPage({ data }) {
-    const useCasesPageData = data.prismicUseCasesPage.data
+import SolutionsComponent from "../components/solutions/solutions"
+import Layout from "../components/layout"
 
-    return (
-        <div>
-            <h1>{useCasesPageData.tagline_heading}</h1>
-        </div>
-    )
+export default function UseCasesPage({ data }) {
+  const useCasesPageData = data.prismicUseCasesPage.data
+
+  return (
+    <Layout>
+      <SolutionsComponent data={data} />
+    </Layout>
+  )
 }
 
 export const query = graphql`
   query UseCasesPageQuery {
     prismicUseCasesPage {
       data {
-        call_to_action_heading
+        tagline_image {
+          url
+        }
+        tagline_heading
+        tagline_description
         cta_button_destination {
-          target
+          url
         }
         cta_button_text
-        tagline_description
-        tagline_heading
-        tagline_image {
-            url
-            dimensions {
-                height
-                width
-            }
+        call_to_action_heading
+        cta_image {
+          url
         }
-        use_case {
-            link_type
+        use_cases {
+          use_case {
+            document {
+              ... on PrismicUseCase {
+                uid
+                data {
+                  preview_title
+                  preview_image {
+                    url
+                  }
+                  preview_description
+                }
+              }
+            }
+          }
         }
       }
     }

@@ -23,16 +23,32 @@
     }
   },
   "Use Cases" : {
-    "use_case" : {
-      "type" : "Link",
+    "use_cases" : {
+      "type" : "Group",
       "config" : {
-        "select" : "document",
-        "customtypes" : [ "use_case" ],
-        "label" : "Use Case"
+        "fields" : {
+          "use_case" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "customtypes" : [ "use_case" ],
+              "label" : "Use Case"
+            }
+          }
+        },
+        "label" : "Use Cases"
       }
     }
   },
   "Call To Action" : {
+    "cta_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "CTA Image"
+      }
+    },
     "call_to_action_heading" : {
       "type" : "Text",
       "config" : {

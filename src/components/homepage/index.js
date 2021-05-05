@@ -1,11 +1,19 @@
 import React from "react"
 import { H1, P, H2, H3 } from "../../style/type-styles"
 import {
+  HomePageContainer,
   HeroContainer,
   HeroTextSection,
   HeroHeadline,
   HeroDescription,
   HeroCTA,
+  ImpactSection,
+  ImpactHeader,
+  ImpactIcon,
+  ImpactStats,
+  ImpactExample,
+  ImpactStat,
+  ImpactStatIcon,
   FutureSection,
   FutureText,
   FutureSolarIcon,
@@ -13,16 +21,26 @@ import {
   FutureDescription,
   FutureCTA,
   FutureImage,
-  HomePageContainer,
   HeroImage,
   SolutionsSection,
   SolutionsCard,
   SolutionsCards,
   SolutionsCTA,
+  CTASection,
+  CTAImage,
+  CTAContent,
+  CTAText,
+  CTAButton,
+  NodeLine,
+  MobileNodeLine,
+  ImpactImage,
+  ImpactCTA,
 } from "./index-styles"
 
+import Circle from "../../vectors/circle.svg"
 import TreeIcon from "../../vectors/renewable-tree-icon.svg"
 import SunIcon from "../../vectors/sun-icon.svg"
+import PlantIcon from "../../vectors/plant-icon.svg"
 import { Helmet } from "react-helmet"
 
 export default function HomePage({ data }) {
@@ -77,6 +95,41 @@ export default function HomePage({ data }) {
           </FutureImage>
         </FutureSection>
 
+        <ImpactImage>
+          <img
+            alt="Impact Section Backgroud Image"
+            src={data.impact_image.url}
+          />
+        </ImpactImage>
+        <ImpactSection>
+          <div>
+            <ImpactHeader>
+              <ImpactIcon>
+                <PlantIcon />
+              </ImpactIcon>
+              <H2>{data.impact_section_title}</H2>
+            </ImpactHeader>
+            <ImpactStats>
+              {data.impact_example.map((example, idx) => (
+                <ImpactExample key={idx}>
+                  <ImpactStat>
+                    <H1>{example.impact_big_text}</H1>
+                    <P>{example.impact_small_text}</P>
+                    {idx === 2 && <NodeLine />}
+                    <MobileNodeLine />
+                    <Circle />
+                  </ImpactStat>
+                </ImpactExample>
+              ))}
+            </ImpactStats>
+
+            <ImpactCTA>
+              <FutureCTA>
+                <a href={data.button_destination}>{data.button_text}</a>
+              </FutureCTA>
+            </ImpactCTA>
+          </div>
+        </ImpactSection>
         <SolutionsSection>
           <TreeIcon />
           <H2>{data.solutions_header}</H2>
@@ -103,6 +156,24 @@ export default function HomePage({ data }) {
             </a>{" "}
           </SolutionsCTA>
         </SolutionsSection>
+
+        <CTASection>
+          <CTAContent>
+            <CTAImage>
+              <img src={data.cta_image.url} />
+            </CTAImage>
+
+            <CTAText>
+              <PlantIcon alt="Contact Us Plant Icon" />
+              <H2>{data.cta_text}</H2>
+              <CTAButton>
+                <a target="_blank" s rel="noreferrer" href="/solutions">
+                  Contact Us
+                </a>{" "}
+              </CTAButton>
+            </CTAText>
+          </CTAContent>
+        </CTASection>
       </HomePageContainer>
     </>
   )

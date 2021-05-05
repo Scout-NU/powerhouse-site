@@ -18,7 +18,7 @@ export const query = graphql`
       data {
         find_button_destination
         find_button_text
-        find_description
+        # find_description
         find_header
         header_image {
           url
@@ -27,9 +27,9 @@ export const query = graphql`
             height
           }
         }
-        how_description {
-          text
-        }
+        # how_description {
+        #   text
+        # }
         how_header
         how_images {
           how_image {
