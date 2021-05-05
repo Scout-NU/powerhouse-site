@@ -14,37 +14,41 @@ export const query = graphql`
       node {
         uid
         data {
-          preview_title
-          preview_image {
-            url
+            preview_title
+            preview_image {
+              url
+            }
+            specific_reason {
+              specific_reason_heading
+              specific_reason_description
+              reason_image {
+                url
+              }
+            }
+            reasons_main_heading
+            preview_description
+            overview_image_two {
+              url
+            }
+            overview_image_one {
+              url
+            }
+            overview_heading
+            overview_description {
+              text
+              raw
+            }
+            learn_more_button_text
+            learn_more_button_destination {
+              url
+            }
+            demo_video_url
+            demo_heading
+            cta_button_text
+            cta_button_destination {
+              url
+            }
           }
-          specific_reason {
-            specific_reason_heading
-            specific_reason_description
-          }
-          reasons_main_heading
-          preview_description
-          overview_image_two {
-            url
-          }
-          overview_image_one {
-            url
-          }
-          overview_heading
-          overview_description
-          learn_more_button_text
-          learn_more_button_destination {
-            url
-          }
-          demo_video {
-            url
-          }
-          demo_heading
-          cta_button_text
-          cta_button_destination {
-            url
-          }
-        }
       }
     }
   }

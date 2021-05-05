@@ -53,6 +53,13 @@ export const query = graphql`
             width
           }
         }
+
+        cta_text
+        cta_button_destination
+        cta_button_text
+        cta_image {
+          url
+        }
         impact_example {
           impact_big_text
           impact_small_text

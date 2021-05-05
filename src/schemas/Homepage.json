@@ -189,6 +189,14 @@
     }
   },
   "Quote Section" : {
+    "quote_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "quote image"
+      }
+    },
     "quotes" : {
       "type" : "Group",
       "config" : {
@@ -213,6 +221,34 @@
           }
         },
         "label" : "Quotes"
+      }
+    }
+  },
+  "Reach Out Section" : {
+    "cta_text" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "CTA Text"
+      }
+    },
+    "cta_button_text" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "CTA Button Text"
+      }
+    },
+    "cta_button_destination" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "CTA Button Destination"
+      }
+    },
+    "cta_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "CTA Image"
       }
     }
   }
