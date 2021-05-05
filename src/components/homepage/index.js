@@ -91,7 +91,10 @@ export default function HomePage({ data }) {
         </FutureSection>
 
         <ImpactImage>
-          <img src={data.impact_image.url} />
+          <img
+            alt="Impact Section Backgroud Image"
+            src={data.impact_image.url}
+          />
         </ImpactImage>
         <ImpactSection>
           <div>
@@ -103,7 +106,7 @@ export default function HomePage({ data }) {
             </ImpactHeader>
             <ImpactStats>
               {data.impact_example.map((example, idx) => (
-                <ImpactExample>
+                <ImpactExample key={idx}>
                   <ImpactStat>
                     <H1>{example.impact_big_text}</H1>
                     <P>{example.impact_small_text}</P>

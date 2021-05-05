@@ -93,7 +93,6 @@ export const ImpactStats = styled.div`
 
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     display: flex;
-    // justify-content: center;
     margin-top: 132px;
     margin-bottom: 80px;
   }
