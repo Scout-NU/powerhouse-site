@@ -47,8 +47,9 @@
       }
     },
     "overview_description" : {
-      "type" : "Text",
+      "type" : "StructuredText",
       "config" : {
+        "multi" : "paragraph",
         "label" : "Overview Description"
       }
     },
@@ -80,6 +81,14 @@
       "type" : "Group",
       "config" : {
         "fields" : {
+          "reason_image" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "Reason Image"
+            }
+          },
           "specific_reason_heading" : {
             "type" : "Text",
             "config" : {
