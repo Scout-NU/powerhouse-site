@@ -43,11 +43,29 @@ export const HowCarousel = styled.div`
 
 export const HowText = styled.div`
   width: 100%;
+  position: relative;
 
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     height: 581px;
     width: 36vw;
     background-color: ${colors.white900};
+  }
+`
+
+export const Indicators = styled.div`
+  display: flex;
+  justify-content: center;
+
+  position: absolute;
+  width: 100%;
+  bottom: 52px;
+
+  svg {
+    margin-right: 14px;
+  }
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    display: none;
   }
 `
 
@@ -64,11 +82,14 @@ export const HowParagraph = styled.div`
 export const BlueBackground = styled.div`
   position: absolute;
   width: 188px;
-  left: 0;
   min-height: calc(100vh + 242px);
   background-color: ${colors.softblue900};
   top: 127px;
   z-index: 0;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    left: 0;
+  }
 
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     right: 0;
