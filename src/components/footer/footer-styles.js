@@ -23,7 +23,6 @@ export const SocialSection = styled.div`
   padding-left: 80px;
   padding-top: 50px;
 
-
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     padding-left: 32px;
   }
@@ -167,7 +166,6 @@ export const FooterSection = styled.div`
 export const SockContainer = styled.div`
   z-index: 1;
   position: relative;
-  
 `
 
 export const SockContent = styled.div`
@@ -184,9 +182,7 @@ export const SockContent = styled.div`
 `
 
 export const ConnectTitle = styled.div`
-color: ${colors.blue900};
-
-
+  color: ${colors.blue900};
 `
 
 export const SockEmailForm = styled.form`
@@ -231,10 +227,11 @@ export const SockDescription = styled.div`
   }
 `
 
-export const SockCTA = styled.a`
+export const SockCTA = styled.button`
   font-size: 16px;
   padding-right: 60px;
   padding-left: 60px;
+  border: none;
   padding-top: 16px;
   padding-bottom: 16px;
   background-color: ${colors.orange900};

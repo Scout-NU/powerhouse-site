@@ -1,12 +1,21 @@
 import React, { useState } from "react"
 import Hamburger from "../../vectors/hamburger.svg"
+import CloseIcon from "../../vectors/CloseIcon.svg"
 import {
   NavContainer,
   Logo,
   MobileIcon,
   NavLinks,
   NavLink,
+  OpenNavContainer,
+  CloseButton,
+  MobileLink,
+  MobileLinks,
+  NodeLine,
+  LogoLink,
 } from "./header-styles"
+
+import Circle from "../../vectors/circle.svg"
 
 import { NavText } from "../../style/type-styles"
 
@@ -23,28 +32,83 @@ export const Header = ({ home }) => {
   typeof window !== "undefined" &&
     window.addEventListener("scroll", changeNavbarColor)
   return (
-    <NavContainer
-      className={
-        (colorChange ? "navbar colorChange" : "navbar") ||
-        (home === true ? "home-header" : "")
-      }
-    >
-      <Logo alt="PowerHouse Logo" className={home === true ? "home-header" : ""}>PowerHouse</Logo>
+    <NavContainer className={colorChange ? "navbar colorChange" : "navbar"}>
+      <Logo
+        alt="PowerHouse Logo"
+        className={colorChange ? "navbar colorChange" : "navbar"}
+      >
+        <div>
+          <LogoLink className={home === true ? "home-header" : ""} href="/">
+            PowerHouse
+          </LogoLink>
+        </div>
+      </Logo>
 
       <MobileIcon onClick={() => setOpen(!open)} className={open ? "open" : ""}>
         <Hamburger className="hamburger" />
       </MobileIcon>
+
+      <OpenNavContainer className={open ? "open" : ""}>
+        <CloseButton
+          onClick={() => setOpen(!open)}
+          className={open ? "open" : ""}
+        >
+          <CloseIcon />
+        </CloseButton>
+        <NodeLine />
+
+        <MobileLinks>
+          <MobileLink>
+            <Circle />
+
+            <a href="/">PowerHouse</a>
+          </MobileLink>
+          <MobileLink>
+            <Circle />
+
+            <a href="/about">About</a>
+          </MobileLink>
+          <MobileLink>
+            <Circle />
+
+            <a href="/process">Process</a>
+          </MobileLink>
+          <MobileLink>
+            <Circle />
+
+            <a href="/products">Products</a>
+          </MobileLink>
+          <MobileLink>
+            <Circle />
+
+            <a href="/solutions">Solutions</a>
+          </MobileLink>
+        </MobileLinks>
+      </OpenNavContainer>
+
       <NavLinks className={home === true ? "home-header" : ""}>
-        <NavLink href="/about">
+        <NavLink
+          className={colorChange ? "colorChange" : "navbar"}
+          href="/about"
+        >
           <NavText>ABOUT</NavText>
         </NavLink>
-        <NavLink href="/process">
+        <NavLink
+          className={colorChange ? "colorChange" : "navbar"}
+          href="/process"
+        >
           <NavText>PROCESS</NavText>
         </NavLink>
-        <NavLink href="/products">
+        <NavLink
+          className={colorChange ? "colorChange" : "navbar"}
+          href="/products"
+        >
           <NavText>PRODUCTS</NavText>
         </NavLink>
-        <NavLink href="/solutions">
+        <NavLink
+          className={colorChange ? "colorChange" : "navbar"}
+          href="/solutions"
+        >
           <NavText>SOLUTIONS</NavText>
         </NavLink>
       </NavLinks>

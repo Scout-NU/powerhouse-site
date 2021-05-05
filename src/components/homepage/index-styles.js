@@ -204,7 +204,7 @@ export const HomePageContainer = styled.div`
 `
 
 export const SolutionsSection = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   margin-top: 200px;
   color: ${colors.blue900};
   padding-bottom: 100px;
@@ -262,9 +262,10 @@ a {
 }
 `
 export const CTASection = styled.div`
-  height: 100vh;
+  min-height: 100vh;
+  position: relative;
   @media (max-width: ${dimensions.maxwidthTablet}px) {
-    margin-top: 480px;
+    margin-top: 100px;
   }
 `
 
@@ -273,7 +274,7 @@ export const CTAImage = styled.div`
   margin-bottom: 100px;
   img {
     object-fit: cover;
-    width: 351px;
+    width: 100%;
     height: 234px;
   }
 
