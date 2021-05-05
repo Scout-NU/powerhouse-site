@@ -31,7 +31,6 @@ export const query = graphql`
             url
           }
           overview_heading
-          overview_description
           learn_more_button_text
           learn_more_button_destination {
             url
