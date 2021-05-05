@@ -30,7 +30,7 @@ export const query = graphql`
         # how_description {
         #   text
         # }
-        # how_header
+        how_header
         how_images {
           how_image {
             url
