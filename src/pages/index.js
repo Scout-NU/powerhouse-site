@@ -7,7 +7,7 @@ export default function Home({ data }) {
   const homepageData = data.prismicHomepage.data
 
   return (
-    <Layout>
+    <Layout home={true}>
       <Homepage data={homepageData} />
     </Layout>
   )
@@ -19,6 +19,7 @@ export const query = graphql`
       data {
         section_title
         section_description
+        section_image_alt
         section_image {
           url
           dimensions {
@@ -52,6 +53,13 @@ export const query = graphql`
             width
           }
         }
+
+        cta_text
+        cta_button_destination
+        cta_button_text
+        cta_image {
+          url
+        }
         impact_example {
           impact_big_text
           impact_small_text
@@ -70,6 +78,24 @@ export const query = graphql`
           target
         }
         sign_up_button_text
+        solutions_header
+        use_cases {
+          use_case {
+            document {
+              ... on PrismicUseCase {
+                id
+                url
+                uid
+                data {
+                  preview_title
+                  preview_image {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -29,6 +29,15 @@
                 "label": "Mission Image"
             }
         }
+      },
+      "mission_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "Mission Image"
+        }
+      }
     },
     "Industry Context Section": {
         "industry_context_icon": {
@@ -87,135 +96,148 @@
                 "label": "CTA Button Destination"
             }
         }
-    },
-    "Company Background Section": {
-        "company_background_section_heading": {
-            "type": "Text",
-            "config": {
-                "label": "Company Background Section Heading"
-            }
-        },
-        "company_background_description": {
-            "type": "Text",
-            "config": {
-                "label": "Company Background Description"
-            }
-        },
-        "company_team_heading": {
-            "type": "Text",
-            "config": {
-                "label": "Company Team Heading"
-            }
-        },
-        "team_member_information": {
-            "type": "Group",
-            "config": {
-                "fields": {
-                    "team_member_image": {
-                        "type": "Image",
-                        "config": {
-                            "constraint": {},
-                            "thumbnails": [],
-                            "label": "Team Member Image"
-                        }
-                    },
-                    "team_member_title": {
-                        "type": "Text",
-                        "config": {
-                            "label": "Team Member Title"
-                        }
-                    },
-                    "team_member_description": {
-                        "type": "Text",
-                        "config": {
-                            "label": "Team Member Description"
-                        }
-                    },
-                    "contact_button_text": {
-                        "type": "Text",
-                        "config": {
-                            "label": "Contact Button Text"
-                        }
-                    },
-                    "contact_button_destination": {
-                        "type": "Link",
-                        "config": {
-                            "label": "Contact Button Destination"
-                        }
-                    }
-                },
-                "label": "Team Member Information"
-            }
+      },
+      "cta_button_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "CTA Button Text"
         }
-    },
-    "Company Comparison Section": {
-        "company_comparison_section_heading": {
-            "type": "Text",
-            "config": {
-                "label": "Company Comparison Section Heading"
-            }
-        },
-        "product_benefit": {
-            "type": "Group",
-            "config": {
-                "fields": {
-                    "product_benefit_image": {
-                        "type": "Image",
-                        "config": {
-                            "constraint": {},
-                            "thumbnails": [],
-                            "label": "Product Benefit Image"
-                        }
-                    },
-                    "product_benefit_title": {
-                        "type": "Text",
-                        "config": {
-                            "label": "Product Benefit Title"
-                        }
-                    }
-                },
-                "label": "Product Benefit"
-            }
-        },
-        "company": {
-            "type": "Group",
-            "config": {
-                "fields": {
-                    "company_name": {
-                        "type": "Text",
-                        "config": {
-                            "label": "Company Name"
-                        }
-                    }
-                },
-                "label": "Company"
-            }
-        },
-        "product_feature": {
-            "type": "Group",
-            "config": {
-                "fields": {
-                    "product_feature_name": {
-                        "type": "Text",
-                        "config": {
-                            "label": "Product Feature Name"
-                        }
-                    }
-                },
-                "label": "Product Feature"
-            }
-        },
-        "products_navigation_button_text": {
-            "type": "Text",
-            "config": {
-                "label": "Products Navigation Button Text"
-            }
-        },
-        "products_navigation_button_destination": {
-            "type": "Link",
-            "config": {
-                "label": "Products Navigation Button Destination"
-            }
+      },
+      "cta_button_destination" : {
+        "type" : "Link",
+        "config" : {
+          "label" : "CTA Button Destination"
         }
+      }
+    },
+    "Company Background Section" : {
+      "company_background_section_heading" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Company Background Section Heading"
+        }
+      },
+      "company_background_description" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Company Background Description"
+        }
+      },
+      "company_team_heading" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Company Team Heading"
+        }
+      },
+      "team_member_information" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "team_member_image" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "Team Member Image"
+              }
+            },
+            "team_member_title" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Team Member Title"
+              }
+            },
+            "team_member_description" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Team Member Description"
+              }
+            },
+            "contact_button_text" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Contact Button Text"
+              }
+            },
+            "contact_button_destination" : {
+              "type" : "Link",
+              "config" : {
+                "label" : "Contact Button Destination"
+              }
+            }
+          },
+          "label" : "Team Member Information"
+        }
+      }
+    },
+    "Company Comparison Section" : {
+      "company_comparison_section_heading" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Company Comparison Section Heading"
+        }
+      },
+      "product_benefit" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "product_benefit_image" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "Product Benefit Image"
+              }
+            },
+            "product_benefit_title" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Product Benefit Title"
+              }
+            }
+          },
+          "label" : "Product Benefit"
+        }
+      },
+      "company" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "company_name" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Company Name"
+              }
+            }
+          },
+          "label" : "Company"
+        }
+      },
+      "product_feature" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "product_feature_name" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Product Feature Name"
+              }
+            }
+          },
+          "label" : "Product Feature"
+        }
+      },
+      "products_navigation_button_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Products Navigation Button Text"
+        }
+      },
+      "products_navigation_button_destination" : {
+        "type" : "Link",
+        "config" : {
+          "label" : "Products Navigation Button Destination"
+        }
+      }
     }
-}
+  }
