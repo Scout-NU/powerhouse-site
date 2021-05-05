@@ -8,7 +8,6 @@ export const NavContainer = styled.div`
   &.colorChange {
     background-color: rgb(0, 0, 0, 0.55);
     color: ${colors.white900};
-
   }
 
   position: fixed;
@@ -63,13 +62,11 @@ export const NavLink = styled.a`
   padding-left: 100px;
   text-decoration: none;
 
-
   color: ${colors.black900};
 
   &.home-header {
     color: ${colors.white900};
   }
-
 `
 
 export const MobileIcon = styled.div`
