@@ -1,11 +1,19 @@
 import React from "react"
 import { H1, P, H2, H3 } from "../../style/type-styles"
 import {
+  HomePageContainer,
   HeroContainer,
   HeroTextSection,
   HeroHeadline,
   HeroDescription,
   HeroCTA,
+  ImpactSection,
+  ImpactHeader,
+  ImpactIcon,
+  ImpactStats,
+  ImpactExample,
+  ImpactStat,
+  ImpactStatIcon,
   FutureSection,
   FutureText,
   FutureSolarIcon,
@@ -13,7 +21,6 @@ import {
   FutureDescription,
   FutureCTA,
   FutureImage,
-  HomePageContainer,
   HeroImage,
   SolutionsSection,
   SolutionsCard,
@@ -24,7 +31,14 @@ import {
   CTAContent,
   CTAText,
   CTAButton,
+  NodeLine,
+  MobileNodeLine,
+  ImpactImage,
+  ImpactCTA,
 } from "./index-styles"
+
+import Circle from "../../vectors/circle.svg"
+import PlantIcon from "../../vectors/holding-plant-icon.svg"
 
 import TreeIcon from "../../vectors/renewable-tree-icon.svg"
 import SunIcon from "../../vectors/sun-icon.svg"
@@ -82,6 +96,41 @@ export default function HomePage({ data }) {
           </FutureImage>
         </FutureSection>
 
+        <ImpactImage>
+          <img
+            alt="Impact Section Backgroud Image"
+            src={data.impact_image.url}
+          />
+        </ImpactImage>
+        <ImpactSection>
+          <div>
+            <ImpactHeader>
+              <ImpactIcon>
+                <PlantIcon />
+              </ImpactIcon>
+              <H2>{data.impact_section_title}</H2>
+            </ImpactHeader>
+            <ImpactStats>
+              {data.impact_example.map((example, idx) => (
+                <ImpactExample key={idx}>
+                  <ImpactStat>
+                    <H1>{example.impact_big_text}</H1>
+                    <P>{example.impact_small_text}</P>
+                    {idx === 2 && <NodeLine />}
+                    <MobileNodeLine />
+                    <Circle />
+                  </ImpactStat>
+                </ImpactExample>
+              ))}
+            </ImpactStats>
+
+            <ImpactCTA>
+              <FutureCTA>
+                <a href={data.button_destination}>{data.button_text}</a>
+              </FutureCTA>
+            </ImpactCTA>
+          </div>
+        </ImpactSection>
         <SolutionsSection>
           <TreeIcon />
           <H2>{data.solutions_header}</H2>

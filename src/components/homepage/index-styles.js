@@ -58,6 +58,68 @@ export const HeroCTA = styled.div`
   }
 `
 
+export const ImpactSection = styled.div`
+  display: flex;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  min-height: 100vh;
+  z-index: 1;
+  position: relative;
+
+  background-color: ${colors.white900};
+  justify-content: center;
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+`
+export const ImpactHeader = styled.div`
+  width: 43vw;
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 100%;
+  }
+`
+export const ImpactIcon = styled.div`
+  margin-top: 128px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    margin-top: 48px;
+  }
+`
+
+export const ImpactStats = styled.div`
+  margin-top: 64px;
+  margin-bottom: 48;
+
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    display: flex;
+    margin-top: 132px;
+    margin-bottom: 80px;
+  }
+`
+
+export const ImpactExample = styled.div`
+  padding-right: 9vw;
+
+  svg {
+    margin-top: 48px;
+    position: relative;
+    z-index: 1;
+  }
+`
+
+export const ImpactStat = styled.div`
+  text-align: center;
+`
+
+export const ImpactStatIcon = styled.div`
+  width: 194px;
+  height: 194px;
+  background-color: ${colors.gray_icon};
+  margin-left: auto;
+  margin-right: auto;
+`
+
 export const FutureSection = styled.div`
   height: 100vh;
   position: relative;
@@ -259,4 +321,65 @@ a {
   text-transform: uppercase;
   color: ${colors.orange900};
 }
+`
+export const NodeLine = styled.div`
+  position: absolute;
+  height: 3px;
+  left: -80px;
+  margin-top: 64px;
+  z-index: 0;
+  background-color: ${colors.orange900};
+
+  @media (min-width: ${dimensions.maxwidthDesktop}px) {
+    width: 70%;
+  }
+
+  @media (min-width: ${dimensions.maxwidthTablet}px) and (max-width: ${dimensions.maxwidthDesktop}px) {
+    width: 80%;
+  }
+`
+export const MobileNodeLine = styled.div`
+  position: absolute;
+  height: 3px;
+  left: -${layoutPaddingMobile};
+  margin-top: 64px;
+  z-index: 0;
+  background-color: ${colors.orange900};
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 55.8%;
+  }
+`
+
+export const ImpactImage = styled.div`
+  position: relative;
+
+  img {
+    width: 100vw;
+    height: calc(100vh + 304px);
+    object-fit: cover;
+    z-index: 0;
+    position: absolute;
+    left: -${layoutPaddingDesktop};
+  }
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    img {
+      width: 100vw;
+      object-fit: cover;
+      z-index: 0;
+      position: absolute;
+      left: -${layoutPaddingMobile};
+    }
+  }
+`
+
+export const ImpactCTA = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    margin-bottom: 48px;
+  }
 `
