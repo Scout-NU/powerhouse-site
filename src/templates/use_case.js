@@ -11,10 +11,20 @@ import {
   IntroDescription,
   MobileImage,
   WhySection,
+  WhyHeader,
+  Reasons,
+  SpecificReason,
+  SpecificImage,
+  SpecificReasonHeading,
+  SpecificReasonDescription,
+  WhyCTA,
+  DemoVideoSection,
+  DemoHeading,
+  DemoVideo,
 } from "./use-case-styles"
 import Layout from "../components/layout"
 
-import { H1, Body } from "../style/type-styles"
+import { H1, H2, H3, Body } from "../style/type-styles"
 
 export default function Product({ data }) {
   const use_case = data.allPrismicUseCase.edges[0].node
@@ -52,10 +62,51 @@ export default function Product({ data }) {
         </UseCaseIntro>
 
         <WhySection>
-            
-            
+          <WhyHeader>
+            <H2>{use_case.data.reasons_main_heading}</H2>
+          </WhyHeader>
 
+          <Reasons>
+            {use_case.data.specific_reason.map(reason => {
+              return (
+                <SpecificReason>
+                  <SpecificImage>
+                    <img src={reason.reason_image.url} />
+                  </SpecificImage>
+                  <SpecificReasonHeading>
+                    <H3>{reason.specific_reason_heading}</H3>
+                  </SpecificReasonHeading>
+                  <SpecificReasonDescription>
+                    <Body>{reason.specific_reason_description}</Body>
+                  </SpecificReasonDescription>
+                </SpecificReason>
+              )
+            })}
+          </Reasons>
+
+          <WhyCTA>
+            <a href={use_case.data.cta_button_destination.url}>
+              {use_case.data.cta_button_text}
+            </a>
+          </WhyCTA>
         </WhySection>
+
+        <DemoVideoSection>
+          <div>
+            <DemoHeading>
+              <H2>{use_case.data.demo_heading}</H2>
+            </DemoHeading>
+
+            <DemoVideo>
+              <iframe
+                src={use_case.data.demo_video_url}
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </DemoVideo>
+          </div>
+        </DemoVideoSection>
       </UseCaseContainer>
     </Layout>
   )
@@ -75,6 +126,9 @@ export const query = graphql`
             specific_reason {
               specific_reason_heading
               specific_reason_description
+              reason_image {
+                url
+              }
             }
             reasons_main_heading
             preview_description
@@ -93,9 +147,7 @@ export const query = graphql`
             learn_more_button_destination {
               url
             }
-            demo_video {
-              url
-            }
+            demo_video_url
             demo_heading
             cta_button_text
             cta_button_destination {
