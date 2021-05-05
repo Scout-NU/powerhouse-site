@@ -35,11 +35,17 @@ export default function Product({ data }) {
         <UseCaseIntro>
           <IntroImages>
             <ImageOne>
-              <img src={use_case.data.overview_image_one.url} />
+              <img
+                alt="Use Case Demo Primary Image"
+                src={use_case.data.overview_image_one.url}
+              />
             </ImageOne>
 
             <ImageTwo>
-              <img src={use_case.data.overview_image_two.url} />
+              <img
+                alt="Use Case Demo Secondary Image"
+                src={use_case.data.overview_image_two.url}
+              />
             </ImageTwo>
           </IntroImages>
 
@@ -57,7 +63,10 @@ export default function Product({ data }) {
           </IntroTextSection>
 
           <MobileImage>
-            <img src={use_case.data.overview_image_two.url} />
+            <img
+              alt="Use Case Demo Secondary Image"
+              src={use_case.data.overview_image_two.url}
+            />
           </MobileImage>
         </UseCaseIntro>
 
@@ -67,11 +76,14 @@ export default function Product({ data }) {
           </WhyHeader>
 
           <Reasons>
-            {use_case.data.specific_reason.map(reason => {
+            {use_case.data.specific_reason.map((reason, id) => {
               return (
-                <SpecificReason>
+                <SpecificReason key={id}>
                   <SpecificImage>
-                    <img src={reason.reason_image.url} />
+                    <img
+                      alt={`Reason ${id + 1} image`}
+                      src={reason.reason_image.url}
+                    />
                   </SpecificImage>
                   <SpecificReasonHeading>
                     <H3>{reason.specific_reason_heading}</H3>
