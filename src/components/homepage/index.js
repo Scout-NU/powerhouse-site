@@ -38,8 +38,6 @@ import {
 } from "./index-styles"
 
 import Circle from "../../vectors/circle.svg"
-import PlantIcon from "../../vectors/holding-plant-icon.svg"
-
 import TreeIcon from "../../vectors/renewable-tree-icon.svg"
 import SunIcon from "../../vectors/sun-icon.svg"
 import PlantIcon from "../../vectors/plant-icon.svg"
@@ -165,7 +163,7 @@ export default function HomePage({ data }) {
             </CTAImage>
 
             <CTAText>
-              <PlantIcon />
+              <PlantIcon alt="Contact Us Plant Icon" />
               <H2>{data.cta_text}</H2>
               <CTAButton>
                 <a target="_blank" s rel="noreferrer" href="/solutions">
