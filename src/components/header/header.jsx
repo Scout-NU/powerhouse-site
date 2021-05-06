@@ -44,7 +44,7 @@ export const Header = ({ home }) => {
         <NavLink href="/products">
           <NavText>PRODUCTS</NavText>
         </NavLink>
-        <NavLink href="/UseCases">
+        <NavLink href="/solutions">
           <NavText>SOLUTIONS</NavText>
         </NavLink>
       </NavLinks>

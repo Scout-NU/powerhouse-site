@@ -47,9 +47,7 @@ export const query = graphql`
                   feature_title
                   features {
                     feature_name
-                    feature_description {
-                      text
-                    }
+                    feature_description
                     feature_image {
                       url
                     }

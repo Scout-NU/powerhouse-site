@@ -156,9 +156,6 @@ export const query = graphql`
             feature_title
             features {
               feature_name
-              feature_description {
-                text
-              }
               feature_image {
                 url
                 alt
