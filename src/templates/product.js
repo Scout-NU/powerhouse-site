@@ -121,7 +121,7 @@ export default function Product({ data }) {
                   />
                 </FeatureImage>
                 <FeatureDescription>
-                  <P>{feature.feature_description.text}</P>
+                  {/* <P>{feature.feature_description.text}</P> */}
                 </FeatureDescription>
               </Feature>
             )
