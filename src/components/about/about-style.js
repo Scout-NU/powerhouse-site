@@ -11,7 +11,7 @@ export const IconPlaceholder = styled.div`
 `
 
 export const AboutHeaderText = styled.div`
-  margin-top: 89px;
+  padding-top: 89px;
 `
 
 export const MissionSection = styled.div`

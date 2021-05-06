@@ -5,7 +5,6 @@ import styled from "styled-components"
 import dimensions from "../style/dimensions"
 import AboutPage from "../components/about/about"
 
-
 export default function About({ data }) {
   const aboutData = data.prismicAboutPage.data
   return (
@@ -50,6 +49,12 @@ export const query = graphql`
         }
         mission_image {
           url
+        }
+        rows {
+          feature_name
+          first_company_check
+          second_company
+          third_company
         }
         product_benefit {
           product_benefit_image {
