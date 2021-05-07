@@ -21,6 +21,8 @@ const colors = {
   grass900: "#B2DD8E",
   frost900: "#ECF3F7",
   stone900: "#585858",
+  seafoam900_transparent: "rgb(90, 199, 172, .07)",
+
 }
 
 export default colors
