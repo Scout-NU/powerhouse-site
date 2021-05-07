@@ -33,6 +33,7 @@ module.exports = {
         schemas: {
           // all the schemas here
           test: require("./src/schemas/test.json"),
+          faq: require("./src/schemas/faq.json"),
           product_page: require("./src/schemas/product_page.json"),
           product: require("./src/schemas/product.json"),
           Process: require("./src/schemas/process.json"),
@@ -47,9 +48,9 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /vectors/ // See below to configure properly
-        }
-      }
-    }
+          include: /vectors/, // See below to configure properly
+        },
+      },
+    },
   ],
 }
