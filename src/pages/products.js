@@ -8,7 +8,7 @@ export default function ProductSection({ data }) {
 
   return (
     <Layout>
-      <ProductPage data={productSectionData}/>
+      <ProductPage data={productSectionData} />
     </Layout>
   )
 }
@@ -32,9 +32,12 @@ export const query = graphql`
         product_page_main_heading
 
         products {
+          button_text
+          product_description
           product {
             document {
               ... on PrismicProduct {
+                uid
                 data {
                   product_title
                   button_destination
