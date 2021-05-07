@@ -18,13 +18,16 @@ export const TopicFAQSection = styled.section`
 `
 
 export const TopicContainer = styled.div`
-  flex: 3;
+  flex: 4;
 `
 
 export const FAQQuestionsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  flex: 7;
+  flex: 6;
+  @media (max-width: ${dimensions.maxwidthDesktop}px) {
+    display: none;
+  }
 `
 
 export const FAQWrapper = styled.div`

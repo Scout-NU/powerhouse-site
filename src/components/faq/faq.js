@@ -24,7 +24,7 @@ const FAQPage = ({ data }) => {
   } = data
 
   const [selectedTopic, setSelected] = React.useState()
-  console.log(cta_button_destination)
+
   return (
     <FAQContainer>
       <H3>{main_section_heading}</H3>
@@ -36,6 +36,9 @@ const FAQPage = ({ data }) => {
               label: t.topic_heading,
               id: t.topic_heading + i,
               selected: t.topic_heading === selectedTopic,
+              questions: frequently_asked_question.filter(
+                faq => faq.topic === t.topic_heading
+              ),
             }))}
             onTopicPicked={t =>
               setSelected(

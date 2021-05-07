@@ -12,7 +12,7 @@ export const ToggleContainer = styled.div`
 
 export const FAQQuestionTitle = styled(H4)`
   color: ${colors.blue900};
-  margin-top: 0;
+  margin: 0;
 `
 
 export const FAQAnswer = styled(Body)`

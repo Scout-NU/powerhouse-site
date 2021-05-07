@@ -43,4 +43,17 @@ export const TopicBox = styled.div`
     max-width: 100%;
     height: 100px;
   }
+  @media (max-width: ${dimensions.maxwidthDesktop}px) {
+    width: 100%;
+  }
+`
+
+export const TopicFAQContainer = styled.div`
+  flex: 100%;
+  max-width: 100%;
+  margin: 10px;
+  display: none;
+  @media (max-width: ${dimensions.maxwidthDesktop}px) {
+    display: initial;
+  }
 `
