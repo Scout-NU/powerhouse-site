@@ -66,6 +66,14 @@
     }
   },
   "Call To Action": {
+    "ctabackground": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "ctaBackground"
+      }
+    },
     "cta_heading": {
       "type": "Text",
       "config": {

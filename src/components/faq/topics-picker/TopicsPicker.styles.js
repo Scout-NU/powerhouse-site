@@ -1,6 +1,7 @@
 import { css } from "@emotion/react"
 import styled from "@emotion/styled"
 import colors from "../../../style/colors"
+import dimensions from "../../../style/dimensions"
 
 export const TopicsContainer = styled.div`
   display: flex;
@@ -35,5 +36,11 @@ export const TopicBox = styled.div`
 
   &:hover {
     ${SelectedBox};
+  }
+
+  @media (max-width: ${dimensions.maxwidthDesktop}px) {
+    flex: 100%;
+    max-width: 100%;
+    height: 100px;
   }
 `

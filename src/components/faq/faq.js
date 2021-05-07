@@ -1,12 +1,13 @@
 import React from "react"
 import { H3 } from "../../style/type-styles"
+import { FAQContact } from "./faq-contact/FAQContact"
 import { FAQQuestion } from "./faq-question/FAQQuestion"
 import {
   FAQContainer,
   FAQQuestionsContainer,
+  FAQWrapper,
   TopicContainer,
   TopicFAQSection,
-  FAQWrapper,
 } from "./faq.styles"
 import { TopicsPicker } from "./topics-picker/TopicsPicker"
 
@@ -17,15 +18,13 @@ const FAQPage = ({ data }) => {
     cta_button_destination,
     cta_button_text,
     cta_heading,
+    ctabackground,
     frequently_asked_question,
     individual_topic,
   } = data
 
-  const [selectedTopic, setSelected] = React.useState(
-    individual_topic[0]?.topic_heading ?? ""
-  )
-  console.log(selectedTopic)
-  console.log(frequently_asked_question)
+  const [selectedTopic, setSelected] = React.useState()
+  console.log(cta_button_destination)
   return (
     <FAQContainer>
       <H3>{main_section_heading}</H3>
@@ -59,6 +58,12 @@ const FAQPage = ({ data }) => {
             ))}
         </FAQQuestionsContainer>
       </TopicFAQSection>
+      <FAQContact
+        imageUrl={ctabackground.url}
+        ctaTitle={cta_heading}
+        ctaLabel={cta_button_text}
+        ctaDestination={cta_button_destination.url}
+      />
     </FAQContainer>
   )
 }

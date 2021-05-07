@@ -17,10 +17,13 @@ export const query = graphql`
       data {
         main_section_heading
         topics_section_heading
+        ctabackground {
+          url
+        }
         cta_heading
         cta_button_text
         cta_button_destination {
-          link_type
+          url
         }
         frequently_asked_question {
           question
