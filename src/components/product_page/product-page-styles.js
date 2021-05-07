@@ -34,6 +34,11 @@ export const ProductsHeading = styled.div`
   color: ${colors.blue900};
 `
 
+export const ProductCard = styled.a`
+  color: ${colors.blue900};
+  text-decoration: none;
+`
+
 export const FeaturedProductImage = styled.div`
   img {
     width: 47vw;

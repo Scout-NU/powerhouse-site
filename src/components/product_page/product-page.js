@@ -11,6 +11,7 @@ import {
   ProductsHeading,
   FeaturedCTA,
   ProductCTA,
+  ProductCard,
 } from "./product-page-styles"
 
 export default function ProductSection({ data }) {
@@ -46,7 +47,7 @@ export default function ProductSection({ data }) {
           {data.products.map(product => {
             return (
               product.product.document.data.product_type === "Homeowner" && (
-                <div>
+                <ProductCard href={`/${product.product.document.uid}`}>
                   <ProductImage>
                     <img
                       src={
@@ -67,7 +68,7 @@ export default function ProductSection({ data }) {
                       {product.button_text}
                     </a>
                   </ProductCTA>
-                </div>
+                </ProductCard>
               )
             )
           })}
@@ -81,7 +82,7 @@ export default function ProductSection({ data }) {
           {data.products.map(product => {
             return (
               product.product.document.data.product_type === "Commercial" && (
-                <div>
+                <ProductCard href={`/${product.product.document.uid}`}>
                   <ProductImage>
                     <img
                       src={
@@ -103,7 +104,7 @@ export default function ProductSection({ data }) {
                       {product.button_text}
                     </a>
                   </ProductCTA>
-                </div>
+                </ProductCard>
               )
             )
           })}
