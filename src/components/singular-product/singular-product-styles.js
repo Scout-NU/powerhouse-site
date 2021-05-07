@@ -63,7 +63,7 @@ export const SmallImageContainer = styled.div`
 export const TextContainer = styled.div`
   padding-left: 67px;
 
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     padding-left: 0px;
@@ -115,7 +115,7 @@ export const Icon = styled.div`
 
 export const IconHeader = styled.div`
   margin-left: ${layoutPaddingDesktop};
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     text-align: center;
@@ -133,7 +133,7 @@ export const IconImage = styled.div`
 export const IconCaption = styled.div`
   margin-top: 25px;
   width: 12vw;
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 
   text-align: center;
   @media (max-width: ${dimensions.maxwidthTablet}px) {
@@ -149,13 +149,13 @@ export const ImageHighlightSection = styled.div`
 export const ImageHighlightHeading = styled.div`
   padding-top: 147px;
   margin-left: 4vw;
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 `
 
 export const ImageHighlightGroupContainer = styled.div``
 
 export const ImageHighlightGroup = styled.div`
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 
   &.second-section {
     position: absolute;
@@ -261,7 +261,7 @@ export const ThirdSection = styled.div`
 
 export const FeatureSpecSection = styled.div`
   margin-top: 100px;
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 `
 
 export const FeatureIcon = styled.div`
