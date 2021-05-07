@@ -8,7 +8,7 @@ export const TopicsPicker = ({ topics, onTopicPicked }) => {
         <TopicBox
           role="button"
           aria-label="General FAQ Question topic filter"
-          onClick={() => onTopicPicked(t.id)}
+          onClick={() => onTopicPicked(t)}
           selected={t.selected}
           key={t.id}
         >

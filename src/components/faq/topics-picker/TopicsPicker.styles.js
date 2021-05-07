@@ -19,8 +19,9 @@ export const TopicBox = styled.div`
   align-items: center;
   justify-content: center;
   margin: 10px;
-  width: 200px;
-  height: 150px;
+  flex: 50%;
+  max-width: 40%;
+  aspect-ratio: 4/3;
   font-weight: bolder;
 
   cursor: pointer;
