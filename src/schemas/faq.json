@@ -1,0 +1,88 @@
+{
+  "Main": {},
+  "Top Questions": {
+    "main_section_heading": {
+      "type": "Text",
+      "config": {
+        "label": "Main Section Heading"
+      }
+    },
+    "frequently_asked_question": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "question": {
+            "type": "Text",
+            "config": {
+              "label": "Question"
+            }
+          },
+          "answer": {
+            "type": "Text",
+            "config": {
+              "label": "Answer"
+            }
+          },
+          "topic": {
+            "type": "Text",
+            "config": {
+              "label": "topic",
+              "placeholder": "The topic this question answer pair is associated with"
+            }
+          }
+        },
+        "label": "Frequently Asked Question"
+      }
+    }
+  },
+  "Topics": {
+    "topics_section_heading": {
+      "type": "Text",
+      "config": {
+        "label": "Topics Section Heading"
+      }
+    },
+    "individual_topic": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "topic_image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Topic Image"
+            }
+          },
+          "topic_heading": {
+            "type": "Text",
+            "config": {
+              "label": "Topic Heading"
+            }
+          }
+        },
+        "label": "Individual Topic"
+      }
+    }
+  },
+  "Call To Action": {
+    "cta_heading": {
+      "type": "Text",
+      "config": {
+        "label": "CTA Heading"
+      }
+    },
+    "cta_button_text": {
+      "type": "Text",
+      "config": {
+        "label": "CTA Button Text"
+      }
+    },
+    "cta_button_destination": {
+      "type": "Link",
+      "config": {
+        "label": "CTA Button Destination"
+      }
+    }
+  }
+}
