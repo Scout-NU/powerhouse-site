@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Hamburger from "../../vectors/hamburger.svg"
 import CloseIcon from "../../vectors/CloseIcon.svg"
 import {
@@ -14,10 +14,15 @@ import {
   NodeLine,
   LogoLink,
 } from "./header-styles"
-
 import Circle from "../../vectors/circle.svg"
-
 import { NavText } from "../../style/type-styles"
+import { createGlobalStyle } from "styled-components"
+
+const GlobalStyle = createGlobalStyle`
+   body {
+     overflow: ${props => (props.open == "open" ? "hidden" : "visible")};;
+   }
+`
 
 export const Header = ({ home }) => {
   const [open, setOpen] = useState(false)
@@ -29,10 +34,14 @@ export const Header = ({ home }) => {
       setColorchange(false)
     }
   }
+
   typeof window !== "undefined" &&
     window.addEventListener("scroll", changeNavbarColor)
+
   return (
     <NavContainer className={colorChange ? "navbar colorChange" : "navbar"}>
+      <GlobalStyle open={open ? "open" : ""} />
+
       <Logo
         alt="PowerHouse Logo"
         className={colorChange ? "navbar colorChange" : "navbar"}
@@ -43,7 +52,6 @@ export const Header = ({ home }) => {
           </LogoLink>
         </div>
       </Logo>
-
       <MobileIcon onClick={() => setOpen(!open)} className={open ? "open" : ""}>
         <Hamburger className="hamburger" />
       </MobileIcon>
