@@ -53,12 +53,24 @@
         "label": "Overview Description"
       }
     },
+    "image_one_alt": {
+      "type": "Text",
+      "config": {
+        "label": "Image One Alt"
+      }
+    },
     "overview_image_one": {
       "type": "Image",
       "config": {
         "constraint": {},
         "thumbnails": [],
         "label": "Overview Image One"
+      }
+    },
+    "image_two_alt": {
+      "type": "Text",
+      "config": {
+        "label": "Image Two Alt"
       }
     },
     "overview_image_two": {

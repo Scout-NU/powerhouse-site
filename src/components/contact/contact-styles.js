@@ -1,12 +1,12 @@
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import colors from "../../style/colors"
 import dimensions from "../../style/dimensions"
-
 import { fontSizes } from "../../style/type-styles"
 import {
   layoutPaddingDesktop,
   layoutPaddingMobile,
 } from "../../style/variables"
+
 export const ContactContainer = styled.div`
   min-height: 100vh;
 `
@@ -16,7 +16,6 @@ export const ContactForm = styled.div`
   width: 100%;
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     width: 36vw;
-
   }
   color: ${colors.blue900};
   input {
@@ -49,7 +48,7 @@ export const ContactSection = styled.div`
 export const ContactDescription = styled.div`
   margin-bottom: 64px;
 `
-export const ContactButton = styled.button`
+export const ContactButton = styled.a`
   font-size: 16px;
   padding-right: 60px;
   padding-left: 60px;
@@ -60,6 +59,11 @@ export const ContactButton = styled.button`
   color: ${colors.white900};
 
   border: none;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 46px -9px ${colors.orange900};
+  }
 `
 
 export const ContactImageSection = styled.div`
@@ -72,7 +76,6 @@ export const ContactImageSection = styled.div`
     object-fit: cover;
   }
 
-
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     margin-right: -${layoutPaddingMobile};
 
@@ -83,9 +86,7 @@ export const ContactImageSection = styled.div`
       height: 263px;
       object-fit: cover;
     }
-
   }
-
 `
 
 export const SpecificContactInfo = styled.div`
@@ -108,7 +109,4 @@ export const AddressSection = styled.div`
   margin-bottom: 110px;
 `
 
-export const UseCaseSection = styled.div`
-
-
-`
+export const UseCaseSection = styled.div``
