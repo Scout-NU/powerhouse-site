@@ -1,6 +1,10 @@
 import styled from "styled-components"
 import dimensions from "../../style/dimensions"
-
+import colors from "../../style/colors"
+import {
+  layoutPaddingDesktop,
+  layoutPaddingMobile,
+} from "../../style/variables"
 export const IconPlaceholder = styled.div`
   img {
     width: 6vw;
@@ -51,24 +55,23 @@ export const MissionTextParagraph = styled.div`
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     width: 100%;
   }
-
 `
 export const IndustryContextSection = styled.div`
   margin-top: 130px;
-  background-color: black;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: white;
 `
 
 export const IndustryContextContainer = styled.div`
   background-color: white;
   width: 89%;
+  position: relative;
+  z-index: 1;
   margin-top: 70px;
-  margin-bottom: 80px;
   padding-top: 42px;
-  padding-left: 8%;
-  padding-right: 8%;
-  padding-bottom: 54px;
-
+  padding-left: 109px;
+  padding-right: 109px;
 `
 
 export const IndustryContextExamples = styled.div`
@@ -109,6 +112,11 @@ export const IndustryContextExampleParagraph = styled.div`
 
 export const ProductBenefitHeader = styled.div`
   text-align: center;
+  margin-top: 158px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    margin-top: 54px;
+  }
 `
 
 export const ProductBenefitsContainer = styled.div`
@@ -143,15 +151,53 @@ export const BenefitTitle = styled.div`
   text-align: center;
 `
 
-export const CompanyComparisonSection = styled.div`
-  padding-top: 148px;
-  width: 100%;
+export const ComparisonCTA = styled.div`
+  margin-top: 90px;
+  margin-bottom: 114px;
+
   display: flex;
   justify-content: center;
+  a {
+    background-color: ${colors.orange900};
+    text-transform: uppercase;
+    color: ${colors.white900};
+    padding-left: 48px;
+    font-size: 16px;
+    padding-right: 48px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    text-decoration: none;
+  }
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    margin-bottom: 40px;
+    margin-top: 56px;
+  }
+`
+
+export const CompanyComparisonSection = styled.div`
+  padding-top: 148px;
+  width: 100vw;
+  margin-top: 141px;
+  display: flex;
+  margin-left: -${layoutPaddingDesktop};
+  justify-content: center;
+
+  background-color: rgb(110, 168, 192, 0.07);
 
   th {
     text-align: center;
     padding-right: 51px;
+  }
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    margin-left: -${layoutPaddingMobile};
+    padding-top: 53px;
+
+    th {
+      text-align: center;
+      padding-right: 16px;
+    }
   }
 
   td.competitor-icon {
@@ -176,13 +222,15 @@ export const FeatureTitleColumn = styled.div`
 `
 
 export const FeatureTitle = styled.div`
-  // font-size: calc(28px + (28 - 14) * ((100vw - 300px) / (1440 - 300)));
   font-size: 28px;
-
+  margin-bottom: 25px;
+  margin-top: 25px;
+  margin-right: 16px;
   font-weight: bold;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
-    font-size: 14px;
+    font-size: 12px;
+    width: 70px;
   }
 `
 
@@ -196,14 +244,22 @@ export const CompetitorColumn = styled.div`
 `
 
 export const CompetitorName = styled.div`
-  // font-size: calc(36px + (36 - 8) * ((100vw - 300px) / (1600 - 300)));
   font-size: 36px;
+  text-align: center;
+  padding-bottom: 68px;
+
+  color: ${colors.black900};
+  display: flex;
+  justify-content: center;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
-    font-size: 8px;
+    font-size: 12px;
+    padding-bottom: 18px;
   }
   font-weight: bold;
 `
+
+export const CompetitorTH = styled.th``
 
 export const IconGroup = styled.div`
   margin-top: 68px;
@@ -255,6 +311,18 @@ export const CompanyTeamSection = styled.div`
   }
 `
 
+export const CheckIcon = styled.div`
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    svg {
+      width: 27px;
+      height: 27px;
+    }
+  }
+`
+
 export const CompanyTeamHeading = styled.div`
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     text-align: center;
@@ -287,4 +355,15 @@ export const MemberImage = styled.div`
 
 export const FeatureSection = styled.div`
   display: flex;
+`
+
+export const IndustryContextBackgroundImage = styled.div`
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  img {
+    width: 100vw;
+    height: calc(100vh + 160px);
+    object-fit: cover;
+  }
 `

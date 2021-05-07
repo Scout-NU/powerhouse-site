@@ -29,8 +29,15 @@ import {
   TeamMember,
   MemberImage,
   MissionText,
-  CompanyTeamSection
+  CompanyTeamSection,
+  CheckIcon,
+  CompetitorTH,
+  ComparisonCTA,
+  IndustryContextBackgroundImage,
 } from "./about-style"
+
+import Check from "../../vectors/CheckIcon.svg"
+import Xicon from "../../vectors/xicon.svg"
 
 export default function About({ data }) {
   return (
@@ -41,12 +48,12 @@ export default function About({ data }) {
 
       <MissionSection>
         <MissionImage>
-          <img src={data.mission_image.url}/>
+          <img src={data.mission_image.url} />
         </MissionImage>
 
         <MissionText>
           <IconPlaceholder>
-            <img src={data.mission_icon.url}/>
+            <img src={data.mission_icon.url} />
           </IconPlaceholder>
           <H2>{data.mission_heading}</H2>
           <MissionTextParagraph>
@@ -55,28 +62,38 @@ export default function About({ data }) {
         </MissionText>
       </MissionSection>
 
-
-      <IndustryContextSection>   
+      <IndustryContextSection>
+        <IndustryContextBackgroundImage>
+          <img src={data.industry_context_background_image.url} />
+        </IndustryContextBackgroundImage>
         <IndustryContextContainer>
-          <IconPlaceholder>
-            <img src={data.industry_context_icon.url} />
-          </IconPlaceholder>
-          <H2>{data.industry_context_heading}</H2>
-          <IndustryContextExamples>
-            {data.industry_context_explanation.map((example, id) => {
-              return (
-                <IndustryContextGroup key={id}>
-                  <IndustryContextImage>
-                    <img src={example.explanation_image.url}/>
-                  </IndustryContextImage>
-                  <IndustryContextExampleParagraph>
-                    <Body>{example.explanation_description}</Body>
-                  </IndustryContextExampleParagraph>
-                </IndustryContextGroup>
-              )
-            })}
-          </IndustryContextExamples>
-        </IndustryContextContainer> 
+          <div>
+            <IconPlaceholder>
+              <img src={data.industry_context_icon.url} />
+            </IconPlaceholder>
+            <H2>{data.industry_context_heading}</H2>
+            <IndustryContextExamples>
+              {data.industry_context_explanation.map((example, id) => {
+                return (
+                  <IndustryContextGroup key={id}>
+                    <IndustryContextImage>
+                      <img src={example.explanation_image.url} />
+                    </IndustryContextImage>
+                    <IndustryContextExampleParagraph>
+                      <Body>{example.explanation_description}</Body>
+                    </IndustryContextExampleParagraph>
+                  </IndustryContextGroup>
+                )
+              })}
+            </IndustryContextExamples>
+
+            <ComparisonCTA>
+              <a href={data.cta_button_destination.url}>
+                {data.cta_button_text}
+              </a>
+            </ComparisonCTA>
+          </div>
+        </IndustryContextContainer>
       </IndustryContextSection>
 
       <div>
@@ -88,100 +105,65 @@ export default function About({ data }) {
             return (
               <BenefitGroup key={id}>
                 <BenefitImage>
-                  <img src={benefit.product_benefit_image.url}/>
+                  <img src={benefit.product_benefit_image.url} />
                 </BenefitImage>
                 <BenefitTitle>
                   <Body>{benefit.product_benefit_title}</Body>
                 </BenefitTitle>
-                  
-                
               </BenefitGroup>
             )
           })}
         </ProductBenefitsContainer>
-    </div>
-
-      {/* <CompanyComparisonSection>
-    <CompanyComparisonSectionHeading>
-      {aboutData.company_comparison_section_heading}
-    </CompanyComparisonSectionHeading>
-    <ProductBenefitSection>
-      {aboutData.product_benefit.map(benefit => {
-        return (
-          <BenefitGroup>
-            <BenefitImage></BenefitImage>
-            <BenefitTitle>{benefit.product_benefit_title}</BenefitTitle>
-          </BenefitGroup>
-        )
-      })}
-    </ProductBenefitSection>
-
-    <ProductComparison>
-      <FeatureTitleColumn>
-        {aboutData.product_feature.map(feature => {
-          return (
-            <FeatureSection>
-              <FeatureTitle>{feature.product_feature_name}</FeatureTitle>
-              <CompetitorIcon />
-              <CompetitorIcon />
-              <CompetitorIcon />
-            </FeatureSection>
-          )
-        })}
-      </FeatureTitleColumn>
-      <CompetitorColumnGroup>
-        {aboutData.company.map(competitor => {
-          return (
-            <CompetitorColumn>
-              <CompetitorName>{competitor.company_name}</CompetitorName>
-              <IconGroup>
-                <CompetitorIcon />
-                <CompetitorIcon />
-                <CompetitorIcon />
-                <CompetitorIcon />
-                <CompetitorIcon />
-              </IconGroup>
-            </CompetitorColumn>
-          )
-        })}
-      </CompetitorColumnGroup>
-    </ProductComparison>
-  </CompanyComparisonSection> */}
+      </div>
 
       <CompanyComparisonSection>
-        <table>
-          <tr>
-            <th></th>
-            {data.company.map((competitor, id) => (
-              <>
-                <th key={id}>
-                  <CompetitorName>
-                    <H3>{competitor.company_name}</H3>
-                  </CompetitorName>
-                </th>
-              </>
-            ))}
-          </tr>
-          {data.product_feature.map((feature, id) => (
-            <tr key={id}>
-              <td>
-                <FeatureTitle>
-                  <P>{feature.product_feature_name}</P>
-                </FeatureTitle>
-              </td>
-              <td>
-                <CompetitorIcon />
-              </td>
-              <td>
-                <CompetitorIcon />
-              </td>
-
-              <td>
-                <CompetitorIcon />
-              </td>
+        <div>
+          <table>
+            <tr>
+              <th></th>
+              {data.company.map((competitor, id) => (
+                <>
+                  <CompetitorTH key={id}>
+                    <CompetitorName>{competitor.company_name}</CompetitorName>
+                  </CompetitorTH>
+                </>
+              ))}
             </tr>
-          ))}
-        </table>
+            {data.rows.map((feature, id) => (
+              <tr key={id}>
+                <td>
+                  <FeatureTitle>{feature.feature_name}</FeatureTitle>
+                </td>
+                <td>
+                  <CheckIcon>
+                    {feature.first_company_check == "Yes" ? (
+                      <Check />
+                    ) : (
+                      <Xicon />
+                    )}
+                  </CheckIcon>
+                </td>
+                <td>
+                  <CheckIcon>
+                    {feature.second_company == "Yes" ? <Check /> : <Xicon />}
+                  </CheckIcon>
+                </td>
+
+                <td>
+                  <CheckIcon>
+                    {feature.third_company == "Yes" ? <Check /> : <Xicon />}
+                  </CheckIcon>
+                </td>
+              </tr>
+            ))}
+          </table>
+
+          <ComparisonCTA>
+            <a href={data.products_navigation_button_destination.url}>
+              {data.products_navigation_button_text}
+            </a>
+          </ComparisonCTA>
+        </div>
       </CompanyComparisonSection>
 
       <CompanyBackgroundSection>
@@ -200,7 +182,7 @@ export default function About({ data }) {
               return (
                 <TeamMember key={id}>
                   <MemberImage>
-                    <img src={member.team_member_image.url}/>
+                    <img src={member.team_member_image.url} />
                   </MemberImage>
                   <H3>{member.team_member_title}</H3>
                   <Body>{member.team_member_description}</Body>

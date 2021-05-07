@@ -28,6 +28,7 @@ export const query = graphql`
         cta_button_destination {
           url
         }
+
         cta_button_text
         industry_context_explanation {
           explanation_description
