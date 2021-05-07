@@ -148,39 +148,31 @@ export const WhyCTA = styled.div`
 `
 
 export const DemoVideoSection = styled.div`
-margin-top: 75px;
-margin-bottom: 75px;
+  margin-top: 75px;
+  margin-bottom: 75px;
 
-@media (min-width: ${dimensions.maxwidthTablet}px) {
-  margin-top: 192px;
-  margin-bottom: 192px;
-  justify-content: center;
-  display: flex;
-}
-
-
-
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    margin-top: 192px;
+    margin-bottom: 192px;
+    justify-content: center;
+    display: flex;
+  }
 `
 
 export const DemoVideo = styled.div`
-
-iframe {
-  width: 72vw;
-  height: 562px;
-}
-
-@media (max-width: ${dimensions.maxwidthTablet}px) {
   iframe {
-    width: 100%;
-    height: 173px;
+    width: 72vw;
+    height: 562px;
   }
-}
 
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    iframe {
+      width: 100%;
+      height: 173px;
+    }
+  }
 `
 
-
 export const DemoHeading = styled.div`
-
-color: ${colors.ocean900};
-
+  color: ${colors.ocean900};
 `

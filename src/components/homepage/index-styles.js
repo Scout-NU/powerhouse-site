@@ -328,7 +328,7 @@ export const NodeLine = styled.div`
   left: -80px;
   margin-top: 64px;
   z-index: 0;
-  background-color: ${colors.seafoam900};
+  background-color: ${colors.grass900};
 
   @media (min-width: ${dimensions.maxwidthDesktop}px) {
     width: 70%;
