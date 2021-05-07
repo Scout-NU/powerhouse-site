@@ -44,7 +44,7 @@ export const IntroTextSection = styled.div`
 `
 
 export const IntroHeader = styled.div`
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 `
 
 export const ImageTwo = styled.div`
@@ -87,7 +87,7 @@ export const WhyHeader = styled.div`
   margin-top: 118px;
   margin-bottom: 88px;
 
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     margin-top: 152px;
@@ -116,7 +116,7 @@ export const SpecificImage = styled.div`
 export const SpecificReasonHeading = styled.div`
   text-align: center;
 
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 
   @media (min-width: ${dimensions.maxwidthTablet}px) {
   }
@@ -135,7 +135,7 @@ export const WhyCTA = styled.div`
   justify-content: center;
 
   a {
-    background-color: ${colors.orange900};
+    background-color: ${colors.seafoam900};
     text-transform: uppercase;
     color: ${colors.white900};
     padding-left: 48px;
@@ -181,6 +181,6 @@ iframe {
 
 export const DemoHeading = styled.div`
 
-color: ${colors.blue900};
+color: ${colors.ocean900};
 
 `
