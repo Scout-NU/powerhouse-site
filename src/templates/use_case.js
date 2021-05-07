@@ -36,14 +36,14 @@ export default function Product({ data }) {
           <IntroImages>
             <ImageOne>
               <img
-                alt="Use Case Demo Primary Image"
+                alt={use_case.data.image_one_alt}
                 src={use_case.data.overview_image_one.url}
               />
             </ImageOne>
 
             <ImageTwo>
               <img
-                alt="Use Case Demo Secondary Image"
+                alt={use_case.data.image_two_alt}
                 src={use_case.data.overview_image_two.url}
               />
             </ImageTwo>
@@ -53,9 +53,9 @@ export default function Product({ data }) {
             <IntroHeader>
               <H1>{use_case.data.overview_heading}</H1>
             </IntroHeader>
-            {use_case.data.overview_description.raw.map(paragraph => {
+            {use_case.data.overview_description.raw.map((paragraph, id) => {
               return (
-                <IntroDescription>
+                <IntroDescription key={id}>
                   <Body>{paragraph.text}</Body>
                 </IntroDescription>
               )
@@ -144,6 +144,8 @@ export const query = graphql`
             }
             reasons_main_heading
             preview_description
+            image_one_alt
+            image_two_alt
             overview_image_two {
               url
             }
