@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from "@emotion/styled"
 import dimensions from "../../style/dimensions"
 import colors from "../../style/colors"
 
