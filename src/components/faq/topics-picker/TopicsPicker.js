@@ -19,7 +19,7 @@ export const TopicsPicker = ({ topics, onTopicPicked }) => {
   return (
     <TopicsContainer>
       {topics.map(t => (
-        <>
+        <React.Fragment key={t.label}>
           <TopicBox
             role="button"
             aria-label="General FAQ Question topic filter"
@@ -29,16 +29,15 @@ export const TopicsPicker = ({ topics, onTopicPicked }) => {
             {t.label}
           </TopicBox>
           {openTopics.includes(t.label) &&
-            t.questions.map((fq, i) => (
-              <TopicFAQContainer>
+            t.questions.map(fq => (
+              <TopicFAQContainer key={fq.question}>
                 <FAQQuestion
-                  key={i}
                   questionText={fq.question}
                   answerText={fq.answer}
                 />
               </TopicFAQContainer>
             ))}
-        </>
+        </React.Fragment>
       ))}
     </TopicsContainer>
   )
