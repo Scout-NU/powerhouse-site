@@ -1,6 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
-import {H1, H2, H3, Sub1, P} from "../style/type-styles"
+import { H1, H2, H3, Sub1, P } from "../style/type-styles"
 import {
   SingularProductContainer,
   HeroSection,
@@ -25,110 +25,135 @@ import {
   FeatureName,
   FeatureImage,
   FeatureDescription,
+  IconHeader,
 } from "../components/singular-product/singular-product-styles"
 
 import Layout from "../components/layout"
 export default function Product({ data }) {
   const products = data.allPrismicProduct.edges[0].node
+  const [mainImage, setMainImage] = useState(0)
 
   return (
     <Layout>
-    <SingularProductContainer>
-      <HeroSection>
-        <ImageContainer>
-          {products.data.product_images.map((image, id) => {
-            return (
-              <img 
-                src={image.url} 
-                alt={image.alt}
-                key={id} 
-                className={id === 0? "main-image" : ""}/>
-            )
-          })}
-        </ImageContainer>
-        <TextContainer>
-          <ProductType>
-            <Sub1>{products.data.product_type}</Sub1>
-          </ProductType>
-          <H1>{products.data.product_title}</H1>
-          <P>{products.data.product_description.text}</P>
-        </TextContainer>
-      </HeroSection>
-
-      <IconSection>
-        <H3>{products.data.icon_section_title}</H3>
-        <IconContainer>
-          {products.data.icons.map((icon, id) => {
-            return (
-              <Icon key={id}>
-                <IconImage>
-                  <img src={icon.icon_image.url} alt={icon.icon_image.alt}/>
-                </IconImage>
-                <IconCaption>
-                  <P>{icon.icon_text}</P>
-                </IconCaption>
-              </Icon>
-            )
-          })}
-        </IconContainer>
-      </IconSection>
-
-      <ImageHighlightSection>
-        <ImageHighlightHeading>
-          <H1>{products.data.image_highlight_heading}</H1>
-        </ImageHighlightHeading>
-        <ImageHighlightGroupContainer>
-          {products.data.image_highlight_group.map((highlight, id) => {
-            return (
-              <ImageHighlightGroup
-                key={id}
-                className={id === 0 ? "first" : ""}
-                className={id === 1 ? "second-section" : ""}
-              >
-                <ThirdSection className={id === 2 ? "third-section" : ""}>
-                  <HighlightedImage className={id === 0 ? "first-image" : ""}>
-                    <img src={highlight.highlighted_image.url} alt={highlight.highlighted_image.alt}/>
-                  </HighlightedImage>
-                  <ImageHighlightDescription className={id === 1 ? "second-section" : ""}>
-                    {highlight.image_highlight_description}
-                  </ImageHighlightDescription>
-                </ThirdSection>
-              </ImageHighlightGroup>
-            )
-          })}
-        </ImageHighlightGroupContainer>
-      </ImageHighlightSection>
-
-      <FeatureSpecSection>
-        <FeatureIcon>
-          <img src={products.data.feature_icon.url} alt={products.data.feature_icon.alt}/>
-        </FeatureIcon>
-        <H2>{products.data.feature_title}</H2>
-        <div>
-          {products.data.features.map((feature, id) => {
-            return (
-              <Feature>
-                <FeatureName>
-                  <Sub1>{feature.feature_name}</Sub1>
-                </FeatureName>
-                <FeatureImage>
+      <SingularProductContainer>
+        <HeroSection>
+          <ImageContainer>
+            <img
+              src={products.data.product_images[mainImage].image.url}
+              className="main-image"
+            />
+            {products.data.product_images.map((image, id) => {
+              return (
+                <>
                   <img
+                    onClick={() => setMainImage(id)}
+                    src={image.image.url}
+                    alt={image.alt}
                     key={id}
-                    className={id === 0 ? "first-image" : ""}
-                    className={id !== 0 ? "not-image" : ""}
-                    src={feature.feature_image.url}
-                    alt={feature.feature_image.alt}
                   />
-                </FeatureImage>
-                <FeatureDescription>
-                  {/* <P>{feature.feature_description.text}</P> */}
-                </FeatureDescription>
-              </Feature>
-            )
-          })}
-        </div>
-      </FeatureSpecSection>
-    </SingularProductContainer>
+                  {console.log(image)}
+                </>
+              )
+            })}
+          </ImageContainer>
+          <TextContainer>
+            <ProductType>
+              <Sub1>{products.data.product_type}</Sub1>
+            </ProductType>
+            <H1>{products.data.product_title}</H1>
+            <P>{products.data.product_description.text}</P>
+          </TextContainer>
+        </HeroSection>
+
+        <IconSection>
+          <IconHeader>
+            <H3>{products.data.icon_section_title}</H3>
+          </IconHeader>
+          <IconContainer>
+            {products.data.icons.map((icon, id) => {
+              return (
+                <Icon key={id}>
+                  <IconImage>
+                    <img src={icon.icon_image.url} alt={icon.icon_image.alt} />
+                  </IconImage>
+                  <IconCaption>
+                    <P>{icon.icon_text}</P>
+                  </IconCaption>
+                </Icon>
+              )
+            })}
+          </IconContainer>
+        </IconSection>
+
+        <ImageHighlightSection>
+          <ImageHighlightHeading>
+            <H1>{products.data.image_highlight_heading}</H1>
+          </ImageHighlightHeading>
+          <ImageHighlightGroupContainer>
+            {products.data.image_highlight_group.map((highlight, id) => {
+              return (
+                <ImageHighlightGroup
+                  key={id}
+                  className={`${id === 0 ? "first" : ""}  ${
+                    id === 1 ? "second-section" : ""
+                  }`}
+                >
+                  <ThirdSection className={id === 2 ? "third-section" : ""}>
+                    <HighlightedImage
+                      className={`${id === 0 ? " first-image " : ""} ${
+                        id === 1 ? " second-image " : ""
+                      }`}
+                    >
+                      <img
+                        src={highlight.highlighted_image.url}
+                        alt={highlight.highlighted_image.alt}
+                      />
+                    </HighlightedImage>
+                    <ImageHighlightDescription
+                      className={id === 1 ? "second-section" : ""}
+                    >
+                      {highlight.image_highlight_description}
+                    </ImageHighlightDescription>
+                  </ThirdSection>
+                </ImageHighlightGroup>
+              )
+            })}
+          </ImageHighlightGroupContainer>
+        </ImageHighlightSection>
+
+        <FeatureSpecSection>
+          <FeatureIcon>
+            <img
+              src={products.data.feature_icon.url}
+              alt={products.data.feature_icon.alt}
+            />
+          </FeatureIcon>
+          <H2>{products.data.feature_title}</H2>
+          <div>
+            {products.data.features.map((feature, id) => {
+              return (
+                <Feature>
+                  <FeatureName>
+                    <Sub1>{feature.feature_name}</Sub1>
+                  </FeatureName>
+                  <FeatureImage>
+                    <img
+                      key={id}
+                      className={id === 0 ? " first-image " : ""}
+                      className={id !== 0 ? " not-image " : ""}
+                      src={feature.feature_image.url}
+                      alt={feature.feature_image.alt}
+                    />
+                  </FeatureImage>
+                  <FeatureDescription>
+                    <P>{feature.feature_description}</P>
+                  </FeatureDescription>
+                </Feature>
+              )
+            })}
+          </div>
+        </FeatureSpecSection>
+      </SingularProductContainer>
     </Layout>
   )
 }
@@ -148,7 +173,7 @@ export const query = graphql`
                 height
                 width
               }
-            } 
+            }
             product_title
             button_destination
             button_title
@@ -156,6 +181,7 @@ export const query = graphql`
             feature_title
             features {
               feature_name
+              feature_description
               feature_image {
                 url
                 alt

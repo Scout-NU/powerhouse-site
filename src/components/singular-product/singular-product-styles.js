@@ -2,7 +2,9 @@ import styled from "styled-components"
 import dimensions from "../../style/dimensions"
 import {
   layoutPaddingDesktop,
+  layoutPaddingMobile,
 } from "../../style/variables"
+import colors from "../../style/colors"
 
 export const SingularProductContainer = styled.div``
 
@@ -17,40 +19,42 @@ export const HeroSection = styled.div`
 
 export const ImageContainer = styled.div`
   display: flex;
-    flex-wrap: wrap;
-    img {
-      width: 4vw;
-      height: 56px;
-      margin-right: 18px;
-      margin-top: 44px;
-
-      @media (max-width: ${dimensions.maxwidthTablet}px) {
-        width: 3vw;
-        height: 39px;
-        margin-right: 12px;
-        margin-top: 32px;
-      }
-
-      &.main-image {
-        width: 47vw;
-        height: 432px;
-        flex: 100%;
-        
-        @media (max-width: ${dimensions.maxwidthTablet}px) {
-          width: 100%;
-          height: 225px;
-        }
-      }
-    }
+  flex-wrap: wrap;
+  img {
+    width: 4vw;
+    height: 56px;
+    object-fit: cover;
+    margin-right: 18px;
+    margin-top: 44px;
 
     @media (max-width: ${dimensions.maxwidthTablet}px) {
-      justify-content: center;
+      width: 39px;
+      height: 39px;
+      margin-right: 12px;
+      margin-top: 32px;
     }
+
+    &.main-image {
+      object-fit: cover;
+      width: 47vw;
+      height: 432px;
+      flex: 100%;
+
+      @media (max-width: ${dimensions.maxwidthTablet}px) {
+        width: 100%;
+        height: 225px;
+      }
+    }
+  }
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    justify-content: center;
+  }
 `
 
 export const SmallImageContainer = styled.div`
   display: flex;
-  
+
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     justify-content: center;
   }
@@ -58,6 +62,8 @@ export const SmallImageContainer = styled.div`
 
 export const TextContainer = styled.div`
   padding-left: 67px;
+
+  color: ${colors.blue900};
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     padding-left: 0px;
@@ -74,22 +80,46 @@ export const ProductType = styled.div`
 
 export const IconSection = styled.div`
   margin-top: 127px;
+  background-color: rgb(110, 168, 192, 0.07);
+  width: 100vw;
+  margin-left: -${layoutPaddingDesktop};
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    margin-left: -${layoutPaddingMobile};
+  }
 `
 
 export const IconContainer = styled.div`
   display: flex;
   margin-top: 80px;
   justify-content: space-between;
+  margin-left: ${layoutPaddingDesktop};
+  margin-right: ${layoutPaddingDesktop};
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     flex-wrap: wrap;
+    justify-content: center;
     margin-top: 54px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 `
 
 export const Icon = styled.div`
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     margin-top: 30px;
+  }
+`
+
+export const IconHeader = styled.div`
+  margin-left: ${layoutPaddingDesktop};
+  color: ${colors.blue900};
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    text-align: center;
+    margin-left: 0px;
   }
 `
 
@@ -103,6 +133,8 @@ export const IconImage = styled.div`
 export const IconCaption = styled.div`
   margin-top: 25px;
   width: 12vw;
+  color: ${colors.blue900};
+
   text-align: center;
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     width: 44vw;
@@ -117,19 +149,14 @@ export const ImageHighlightSection = styled.div`
 export const ImageHighlightHeading = styled.div`
   padding-top: 147px;
   margin-left: 4vw;
-
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-    position: absolute;
-    top: 910px;
-    margin-left: 0px;
-  }
+  color: ${colors.blue900};
 `
 
-export const ImageHighlightGroupContainer = styled.div`
-
-`
+export const ImageHighlightGroupContainer = styled.div``
 
 export const ImageHighlightGroup = styled.div`
+  color: ${colors.blue900};
+
   &.second-section {
     position: absolute;
     right: 0;
@@ -147,11 +174,30 @@ export const HighlightedImage = styled.div`
     img {
       margin-left: -${layoutPaddingDesktop};
       margin-top: 60px;
+      width: 50vw;
+      height: 372px;
+      object-fit: cover;
 
       @media (max-width: ${dimensions.maxwidthTablet}px) {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
+      }
+    }
+  }
+
+  &.second-image {
+    img {
+      width: 28vw;
+      height: 357px;
+      object-fit: cover;
+    }
+
+    @media (max-width: ${dimensions.maxwidthTablet}px) {
+      img {
+        width: 100%;
+        height: 275px;
+        object-fit: cover;
       }
     }
   }
@@ -169,12 +215,12 @@ export const HighlightedImage = styled.div`
 export const ImageHighlightDescription = styled.div`
   font-size: calc(18px + (18 - 16) * ((100vw - 300px) / (1440 - 300)));
   width: 35vw;
+  padding-top: 40px;
 
   &.second-section {
     padding-top: 88px;
 
     @media (max-width: ${dimensions.maxwidthTablet}px) {
-      margin-top: 310px;
     }
   }
 
@@ -189,17 +235,25 @@ export const ThirdSection = styled.div`
     flex-direction: row-reverse;
     align-items: center;
     margin-top: 97px;
-    margin-right: -${layoutPaddingDesktop}; 
+    margin-right: -${layoutPaddingDesktop};
     justify-content: space-between;
+
+    img {
+      width: 56vw;
+      height: 372px;
+      object-fit: cover;
+    }
 
     @media (max-width: ${dimensions.maxwidthTablet}px) {
       display: block;
       width: 100%;
       margin-top: 25px;
+      flex-direction: none;
 
       img {
-        position: absolute;
-        top: 800px;
+        width: 100%;
+        height: 275px;
+        object-fit: cover;
       }
     }
   }
@@ -207,6 +261,7 @@ export const ThirdSection = styled.div`
 
 export const FeatureSpecSection = styled.div`
   margin-top: 100px;
+  color: ${colors.blue900};
 `
 
 export const FeatureIcon = styled.div`
