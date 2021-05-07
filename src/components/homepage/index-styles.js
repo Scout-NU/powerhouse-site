@@ -47,7 +47,7 @@ export const HeroDescription = styled.div``
 export const HeroCTA = styled.div`
   margin-top: 64px;
   a {
-    background-color: ${colors.orange900};
+    background-color: ${colors.seafoam900};
     text-transform: uppercase;
     color: ${colors.white900};
     padding-left: 48px;
@@ -65,7 +65,7 @@ export const ImpactSection = styled.div`
   min-height: 100vh;
   z-index: 1;
   position: relative;
-
+  color: ${colors.ocean900};
   background-color: ${colors.white900};
   justify-content: center;
   @media (max-width: ${dimensions.maxwidthTablet}px) {
@@ -154,7 +154,7 @@ export const FutureImage = styled.div`
 
 export const FutureHeader = styled.div`
   font-weight: bold;
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
   @media (min-width: ${dimensions.maxwidthTablet}px) {
   }
 `
@@ -175,7 +175,7 @@ export const FutureSolarIcon = styled.div`
 export const FutureDescription = styled.div`
   margin-top: 32px;
   font-size: 18px;
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     font-size: 16px;
@@ -189,12 +189,12 @@ export const FutureCTA = styled.div`
     padding-left: 60px;
     padding-top: 16px;
     padding-bottom: 16px;
-    border: solid ${colors.orange900}; 1px;
+    border: solid ${colors.seafoam900}; 1px;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
-    color: ${colors.orange900};
+    color: ${colors.seafoam900};
   }
 `
 
@@ -206,14 +206,14 @@ export const HomePageContainer = styled.div`
 export const SolutionsSection = styled.div`
   height: 100vh;
   margin-top: 200px;
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
   padding-bottom: 100px;
 `
 
 export const SolutionsCard = styled.div`
   a {
     text-decoration: none;
-    color: ${colors.blue900};
+    color: ${colors.ocean900};
   }
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     img {
@@ -253,12 +253,12 @@ a {
   padding-left: 60px;
   padding-top: 16px;
   padding-bottom: 16px;
-  border: solid ${colors.orange900}; 1px;
+  border: solid ${colors.seafoam900}; 1px;
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
-  color: ${colors.orange900};
+  color: ${colors.seafoam900};
 }
 `
 export const CTASection = styled.div`
@@ -298,7 +298,7 @@ export const CTAContent = styled.div`
 `
 
 export const CTAText = styled.div`
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     margin-left: 133px;
@@ -314,12 +314,12 @@ a {
   padding-left: 60px;
   padding-top: 16px;
   padding-bottom: 16px;
-  border: solid ${colors.orange900}; 1px;
+  border: solid ${colors.seafoam900}; 1px;
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
-  color: ${colors.orange900};
+  color: ${colors.seafoam900};
 }
 `
 export const NodeLine = styled.div`
@@ -328,7 +328,7 @@ export const NodeLine = styled.div`
   left: -80px;
   margin-top: 64px;
   z-index: 0;
-  background-color: ${colors.orange900};
+  background-color: ${colors.seafoam900};
 
   @media (min-width: ${dimensions.maxwidthDesktop}px) {
     width: 70%;
@@ -344,7 +344,7 @@ export const MobileNodeLine = styled.div`
   left: -${layoutPaddingMobile};
   margin-top: 64px;
   z-index: 0;
-  background-color: ${colors.orange900};
+  background-color: ${colors.seafoam900};
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     width: 55.8%;
