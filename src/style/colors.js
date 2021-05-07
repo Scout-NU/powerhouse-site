@@ -8,6 +8,7 @@ const colors = {
   white900: "#FFFFFF",
 
   orange900: "#F27A28",
+  orange900_transparent: "rgb(242, 106, 33, .07)",
   blue900: "#245373",
   lightblue900: "#6480A5",
   lighterblue900: "#6EA8C0",
