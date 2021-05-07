@@ -15,7 +15,7 @@ export const TopicsPicker = ({ topics, onTopicPicked }) => {
       prev.includes(label) ? prev.filter(t => t !== label) : [...prev, label]
     )
   }
-  console.log(openTopics)
+
   return (
     <TopicsContainer>
       {topics.map(t => (
