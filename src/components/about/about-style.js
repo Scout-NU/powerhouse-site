@@ -16,9 +16,12 @@ export const IconPlaceholder = styled.div`
 
 export const AboutHeaderText = styled.div`
   padding-top: 89px;
+  color: ${colors.ocean900};
 `
 
 export const MissionSection = styled.div`
+  color: ${colors.ocean900};
+
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     display: flex;
   }
@@ -39,6 +42,8 @@ export const MissionImage = styled.div`
 `
 
 export const MissionText = styled.div`
+  color: ${colors.ocean900};
+
   position: relative;
   padding-top: 28px;
   @media (min-width: ${dimensions.maxwidthTablet}px) {
@@ -51,6 +56,7 @@ export const MissionText = styled.div`
 
 export const MissionTextParagraph = styled.div`
   width: 44vw;
+  color: ${colors.ocean900};
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     width: 100%;
@@ -61,6 +67,7 @@ export const IndustryContextSection = styled.div`
   display: flex;
   justify-content: center;
   background-color: white;
+  color: ${colors.ocean900};
 `
 
 export const IndustryContextContainer = styled.div`
@@ -72,6 +79,7 @@ export const IndustryContextContainer = styled.div`
   padding-top: 42px;
   padding-left: 109px;
   padding-right: 109px;
+  color: ${colors.ocean900};
 `
 
 export const IndustryContextExamples = styled.div`
@@ -113,6 +121,7 @@ export const IndustryContextExampleParagraph = styled.div`
 export const ProductBenefitHeader = styled.div`
   text-align: center;
   margin-top: 158px;
+  color: ${colors.ocean900};
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     margin-top: 54px;
@@ -123,6 +132,8 @@ export const ProductBenefitsContainer = styled.div`
   margin-top: 68px;
   display: flex;
   flex-wrap: wrap;
+  color: ${colors.ocean900};
+
   justify-content: space-between;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
@@ -154,11 +165,12 @@ export const BenefitTitle = styled.div`
 export const ComparisonCTA = styled.div`
   margin-top: 90px;
   margin-bottom: 114px;
+  color: ${colors.ocean900};
 
   display: flex;
   justify-content: center;
   a {
-    background-color: ${colors.orange900};
+    background-color: ${colors.seafoam900};
     text-transform: uppercase;
     color: ${colors.white900};
     padding-left: 48px;
@@ -179,6 +191,8 @@ export const CompanyComparisonSection = styled.div`
   padding-top: 148px;
   width: 100vw;
   margin-top: 141px;
+  color: ${colors.ocean900};
+
   display: flex;
   margin-left: -${layoutPaddingDesktop};
   justify-content: center;
@@ -210,6 +224,7 @@ export const CompanyComparisonSectionHeading = styled.div`
   text-align: center;
   font-size: calc(36px + (36 - 24) * ((100vw - 300px) / (1440 - 300)));
   font-weight: bold;
+  color: ${colors.ocean900};
 `
 
 export const ProductComparison = styled.div`
@@ -219,11 +234,14 @@ export const ProductComparison = styled.div`
 
 export const FeatureTitleColumn = styled.div`
   // margin-top: 110px;
+  color: ${colors.ocean900};
 `
 
 export const FeatureTitle = styled.div`
   font-size: 28px;
   margin-bottom: 25px;
+  color: ${colors.ocean900};
+
   margin-top: 25px;
   margin-right: 16px;
   font-weight: bold;
@@ -248,7 +266,7 @@ export const CompetitorName = styled.div`
   text-align: center;
   padding-bottom: 68px;
 
-  color: ${colors.black900};
+  color: ${colors.ocean900};
   display: flex;
   justify-content: center;
 
@@ -286,6 +304,7 @@ export const GeneralDescriptionSection = styled.div`
   width: 46vw;
   margin-left: auto;
   margin-right: auto;
+  color: ${colors.ocean900};
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     width: 100%;
@@ -294,6 +313,7 @@ export const GeneralDescriptionSection = styled.div`
 
 export const CompanyBackgroundHeading = styled.div`
   text-align: center;
+  color: ${colors.ocean900};
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     padding-bottom: 30px;
@@ -305,6 +325,7 @@ export const CompanyTeamSection = styled.div`
   width: 65vw;
   margin-left: auto;
   margin-right: auto;
+  color: ${colors.ocean900};
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     width: 100%;
