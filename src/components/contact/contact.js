@@ -13,7 +13,7 @@ import {
 } from "./contact-styles"
 import PlantIcon from "../../vectors/plant-icon.svg"
 
-export default function Contact({ data }) {
+export default function ContactComponent({ data }) {
   return (
     <ContactContainer>
       <ContactSection>

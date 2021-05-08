@@ -75,4 +75,4 @@ const Body = styled.div`
   font-size: ${fontSizes.body};
 `
 
-export { H1, H2, H3, H4, P, NavText, Sub1, Body, fontSizes }
+export { H1, H2, H3, H4, P, NavText, Sub1, Sub2, Body, fontSizes }
