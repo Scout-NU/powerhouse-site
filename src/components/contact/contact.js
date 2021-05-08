@@ -24,36 +24,39 @@ export default function Contact({ data }) {
             <Body>{data.prismicContactPage.data.overview_description}</Body>
           </ContactDescription>
           <form>
-            <label>
+            <label for="firstname">
               <Sub2>
                 {data.prismicContactPage.data.form_input[0].input_heading}
               </Sub2>
             </label>
             <input
               type="text"
+              id="firstname"
               placeholder={
                 data.prismicContactPage.data.form_input[0].input_instructions
               }
             />
-            <label>
+            <label for="email">
               <Sub2>
                 {data.prismicContactPage.data.form_input[1].input_heading}
               </Sub2>
             </label>
             <input
               type="text"
+              id="email"
               placeholder={
                 data.prismicContactPage.data.form_input[1].input_instructions
               }
             />
 
-            <label>
+            <label for="message">
               <Sub2>
                 {data.prismicContactPage.data.form_input[2].input_heading}
               </Sub2>
             </label>
             <input
               type="text"
+              id="message"
               placeholder={
                 data.prismicContactPage.data.form_input[2].input_instructions
               }
@@ -65,7 +68,7 @@ export default function Contact({ data }) {
         </ContactForm>
 
         <ContactImageSection>
-          <img src={data.prismicContactPage.data.overview_image.url} />
+          <img alt="Contact Image" src={data.prismicContactPage.data.overview_image.url} />
 
           <SpecificContactInfo>
             <EmailSection>
