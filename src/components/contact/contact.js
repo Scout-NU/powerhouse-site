@@ -48,6 +48,7 @@ export default function Contact({ data }) {
                 data.prismicContactPage.data.form_input[1].input_instructions
               }
             />
+
             <label for="message">
               <Sub2>
                 {data.prismicContactPage.data.form_input[2].input_heading}

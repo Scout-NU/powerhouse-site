@@ -16,7 +16,6 @@ export const ContactForm = styled.div`
   width: 100%;
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     width: 36vw;
-
   }
   color: ${colors.blue900};
   input {
@@ -72,7 +71,6 @@ export const ContactImageSection = styled.div`
     object-fit: cover;
   }
 
-
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     margin-right: -${layoutPaddingMobile};
 
@@ -83,9 +81,7 @@ export const ContactImageSection = styled.div`
       height: 263px;
       object-fit: cover;
     }
-
   }
-
 `
 
 export const SpecificContactInfo = styled.div`
