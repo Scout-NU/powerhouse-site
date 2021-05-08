@@ -55,7 +55,7 @@ export const ContactButton = styled.button`
   padding-left: 60px;
   padding-top: 16px;
   padding-bottom: 16px;
-  background-color: ${colors.orange900};
+  background-color: ${colors.seafoam900};
   text-transform: uppercase;
   color: ${colors.white900};
 
@@ -98,12 +98,12 @@ export const SpecificContactInfo = styled.div`
 export const EmailSection = styled.div`
   margin-right: 127px;
   margin-top: 64px;
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 `
 
 export const AddressSection = styled.div`
   margin-top: 64px;
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
   width: 228px;
   margin-bottom: 110px;
 `
