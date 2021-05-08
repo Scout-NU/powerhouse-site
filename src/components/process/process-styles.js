@@ -15,7 +15,7 @@ export const HowItWorks = styled.div`
 
 export const HowHeader = styled.div`
   padding-top: 216px;
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 `
 
 export const HowImage = styled.div`
@@ -126,11 +126,11 @@ export const FindImage = styled.div`
 export const FindText = styled.div`
   position: relative;
   z-index: 1;
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
   padding-top: 350px;
 `
 export const FindButton = styled.a`
-  background-color: ${colors.orange900};
+  background-color: ${colors.seafoam900};
   text-transform: uppercase;
   color: ${colors.white900};
   padding-left: 48px;
@@ -159,8 +159,6 @@ export const StepImage = styled.div`
 `
 
 export const StepText = styled.div`
-  padding-left: 98px;
-
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     padding-left: 238px;
     width: 32vw;
