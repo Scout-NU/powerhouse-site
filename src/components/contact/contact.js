@@ -48,7 +48,6 @@ export default function Contact({ data }) {
                 data.prismicContactPage.data.form_input[1].input_instructions
               }
             />
-
             <label for="message">
               <Sub2>
                 {data.prismicContactPage.data.form_input[2].input_heading}
@@ -68,7 +67,10 @@ export default function Contact({ data }) {
         </ContactForm>
 
         <ContactImageSection>
-          <img alt="Contact Image" src={data.prismicContactPage.data.overview_image.url} />
+          <img
+            alt="Contact Image"
+            src={data.prismicContactPage.data.overview_image.url}
+          />
 
           <SpecificContactInfo>
             <EmailSection>

@@ -1,9 +1,10 @@
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const minSize = {
   h1: 50,
   h2: 30,
   h3: 20,
+  h4: 20,
   p: 16,
   nav: 16,
   sub1: 16,
@@ -23,6 +24,7 @@ const fontSizes = {
   h1: `calc(${minSize.h1}px + (64 - ${minSize.h1}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
   h2: `calc(${minSize.h2}px + (48 - ${minSize.h2}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
   h3: `calc(${minSize.h3}px + (32 - ${minSize.h3}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
+  h4: `calc(${minSize.h4}px + (22 - ${minSize.h4}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
   p: `calc(${minSize.p}px + (24 - ${minSize.p}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
   NavText: `calc(${minSize.nav}px + (24 - ${minSize.nav}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
   Sub1: `calc(${minSize.sub1}px + (36 - ${minSize.sub1}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
@@ -43,6 +45,11 @@ const H2 = styled.h2`
 
 const H3 = styled.h3`
   font-size: ${fontSizes.h3};
+  font-weight: bold;
+`
+
+const H4 = styled.h4`
+  font-size: ${fontSizes.h4};
   font-weight: bold;
 `
 
@@ -68,4 +75,4 @@ const Body = styled.div`
   font-size: ${fontSizes.body};
 `
 
-export { fontSizes, H1, H2, H3, P, NavText, Sub1, Sub2, Body }
+export { H1, H2, H3, H4, P, NavText, Sub1, Body, fontSizes }
