@@ -10,8 +10,8 @@ export const TopicsContainer = styled.div`
 `
 
 const SelectedBox = css`
-  border: 3px solid ${colors.orange900};
-  background-color: ${colors.orange900_transparent};
+  border: 3px solid ${colors.seafoam900};
+  background-color: ${colors.seafoam900_transparent};
 `
 
 export const TopicBox = styled.div`
@@ -26,10 +26,10 @@ export const TopicBox = styled.div`
   font-weight: bolder;
 
   cursor: pointer;
-  border: 2px solid ${colors.orange900};
+  border: 2px solid ${colors.seafoam900};
   background-color: transparent;
   transition: all 0.1s ease-in-out;
-  color: ${colors.orange900};
+  color: ${colors.seafoam900};
   text-transform: uppercase;
 
   ${props => props.selected && SelectedBox};
