@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
 import Hamburger from "../../vectors/hamburger.svg"
 import CloseIcon from "../../vectors/CloseIcon.svg"
+import { Link } from "gatsby"
+
 import {
   NavContainer,
   Logo,
@@ -17,6 +19,8 @@ import {
 import Circle from "../../vectors/circle.svg"
 import { NavText } from "../../style/type-styles"
 import { createGlobalStyle } from "styled-components"
+import LogoHomepage from "../../images/navlogohomepage.png"
+import NavLogo from "../../images/navlogo.png"
 
 const GlobalStyle = createGlobalStyle`
    body {
@@ -27,13 +31,20 @@ const GlobalStyle = createGlobalStyle`
 export const Header = ({ home }) => {
   const [open, setOpen] = useState(false)
   const [colorChange, setColorchange] = useState(false)
+  const [logoImage, setLogoImage] = useState()
   const changeNavbarColor = () => {
     if (typeof window !== "undefined" && window.scrollY >= 80) {
       setColorchange(true)
+      setLogoImage(LogoHomepage)
     } else {
       setColorchange(false)
+      !home && setLogoImage(NavLogo)
     }
   }
+
+  useEffect(() => {
+    home ? setLogoImage(LogoHomepage) : setLogoImage(NavLogo)
+  }, [setLogoImage])
 
   typeof window !== "undefined" &&
     window.addEventListener("scroll", changeNavbarColor)
@@ -41,14 +52,13 @@ export const Header = ({ home }) => {
   return (
     <NavContainer className={colorChange ? "navbar colorChange" : "navbar"}>
       <GlobalStyle open={open ? "open" : ""} />
-
       <Logo
         alt="PowerHouse Logo"
         className={colorChange ? "navbar colorChange" : "navbar"}
       >
         <div>
           <LogoLink className={home === true ? "home-header" : ""} href="/">
-            PowerHouse
+            <img src={logoImage} />
           </LogoLink>
         </div>
       </Logo>
@@ -69,27 +79,27 @@ export const Header = ({ home }) => {
           <MobileLink>
             <Circle />
 
-            <a href="/">PowerHouse</a>
+            <Link href="/">PowerHouse</Link>
           </MobileLink>
           <MobileLink>
             <Circle />
 
-            <a href="/about">About</a>
+            <Link href="/about">About</Link>
           </MobileLink>
           <MobileLink>
             <Circle />
 
-            <a href="/process">Process</a>
+            <Link href="/process">Process</Link>
           </MobileLink>
           <MobileLink>
             <Circle />
 
-            <a href="/products">Products</a>
+            <Link href="/products">Products</Link>
           </MobileLink>
           <MobileLink>
             <Circle />
 
-            <a href="/solutions">Solutions</a>
+            <Link href="/solutions">Solutions</Link>
           </MobileLink>
         </MobileLinks>
       </OpenNavContainer>

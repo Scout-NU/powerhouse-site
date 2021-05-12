@@ -57,8 +57,6 @@ export default function footer({ data }) {
               alt={data.prismicFooter.data.footer_image_alt}
               src={data.prismicFooter.data.footer_image.url}
             />
-
-            {/*  */}
           </FooterImage>
           <SockContainer>
             <SockContent>
@@ -95,7 +93,7 @@ export default function footer({ data }) {
                   {data.prismicFooter.data.powerhouse_title}
                 </FooterHeader>
                 <AddressSection>
-                  {data.prismicFooter.data.address}{" "}
+                  {data.prismicFooter.data.address}
                 </AddressSection>
               </SocialSection>
 

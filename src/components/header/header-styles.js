@@ -1,10 +1,10 @@
 import styled from "styled-components"
 import dimensions from "../../style/dimensions"
 import colors from "../../style/colors"
+import { Link } from "gatsby"
 
 export const NavContainer = styled.div`
   z-index: 2;
-  padding-bottom: 32px;
   &.colorChange {
     background-color: ${colors.blue900};
     color: ${colors.white900};
@@ -26,6 +26,11 @@ export const LogoLink = styled.a`
 
   &.home-header {
     color: ${colors.white900};
+  }
+
+  img {
+    width: 186px;
+    margin-bottom: 32px;
   }
 `
 
@@ -73,7 +78,7 @@ export const NavLinks = styled.div`
   }
 `
 
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
   font-weight: bold;
   padding-left: 100px;
   text-decoration: none;
@@ -146,5 +151,5 @@ export const NodeLine = styled.div`
   top: 8vh;
   left: 55px;
   z-index: 3;
-  background-color: ${colors.orange900};
+  background-color: ${colors.grass900};
 `
