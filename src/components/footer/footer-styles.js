@@ -23,7 +23,6 @@ export const SocialSection = styled.div`
   padding-left: 80px;
   padding-top: 50px;
 
-
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     padding-left: 32px;
   }
@@ -96,7 +95,7 @@ export const EmailSection = styled.div`
     width: 20vw;
     height: 36px;
     margin-top: 10px;
-    border: solid ${colors.blue900} 1px;
+    border: solid ${colors.ocean900} 1px;
   }
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
@@ -104,7 +103,7 @@ export const EmailSection = styled.div`
       width: 80%;
       height: 36px;
       margin-top: 10px;
-      border: solid ${colors.blue900} 1px;
+      border: solid ${colors.ocean900} 1px;
     }
   }
 
@@ -167,7 +166,6 @@ export const FooterSection = styled.div`
 export const SockContainer = styled.div`
   z-index: 1;
   position: relative;
-  
 `
 
 export const SockContent = styled.div`
@@ -184,9 +182,7 @@ export const SockContent = styled.div`
 `
 
 export const ConnectTitle = styled.div`
-color: ${colors.blue900};
-
-
+  color: ${colors.ocean900};
 `
 
 export const SockEmailForm = styled.form`
@@ -198,11 +194,11 @@ export const SockEmailForm = styled.form`
     background: transparent;
     border: none;
     width: 36vw;
-    border-bottom: 4px solid ${colors.blue900};
+    border-bottom: 4px solid ${colors.ocean900};
   }
 
   input[type="text"]::placeholder {
-    color: ${colors.blue900};
+    color: ${colors.ocean900};
   }
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
@@ -211,14 +207,14 @@ export const SockEmailForm = styled.form`
       background: transparent;
       border: none;
       width: 100%;
-      border-bottom: 4px solid ${colors.blue900};
+      border-bottom: 4px solid ${colors.ocean900};
     }
   }
 
   input[type="text"],
   select {
     font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1440 - 320)));
-    color: ${colors.blue900};
+    color: ${colors.ocean900};
   }
 `
 
@@ -237,7 +233,7 @@ export const SockCTA = styled.a`
   padding-left: 60px;
   padding-top: 16px;
   padding-bottom: 16px;
-  background-color: ${colors.orange900};
+  background-color: ${colors.seafoam900};
   text-transform: uppercase;
   color: ${colors.white900};
 `
