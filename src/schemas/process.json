@@ -23,13 +23,6 @@
         "label" : "How Header"
       }
     },
-    "how_description" : {
-      "type" : "StructuredText",
-      "config" : {
-        "multi" : "paragraph",
-        "label" : "How Description"
-      }
-    },
     "how_images" : {
       "type" : "Group",
       "config" : {
@@ -40,6 +33,13 @@
               "constraint" : { },
               "thumbnails" : [ ],
               "label" : "How Image"
+            }
+          },
+          "how_paragraph" : {
+            "type" : "StructuredText",
+            "config" : {
+              "multi" : "paragraph",
+              "label" : "How Paragraph"
             }
           }
         },
@@ -70,6 +70,14 @@
       "type" : "Text",
       "config" : {
         "label" : "Find Button Destination"
+      }
+    },
+    "find_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Find Image"
       }
     }
   },
