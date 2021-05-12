@@ -18,8 +18,8 @@ import {
   StepText,
   Indicators,
 } from "./process-styles"
-import Circle from "../../vectors/circle.svg"
-import SolidCircle from "../../vectors/solidcircle.svg"
+import Circle from "../../vectors/processcircle.svg"
+import SolidCircle from "../../vectors/processsolidcircle.svg"
 import { H1, P, H2, H3, Body } from "../../style/type-styles"
 
 export default function Process({ data }) {
@@ -37,6 +37,10 @@ export default function Process({ data }) {
         <HowCarousel>
           <HowImage>
             <img
+              alt={
+                data.prismicProcessPage.data.how_images[howNumber]
+                  .how_paragraph[0].text
+              }
               src={
                 data.prismicProcessPage.data.how_images[howNumber].how_image.url
               }
@@ -67,7 +71,10 @@ export default function Process({ data }) {
 
       <FindSection>
         <FindImage>
-          <img src={data.prismicProcessPage.data.find_image.url} />
+          <img
+            alt={data.prismicProcessPage.data.find_header}
+            src={data.prismicProcessPage.data.find_image.url}
+          />
         </FindImage>
 
         <FindText>
@@ -85,7 +92,7 @@ export default function Process({ data }) {
           return (
             <Step>
               <StepImage>
-                <img src={step.step_image.url} />
+                <img alt={step.step_description} src={step.step_image.url} />
               </StepImage>
 
               <StepText>
