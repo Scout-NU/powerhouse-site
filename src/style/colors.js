@@ -15,6 +15,14 @@ const colors = {
   softblue900: "#ECF3F7",
   gray900: "#585858",
   black_overlay: "rgb(0, 0, 0, 0.55)",
+  ocean900: "#00667B",
+  seafoam900: "#5AC7AC",
+  solar900: "#FFB729",
+  grass900: "#B2DD8E",
+  frost900: "#ECF3F7",
+  stone900: "#585858",
+  seafoam900_transparent: "rgb(90, 199, 172, .07)",
+
 }
 
 export default colors
