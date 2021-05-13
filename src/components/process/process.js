@@ -87,7 +87,6 @@ export default function Process({ data }) {
       </FindSection>
 
       <StepsSection>
-        {console.log(data.prismicProcessPage.data.steps[0])}
         {data.prismicProcessPage.data.steps.map(step => {
           return (
             <Step>
