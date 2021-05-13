@@ -34,22 +34,27 @@ export const query = graphql`
           explanation_description
           explanation_image {
             url
+            alt
           }
         }
         industry_context_heading
         industry_context_icon {
           url
+          alt
         }
         industry_context_background_image {
           url
+          alt
         }
         mission_description
         mission_heading
         mission_icon {
           url
+          alt
         }
         mission_image {
           url
+          alt
         }
         rows {
           feature_name
@@ -60,6 +65,7 @@ export const query = graphql`
         product_benefit {
           product_benefit_image {
             url
+            alt
           }
           product_benefit_title
         }
@@ -78,6 +84,7 @@ export const query = graphql`
           team_member_description
           team_member_image {
             url
+            alt
           }
           team_member_title
         }

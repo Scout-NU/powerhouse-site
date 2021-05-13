@@ -388,3 +388,7 @@ export const IndustryContextBackgroundImage = styled.div`
     object-fit: cover;
   }
 `
+
+export const AboutContainer = styled.div`
+
+`
