@@ -227,10 +227,11 @@ export const SockDescription = styled.div`
   }
 `
 
-export const SockCTA = styled.a`
+export const SockCTA = styled.button`
   font-size: 16px;
   padding-right: 60px;
   padding-left: 60px;
+  border: none;
   padding-top: 16px;
   padding-bottom: 16px;
   background-color: ${colors.seafoam900};

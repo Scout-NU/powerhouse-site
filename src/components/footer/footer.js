@@ -64,16 +64,24 @@ export default function footer({ data }) {
                 <Sub1>
                   <label>{data.prismicFooter.data.sock_title}</label>
                 </Sub1>
-                <SockEmailForm>
+                <SockEmailForm
+                  action="https://gmail.us1.list-manage.com/subscribe/post?u=53c27f636ec14a9fe0cc740c3&amp;id=385b379fdd"
+                  method="post"
+                  id="mc-embedded-subscribe-form"
+                  name="mc-embedded-subscribe-form"
+                  class="validate"
+                  target="_blank"
+                  novalidate
+                >
                   <input type="text" placeholder="Enter your email" />
-                </SockEmailForm>
-                <SockDescription>
-                  <Body>{data.prismicFooter.data.sock_description}</Body>
-                </SockDescription>
+                  <SockDescription>
+                    <Body>{data.prismicFooter.data.sock_description}</Body>
+                  </SockDescription>
 
-                <SockCTA role="button" type="submit">
-                  Sign Up
-                </SockCTA>
+                  <SockCTA role="button" type="submit">
+                    Sign Up
+                  </SockCTA>
+                </SockEmailForm>
               </ConnectTitle>
             </SockContent>
           </SockContainer>
@@ -85,7 +93,7 @@ export default function footer({ data }) {
                   {data.prismicFooter.data.powerhouse_title}
                 </FooterHeader>
                 <AddressSection>
-                  {data.prismicFooter.data.address}{" "}
+                  {data.prismicFooter.data.address}
                 </AddressSection>
               </SocialSection>
 
@@ -93,13 +101,13 @@ export default function footer({ data }) {
                 <LinkColumn>
                   <ul>
                     <li>
-                      <a href="/about">Home</a>
+                      <a href="/about">ABOUT</a>
                     </li>
                     <li>
-                      <a href="/about">About</a>
+                      <a href="/process">PROCESS</a>
                     </li>
                     <li>
-                      <a href="/about">Process</a>
+                      <a href="/products">PRODUCTS</a>
                     </li>
                   </ul>
                 </LinkColumn>
@@ -107,13 +115,13 @@ export default function footer({ data }) {
                 <LinkColumn>
                   <ul>
                     <li>
-                      <a href="/about">Products</a>
+                      <a href="/solutions">SOLUTIONS</a>
                     </li>
                     <li>
-                      <a href="/about">Solutions</a>
+                      <a href="/faq">FAQ</a>
                     </li>
                     <li>
-                      <a href="/about">FAQ</a>
+                      <a href="/contact">CONTACT</a>
                     </li>
                   </ul>
                 </LinkColumn>
