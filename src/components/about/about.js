@@ -35,6 +35,8 @@ import {
   ComparisonCTA,
   IndustryContextBackgroundImage,
   AboutContainer,
+  Banner,
+  IndustryContextBackground,
 } from "./about-style"
 
 import Check from "../../vectors/CheckIcon.svg"
@@ -63,51 +65,49 @@ export default function About({ data }) {
         </MissionText>
       </MissionSection>
 
-      <IndustryContextSection>
-        <IndustryContextBackgroundImage>
-          <img
-            alt={data.industry_context_background_image.alt}
-            src={data.industry_context_background_image.url}
-          />
-        </IndustryContextBackgroundImage>
-        <IndustryContextContainer>
-          <div>
-            <IconPlaceholder>
-              <img
-                alt={data.industry_context_icon.alt}
-                src={data.industry_context_icon.url}
-              />
-            </IconPlaceholder>
-            <H2>{data.industry_context_heading}</H2>
-            <IndustryContextExamples>
-              {data.industry_context_explanation.map((example, id) => {
-                return (
-                  <IndustryContextGroup key={id}>
-                    <IndustryContextImage>
-                      <img
-                        alt={
-                          example.explanation_image.alt &&
-                          example.explanation_image.alt
-                        }
-                        src={example.explanation_image.url}
-                      />
-                    </IndustryContextImage>
-                    <IndustryContextExampleParagraph>
-                      <Body>{example.explanation_description}</Body>
-                    </IndustryContextExampleParagraph>
-                  </IndustryContextGroup>
-                )
-              })}
-            </IndustryContextExamples>
+      <Banner imageUrl={data.industry_context_background_image.url}>
+        <IndustryContextBackground>
+          <IndustryContextSection>
+            <IndustryContextContainer>
+              <div>
+                <IconPlaceholder>
+                  <img
+                    alt={data.industry_context_icon.alt}
+                    src={data.industry_context_icon.url}
+                  />
+                </IconPlaceholder>
+                <H2>{data.industry_context_heading}</H2>
+                <IndustryContextExamples>
+                  {data.industry_context_explanation.map((example, id) => {
+                    return (
+                      <IndustryContextGroup key={id}>
+                        <IndustryContextImage>
+                          <img
+                            alt={
+                              example.explanation_image.alt &&
+                              example.explanation_image.alt
+                            }
+                            src={example.explanation_image.url}
+                          />
+                        </IndustryContextImage>
+                        <IndustryContextExampleParagraph>
+                          <Body>{example.explanation_description}</Body>
+                        </IndustryContextExampleParagraph>
+                      </IndustryContextGroup>
+                    )
+                  })}
+                </IndustryContextExamples>
 
-            <ComparisonCTA>
-              <a href={data.cta_button_destination.url}>
-                {data.cta_button_text}
-              </a>
-            </ComparisonCTA>
-          </div>
-        </IndustryContextContainer>
-      </IndustryContextSection>
+                <ComparisonCTA>
+                  <a href={data.cta_button_destination.url}>
+                    {data.cta_button_text}
+                  </a>
+                </ComparisonCTA>
+              </div>
+            </IndustryContextContainer>
+          </IndustryContextSection>
+        </IndustryContextBackground>
+      </Banner>
 
       <div>
         <ProductBenefitHeader>

@@ -21,6 +21,7 @@ export const AboutHeaderText = styled.div`
 
 export const MissionSection = styled.div`
   color: ${colors.ocean900};
+  margin-bottom: 183px;
 
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     display: flex;
@@ -65,20 +66,51 @@ export const MissionTextParagraph = styled.div`
 export const IndustryContextSection = styled.div`
   margin-top: 130px;
   display: flex;
+
   justify-content: center;
   background-color: white;
   color: ${colors.ocean900};
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    margin-top: 26px;
+    padding-left: 43px;
+    padding-right: 43px;
+    padding-top: 26px;
+  }
+`
+
+export const Banner = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(${props => props.imageUrl});
+  width: 100vw;
+  padding: 40px 60px;
+  margin: -${layoutPaddingDesktop};
+  min-height: 100vh;
+
+  @media (max-width: ${dimensions.maxwidthMobile}px) {
+    min-height: 100vh;
+    margin: -${layoutPaddingMobile};
+  }
+`
+
+export const IndustryContextBackground = styled.div`
+  min-height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: ${colors.white900};
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    min-width: 100%;
+  }
 `
 
 export const IndustryContextContainer = styled.div`
   background-color: white;
-  width: 89%;
   position: relative;
-  z-index: 1;
-  margin-top: 70px;
-  padding-top: 42px;
-  padding-left: 109px;
-  padding-right: 109px;
   color: ${colors.ocean900};
 `
 
@@ -90,9 +122,7 @@ export const IndustryContextExamples = styled.div`
 `
 
 export const IndustryContextGroup = styled.div`
-  margin-top: 26px;
-  width: 22vw;
-
+  margin-right: 78px;
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     margin-left: 0px;
     margin-right: 0px;
@@ -103,9 +133,13 @@ export const IndustryContextGroup = styled.div`
 
 export const IndustryContextImage = styled.div`
   img {
-    width: 22vw;
+    width: 20vw;
+    height: 232px;
+    object-fit: cover;
     @media (max-width: ${dimensions.maxwidthTablet}px) {
-      width: 100%;
+      width: 241px;
+      height: 232px;
+      object-fit: cover;
     }
   }
 `
@@ -134,7 +168,7 @@ export const ProductBenefitsContainer = styled.div`
   flex-wrap: wrap;
   color: ${colors.ocean900};
 
-  justify-content: space-between;
+  justify-content: center;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     margin-top: 40px;
@@ -146,6 +180,8 @@ export const BenefitGroup = styled.div`
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     flex: 50%;
+
+    margin-bottom: 53px;
   }
 `
 
@@ -167,6 +203,7 @@ export const ComparisonCTA = styled.div`
   margin-bottom: 114px;
   color: ${colors.ocean900};
 
+  text-align: center;
   display: flex;
   justify-content: center;
   a {
@@ -233,7 +270,6 @@ export const ProductComparison = styled.div`
 `
 
 export const FeatureTitleColumn = styled.div`
-  // margin-top: 110px;
   color: ${colors.ocean900};
 `
 
@@ -389,6 +425,4 @@ export const IndustryContextBackgroundImage = styled.div`
   }
 `
 
-export const AboutContainer = styled.div`
-
-`
+export const AboutContainer = styled.div``
