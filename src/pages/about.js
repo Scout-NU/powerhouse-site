@@ -1,7 +1,7 @@
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import dimensions from "../style/dimensions"
 import AboutPage from "../components/about/about"
 

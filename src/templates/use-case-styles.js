@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import dimensions from "../style/dimensions"
 import { layoutPaddingDesktop, layoutPaddingMobile } from "../style/variables"
 import colors from "../style/colors"
