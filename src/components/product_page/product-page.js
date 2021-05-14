@@ -22,7 +22,6 @@ export default function ProductSection({ data }) {
       </ProductsHeading>
       <FeaturedProductSection>
         <FeaturedProductImage>
-          {console.log(data.featured_product_image)}
           <img
             src={data.featured_product_image.url}
             alt={data.featured_product_image.alt}
@@ -33,7 +32,6 @@ export default function ProductSection({ data }) {
           <H2>{data.featured_product_name}</H2>
           <Body>{data.featured_product_description}</Body>
           <FeaturedCTA>
-            {console.log(data)}
             <a href={data.learn_more_button_text_destination}>
               {data.learn_more_button_text}
             </a>
@@ -44,10 +42,10 @@ export default function ProductSection({ data }) {
       <HomeownerSection>
         <Sub1>{data.model_scope[0].model_scope_heading}</Sub1>
         <ProductsGroup>
-          {data.products.map(product => {
+          {data.products.map((product, id) => {
             return (
               product.product.document.data.product_type === "Homeowner" && (
-                <ProductCard href={`/${product.product.document.uid}`}>
+                <ProductCard key={id} href={`/${product.product.document.uid}`}>
                   <ProductImage>
                     <img
                       src={
@@ -78,11 +76,10 @@ export default function ProductSection({ data }) {
       <CommercialSection>
         <Sub1>{data.model_scope[1].model_scope_heading}</Sub1>
         <ProductsGroup>
-          {console.log(data.products)}
-          {data.products.map(product => {
+          {data.products.map((product, id) => {
             return (
               product.product.document.data.product_type === "Commercial" && (
-                <ProductCard href={`/${product.product.document.uid}`}>
+                <ProductCard key={id} href={`/${product.product.document.uid}`}>
                   <ProductImage>
                     <img
                       src={
