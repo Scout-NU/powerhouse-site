@@ -39,6 +39,7 @@ export default function Product({ data }) {
         <HeroSection>
           <ImageContainer>
             <img
+              alt={products.data.product_images[mainImage].image.alt}
               src={products.data.product_images[mainImage].image.url}
               className="main-image"
             />
@@ -51,7 +52,6 @@ export default function Product({ data }) {
                     alt={image.alt}
                     key={id}
                   />
-                  {console.log(image)}
                 </>
               )
             })}
@@ -132,13 +132,12 @@ export default function Product({ data }) {
           <div>
             {products.data.features.map((feature, id) => {
               return (
-                <Feature>
+                <Feature key={id}>
                   <FeatureName>
                     <Sub1>{feature.feature_name}</Sub1>
                   </FeatureName>
                   <FeatureImage>
                     <img
-                      key={id}
                       className={id === 0 ? " first-image " : ""}
                       className={id !== 0 ? " not-image " : ""}
                       src={feature.feature_image.url}
