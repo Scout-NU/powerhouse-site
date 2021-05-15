@@ -1,16 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Layout from "../components/layout"
+import ProductPage from "../components/product_page/product-page"
 
 export default function ProductSection({ data }) {
   const productSectionData = data.prismicProductPage.data
 
   return (
-    <div>
-      {/* Mapping over individual products.  TODO: separate products based on category (homeowner or commerical) */}
-      {productSectionData.products.map(product => {
-        return <h1>{product.product.document.data.product_title}</h1>
-      })}
-    </div>
+    <Layout>
+      <ProductPage data={productSectionData} />
+    </Layout>
   )
 }
 
@@ -20,6 +19,10 @@ export const query = graphql`
       data {
         featured_product_description
         featured_product_heading
+        featured_product_image {
+          alt
+          url
+        }
         featured_product_name
         learn_more_button_text
         learn_more_button_text_destination
@@ -29,14 +32,24 @@ export const query = graphql`
         product_page_main_heading
 
         products {
+          button_text
+          product_description
           product {
             document {
               ... on PrismicProduct {
+                uid
                 data {
                   product_title
                   button_destination
                   button_title
                   cta_title
+                  feature_icon {
+                    url
+                    dimensions {
+                      height
+                      width
+                    }
+                  }
                   feature_title
                   features {
                     feature_name
@@ -57,9 +70,11 @@ export const query = graphql`
                   }
                   product_images {
                     image {
+                      alt
                       url
                     }
                   }
+                  product_price
                   product_type
                 }
               }

@@ -6,6 +6,7 @@ import {
   layoutPaddingDesktop,
   layoutPaddingMobile,
 } from "../../style/variables"
+
 export const ContactContainer = styled.div`
   min-height: 100vh;
 `
@@ -47,7 +48,7 @@ export const ContactSection = styled.div`
 export const ContactDescription = styled.div`
   margin-bottom: 64px;
 `
-export const ContactButton = styled.button`
+export const ContactButton = styled.a`
   font-size: 16px;
   padding-right: 60px;
   padding-left: 60px;
@@ -58,6 +59,11 @@ export const ContactButton = styled.button`
   color: ${colors.white900};
 
   border: none;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 46px -9px ${colors.seafoam900};
+  }
 `
 
 export const ContactImageSection = styled.div`
@@ -102,3 +108,4 @@ export const AddressSection = styled.div`
   width: 228px;
   margin-bottom: 110px;
 `
+

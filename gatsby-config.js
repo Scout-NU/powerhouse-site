@@ -27,6 +27,8 @@ module.exports = {
           homepage: require("./src/schemas/Homepage.json"),
           use_cases_page: require("./src/schemas/use_cases_page.json"),
           use_case: require("./src/schemas/use_case.json"),
+          About: require("./src/schemas/About.json"),
+
         },
         typePathsFilenamePrefix: "prismic-typepaths---powerhouse-site",
       },

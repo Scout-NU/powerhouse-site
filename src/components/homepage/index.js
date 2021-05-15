@@ -46,8 +46,9 @@ import { Helmet } from "react-helmet"
 export default function HomePage({ data }) {
   return (
     <>
+    
       <Helmet bodyAttributes={{ class: "home-header" }} />
-
+    
       <HomePageContainer>
         <HeroContainer>
           <HeroImage>
