@@ -34,6 +34,9 @@ import {
   CompetitorTH,
   ComparisonCTA,
   IndustryContextBackgroundImage,
+  AboutContainer,
+  Banner,
+  IndustryContextBackground,
 } from "./about-style"
 
 import Check from "../../vectors/CheckIcon.svg"
@@ -41,19 +44,19 @@ import Xicon from "../../vectors/xicon.svg"
 
 export default function About({ data }) {
   return (
-    <>
+    <AboutContainer>
       <AboutHeaderText>
         <H2>About</H2>
       </AboutHeaderText>
 
       <MissionSection>
         <MissionImage>
-          <img src={data.mission_image.url} />
+          <img alt={data.mission_image.alt} src={data.mission_image.url} />
         </MissionImage>
 
         <MissionText>
           <IconPlaceholder>
-            <img src={data.mission_icon.url} />
+            <img alt={data.mission_icon.alt} src={data.mission_icon.url} />
           </IconPlaceholder>
           <H2>{data.mission_heading}</H2>
           <MissionTextParagraph>
@@ -62,39 +65,49 @@ export default function About({ data }) {
         </MissionText>
       </MissionSection>
 
-      <IndustryContextSection>
-        <IndustryContextBackgroundImage>
-          <img src={data.industry_context_background_image.url} />
-        </IndustryContextBackgroundImage>
-        <IndustryContextContainer>
-          <div>
-            <IconPlaceholder>
-              <img src={data.industry_context_icon.url} />
-            </IconPlaceholder>
-            <H2>{data.industry_context_heading}</H2>
-            <IndustryContextExamples>
-              {data.industry_context_explanation.map((example, id) => {
-                return (
-                  <IndustryContextGroup key={id}>
-                    <IndustryContextImage>
-                      <img src={example.explanation_image.url} />
-                    </IndustryContextImage>
-                    <IndustryContextExampleParagraph>
-                      <Body>{example.explanation_description}</Body>
-                    </IndustryContextExampleParagraph>
-                  </IndustryContextGroup>
-                )
-              })}
-            </IndustryContextExamples>
+      <Banner imageUrl={data.industry_context_background_image.url}>
+        <IndustryContextBackground>
+          <IndustryContextSection>
+            <IndustryContextContainer>
+              <div>
+                <IconPlaceholder>
+                  <img
+                    alt={data.industry_context_icon.alt}
+                    src={data.industry_context_icon.url}
+                  />
+                </IconPlaceholder>
+                <H2>{data.industry_context_heading}</H2>
+                <IndustryContextExamples>
+                  {data.industry_context_explanation.map((example, id) => {
+                    return (
+                      <IndustryContextGroup key={id}>
+                        <IndustryContextImage>
+                          <img
+                            alt={
+                              example.explanation_image.alt &&
+                              example.explanation_image.alt
+                            }
+                            src={example.explanation_image.url}
+                          />
+                        </IndustryContextImage>
+                        <IndustryContextExampleParagraph>
+                          <Body>{example.explanation_description}</Body>
+                        </IndustryContextExampleParagraph>
+                      </IndustryContextGroup>
+                    )
+                  })}
+                </IndustryContextExamples>
 
-            <ComparisonCTA>
-              <a href={data.cta_button_destination.url}>
-                {data.cta_button_text}
-              </a>
-            </ComparisonCTA>
-          </div>
-        </IndustryContextContainer>
-      </IndustryContextSection>
+                <ComparisonCTA>
+                  <a href={data.cta_button_destination.url}>
+                    {data.cta_button_text}
+                  </a>
+                </ComparisonCTA>
+              </div>
+            </IndustryContextContainer>
+          </IndustryContextSection>
+        </IndustryContextBackground>
+      </Banner>
 
       <div>
         <ProductBenefitHeader>
@@ -105,7 +118,10 @@ export default function About({ data }) {
             return (
               <BenefitGroup key={id}>
                 <BenefitImage>
-                  <img src={benefit.product_benefit_image.url} />
+                  <img
+                    alt={benefit.product_benefit_image.alt}
+                    src={benefit.product_benefit_image.url}
+                  />
                 </BenefitImage>
                 <BenefitTitle>
                   <Body>{benefit.product_benefit_title}</Body>
@@ -122,11 +138,9 @@ export default function About({ data }) {
             <tr>
               <th></th>
               {data.company.map((competitor, id) => (
-                <>
-                  <CompetitorTH key={id}>
-                    <CompetitorName>{competitor.company_name}</CompetitorName>
-                  </CompetitorTH>
-                </>
+                <CompetitorTH key={id}>
+                  <CompetitorName>{competitor.company_name}</CompetitorName>
+                </CompetitorTH>
               ))}
             </tr>
             {data.rows.map((feature, id) => (
@@ -182,7 +196,10 @@ export default function About({ data }) {
               return (
                 <TeamMember key={id}>
                   <MemberImage>
-                    <img src={member.team_member_image.url} />
+                    <img
+                      alt={member.team_member_image.alt}
+                      src={member.team_member_image.url}
+                    />
                   </MemberImage>
                   <H3>{member.team_member_title}</H3>
                   <Body>{member.team_member_description}</Body>
@@ -192,6 +209,6 @@ export default function About({ data }) {
           </CompanyTeamMemberGroup>
         </CompanyTeamSection>
       </CompanyBackgroundSection>
-    </>
+    </AboutContainer>
   )
 }

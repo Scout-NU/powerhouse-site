@@ -1,4 +1,4 @@
-import styled from "@emotion/styled"
+import styled from "styled-components"
 import dimensions from "../../style/dimensions"
 import colors from "../../style/colors"
 
@@ -6,7 +6,7 @@ export const FeaturedProductSection = styled.div`
   width: 100%;
   margin-top: 40px;
   margin-bottom: 148px;
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     width: 86vw;
@@ -17,7 +17,7 @@ export const FeaturedProductSection = styled.div`
 export const FeaturedCTA = styled.div`
   margin-top: 64px;
   a {
-    background-color: ${colors.orange900};
+    background-color: ${colors.seafoam900};
     text-transform: uppercase;
     color: ${colors.white900};
     padding-left: 48px;
@@ -31,11 +31,11 @@ export const FeaturedCTA = styled.div`
 
 export const ProductsHeading = styled.div`
   padding-top: 135px;
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 `
 
 export const ProductCard = styled.a`
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
   text-decoration: none;
 `
 
@@ -53,7 +53,7 @@ export const FeaturedProductImage = styled.div`
 export const FeaturedProductText = styled.div`
   margin-left: 5vw;
   margin-top: 52px;
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     margin-left: 0vw;
@@ -93,11 +93,11 @@ export const ProductImage = styled.div`
 `
 
 export const HomeownerSection = styled.div`
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 `
 
 export const CommercialSection = styled.div`
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 `
 
 export const ProductCTA = styled.div`
@@ -109,11 +109,11 @@ margin-bottom: 58px;
     padding-left: 60px;
     padding-top: 16px;
     padding-bottom: 16px;
-    border: solid ${colors.orange900}; 1px;
+    border: solid ${colors.seafoam900}; 1px;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
-    color: ${colors.orange900};
+    color: ${colors.seafoam900};
   }
 `

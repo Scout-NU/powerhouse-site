@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import dimensions from "../style/dimensions"
 import { layoutPaddingDesktop, layoutPaddingMobile } from "../style/variables"
 import colors from "../style/colors"
@@ -44,7 +44,7 @@ export const IntroTextSection = styled.div`
 `
 
 export const IntroHeader = styled.div`
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 `
 
 export const ImageTwo = styled.div`
@@ -87,7 +87,7 @@ export const WhyHeader = styled.div`
   margin-top: 118px;
   margin-bottom: 88px;
 
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     margin-top: 152px;
@@ -116,7 +116,7 @@ export const SpecificImage = styled.div`
 export const SpecificReasonHeading = styled.div`
   text-align: center;
 
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 
   @media (min-width: ${dimensions.maxwidthTablet}px) {
   }
@@ -135,7 +135,7 @@ export const WhyCTA = styled.div`
   justify-content: center;
 
   a {
-    background-color: ${colors.orange900};
+    background-color: ${colors.seafoam900};
     text-transform: uppercase;
     color: ${colors.white900};
     padding-left: 48px;
@@ -148,39 +148,31 @@ export const WhyCTA = styled.div`
 `
 
 export const DemoVideoSection = styled.div`
-margin-top: 75px;
-margin-bottom: 75px;
+  margin-top: 75px;
+  margin-bottom: 75px;
 
-@media (min-width: ${dimensions.maxwidthTablet}px) {
-  margin-top: 192px;
-  margin-bottom: 192px;
-  justify-content: center;
-  display: flex;
-}
-
-
-
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    margin-top: 192px;
+    margin-bottom: 192px;
+    justify-content: center;
+    display: flex;
+  }
 `
 
 export const DemoVideo = styled.div`
-
-iframe {
-  width: 72vw;
-  height: 562px;
-}
-
-@media (max-width: ${dimensions.maxwidthTablet}px) {
   iframe {
-    width: 100%;
-    height: 173px;
+    width: 72vw;
+    height: 562px;
   }
-}
 
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    iframe {
+      width: 100%;
+      height: 173px;
+    }
+  }
 `
 
-
 export const DemoHeading = styled.div`
-
-color: ${colors.blue900};
-
+  color: ${colors.ocean900};
 `

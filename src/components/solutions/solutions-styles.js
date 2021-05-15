@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from "@emotion/styled"
 import colors from "../../style/colors"
 import dimensions from "../../style/dimensions"
 import {
@@ -11,10 +11,10 @@ export const SolutionsContainer = styled.div``
 export const TaglineSection = styled.div``
 
 export const TaglineHeader = styled.div`
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 `
 export const TaglineDescription = styled.div`
-  color: ${colors.blue900};
+  color: ${colors.ocean900};
 `
 
 export const TaglineImage = styled.div`
@@ -61,7 +61,7 @@ export const UseCaseCard = styled.div`
   width: 100%;
   a {
     text-decoration: none;
-    color: ${colors.blue900};
+    color: ${colors.ocean900};
   }
 
   @media (min-width: ${dimensions.maxwidthTablet}px) {
@@ -76,12 +76,12 @@ a {
     padding-left: 60px;
     padding-top: 16px;
     padding-bottom: 16px;
-    border: solid ${colors.orange900}; 1px;
+    border: solid ${colors.seafoam900}; 1px;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
-    color: ${colors.orange900};
+    color: ${colors.seafoam900};
   }
 
 `
@@ -125,7 +125,6 @@ export const ModelCTAText = styled.div`
   margin-bottom: 116px;
   margin-top: 116px;
 
-  color: ${colors.blue900};
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     margin-left: 76px;
     margin-top: 72px;
@@ -137,7 +136,7 @@ export const ModelsButton = styled.div`
   margin-top: 42px;
 
   a {
-    background-color: ${colors.orange900};
+    background-color: ${colors.seafoam900};
     text-transform: uppercase;
     color: ${colors.white900};
     padding-left: 48px;

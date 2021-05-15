@@ -1,16 +1,17 @@
 import { graphql } from "gatsby"
-
-import React from "react"
 import Layout from "../components/layout"
+import React from "react"
+import styled from "@emotion/styled"
+import dimensions from "../style/dimensions"
+import AboutPage from "../components/about/about"
 
 export default function About({ data }) {
-    const aboutData = data.prismicAboutPage.data
-
-    return (
-        <Layout>
-            <h1>{aboutData.company_background_section_heading}</h1>
-        </Layout>
-    )
+  const aboutData = data.prismicAboutPage.data
+  return (
+    <Layout>
+      <AboutPage data={aboutData} />
+    </Layout>
+  )
 }
 
 export const query = graphql`
@@ -24,23 +25,67 @@ export const query = graphql`
         company_background_section_heading
         company_comparison_section_heading
         company_team_heading
+        cta_button_destination {
+          url
+        }
+
         cta_button_text
         industry_context_explanation {
           explanation_description
+          explanation_image {
+            url
+            alt
+          }
         }
         industry_context_heading
+        industry_context_icon {
+          url
+          alt
+        }
+        industry_context_background_image {
+          url
+          alt
+        }
         mission_description
         mission_heading
+        mission_icon {
+          url
+          alt
+        }
+        mission_image {
+          url
+          alt
+        }
+        rows {
+          feature_name
+          first_company_check
+          second_company
+          third_company
+        }
         product_benefit {
+          product_benefit_image {
+            url
+            alt
+          }
           product_benefit_title
         }
         product_feature {
           product_feature_name
         }
+        products_navigation_button_destination {
+          url
+        }
         products_navigation_button_text
         team_member_information {
+          contact_button_destination {
+            url
+          }
           contact_button_text
           team_member_description
+          team_member_image {
+            url
+            alt
+          }
           team_member_title
         }
       }
