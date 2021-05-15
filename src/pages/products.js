@@ -43,6 +43,13 @@ export const query = graphql`
                   button_destination
                   button_title
                   cta_title
+                  feature_icon {
+                    url
+                    dimensions {
+                      height
+                      width
+                    }
+                  }
                   feature_title
                   features {
                     feature_name

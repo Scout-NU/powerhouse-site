@@ -6,7 +6,6 @@ import {
 } from "../../style/variables"
 import colors from "../../style/colors"
 
-
 export const SingularProductContainer = styled.div``
 
 export const HeroSection = styled.div`

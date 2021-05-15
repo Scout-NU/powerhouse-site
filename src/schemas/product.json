@@ -32,6 +32,12 @@
         "label" : "Product Description"
       }
     },
+    "product_recommendation" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Product Recommendation"
+      }
+    },
     "product_images" : {
       "type" : "Group",
       "config" : {
