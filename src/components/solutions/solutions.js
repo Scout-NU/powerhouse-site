@@ -46,7 +46,7 @@ export default function Solutions({ data }) {
             {data.prismicUseCasesPage.data.use_cases.map((use_case, idx) => {
               return (
                 <UseCaseCard key={idx}>
-                  <a href={use_case.use_case.document.uid}>
+                  <a href={`/${use_case.use_case.document.uid}`}>
                     <img
                       alt={use_case.use_case.document.data.preview_title}
                       src={use_case.use_case.document.data.preview_image.url}
@@ -57,7 +57,9 @@ export default function Solutions({ data }) {
                     </Body>
 
                     <UseCaseCTA>
-                      <a href={use_case.use_case.document.uid}>Learn More</a>
+                      <a href={`/${use_case.use_case.document.uid}`}>
+                        Learn More
+                      </a>
                     </UseCaseCTA>
                   </a>
                 </UseCaseCard>
