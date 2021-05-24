@@ -8,7 +8,7 @@ const minSize = {
   p: 16,
   nav: 16,
   sub1: 16,
-  sub2: 18,
+  sub2: 14,
   body: 14,
 }
 
@@ -28,7 +28,7 @@ const fontSizes = {
   p: `calc(${minSize.p}px + (24 - ${minSize.p}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
   NavText: `calc(${minSize.nav}px + (24 - ${minSize.nav}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
   Sub1: `calc(${minSize.sub1}px + (36 - ${minSize.sub1}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
-  Sub2: `calc(${minSize.sub1}px + (32 - ${minSize.sub1}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
+  Sub2: `calc(${minSize.sub2}px + (16 - ${minSize.sub2}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
 
   body: `calc(${minSize.body}px + (18 - ${minSize.body}) * ((100vw - ${devices.mobile}px) / (${devices.desktop} - ${devices.mobile})))`,
 }
@@ -69,6 +69,7 @@ const Sub1 = styled.div`
 const Sub2 = styled.div`
   font-size: ${fontSizes.Sub2};
   text-transform: uppercase;
+  font-weight: bold;
 `
 
 const Body = styled.div`
