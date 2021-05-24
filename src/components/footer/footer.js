@@ -64,23 +64,25 @@ export default function footer({ data }) {
                 <Sub1>
                   <label>{data.prismicFooter.data.sock_title}</label>
                 </Sub1>
-                <SockEmailForm
-                  action="https://gmail.us1.list-manage.com/subscribe/post?u=53c27f636ec14a9fe0cc740c3&amp;id=385b379fdd"
-                  method="post"
-                  id="mc-embedded-subscribe-form"
-                  name="mc-embedded-subscribe-form"
-                  class="validate"
-                  target="_blank"
-                  novalidate
-                >
-                  <input type="text" placeholder="Enter your email" />
-                  <SockDescription>
-                    <Body>{data.prismicFooter.data.sock_description}</Body>
-                  </SockDescription>
+                <SockEmailForm>
+                  <form
+                    action="https://gmail.us1.list-manage.com/subscribe/post?u=53c27f636ec14a9fe0cc740c3&amp;id=385b379fdd"
+                    method="post"
+                    id="mc-embedded-subscribe-form"
+                    name="mc-embedded-subscribe-form"
+                    class="validate"
+                    target="_blank"
+                    novalidate
+                  >
+                    <input type="text" placeholder="Enter your email" />
+                    <SockDescription>
+                      <Body>{data.prismicFooter.data.sock_description}</Body>
+                    </SockDescription>
 
-                  <SockCTA role="button" type="submit">
-                    Sign Up
-                  </SockCTA>
+                    <SockCTA role="button" type="submit">
+                      Sign Up
+                    </SockCTA>
+                  </form>
                 </SockEmailForm>
               </ConnectTitle>
             </SockContent>
