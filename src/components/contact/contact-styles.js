@@ -109,4 +109,3 @@ export const AddressSection = styled.div`
   margin-bottom: 110px;
 `
 
-export const UseCaseSection = styled.div``
