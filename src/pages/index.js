@@ -2,12 +2,17 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Homepage from "../components/homepage/index"
+import { Helmet } from "react-helmet"
 
 export default function Home({ data }) {
   const homepageData = data.prismicHomepage.data
 
   return (
     <Layout home={true}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>PowerHouse</title>
+      </Helmet>
       <Homepage data={homepageData} />
     </Layout>
   )

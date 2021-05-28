@@ -99,7 +99,7 @@ export default function About({ data }) {
                 </IndustryContextExamples>
 
                 <ComparisonCTA>
-                  <a href={data.cta_button_destination.url}>
+                  <a href="/process">
                     {data.cta_button_text}
                   </a>
                 </ComparisonCTA>

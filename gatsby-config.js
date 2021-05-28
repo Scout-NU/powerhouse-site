@@ -8,6 +8,7 @@ module.exports = {
   /* Your site config here */
   plugins: [
     `gatsby-plugin-sass`,
+    `gatsby-plugin-react-helmet`,
 
     {
       resolve: "gatsby-source-prismic",
@@ -28,7 +29,6 @@ module.exports = {
           use_cases_page: require("./src/schemas/use_cases_page.json"),
           use_case: require("./src/schemas/use_case.json"),
           About: require("./src/schemas/About.json"),
-
         },
         typePathsFilenamePrefix: "prismic-typepaths---powerhouse-site",
       },

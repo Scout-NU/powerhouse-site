@@ -4,11 +4,16 @@ import React from "react"
 import styled from "@emotion/styled"
 import dimensions from "../style/dimensions"
 import AboutPage from "../components/about/about"
+import { Helmet } from "react-helmet"
 
 export default function About({ data }) {
   const aboutData = data.prismicAboutPage.data
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>About</title>
+      </Helmet>
       <AboutPage data={aboutData} />
     </Layout>
   )
